@@ -13,7 +13,7 @@
     
 
     
-        <meta name="description" content="题目存档：https://hack2018.lug.ustc.edu.cn/官方 write-up 已发布：https://github.com/ustclug/hackergame2018-writeups我的一些解题过程的源文件https://github.com/XTXTMTXTX/Hacke"/>
+        <meta name="description" content="不为所动 做更专业的自己"/>
     
 
     <!--Author-->
@@ -28,7 +28,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="题目存档：https://hack2018.lug.ustc.edu.cn/官方 write-up 已发布：https://github.com/ustclug/hackergame2018-writeups我的一些解题过程的源文件https://github.com/XTXTMTXTX/Hacke"/>
+        <meta property="og:description" content="不为所动 做更专业的自己"/>
     
 
     <!--Open Graph Site Name-->
@@ -237,10 +237,10 @@
 <hr>
 <h5 id="u56DE_u5230_u8FC7_u53BB"><a href="#u56DE_u5230_u8FC7_u53BB" class="headerlink" title="回到过去"></a>回到过去</h5><p>百度ed编辑器<br>注意接受下来的按键记录文件藏了个ESC字符 所以后面那个c是假的<br>事实上我去OpenBSD里试了下 显示ESCc<br>就很怪 卡了好久</p>
 <hr>
-<h5 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h5><h6 id="u54F2_u5B66_u601D_u8003"><a href="#u54F2_u5B66_u601D_u8003" class="headerlink" title="哲学思考"></a>哲学思考</h6><p>HTTP 418<br>得到下一题链接</p>
+<h5 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h5><h6 id="u54F2_u5B66_u601D_u8003"><a href="#u54F2_u5B66_u601D_u8003" class="headerlink" title="哲学思考"></a>哲学思考</h6><p>搜索HTTP 418协议<br>得到下一题链接</p>
 <h6 id="Can_I_help_me_3F"><a href="#Can_I_help_me_3F" class="headerlink" title="Can I help me?"></a>Can I help me?</h6><p>思考 方式 把请求头get改成post一下 得到线索 CRF 7168 <a href="https://www.rfc-editor.org/rfc/rfc7168.txt" target="_blank" rel="external">https://www.rfc-editor.org/rfc/rfc7168.txt</a><br>好的 自定义请求头BREW 注意附上Content-Type: message/teapot\r\n\<br>因为不会使用telnet 专门打了个程序 teapot.cpp</p>
 <hr>
-<h5 id="u732B_u54AA_u9065_u63A7_u5668"><a href="#u732B_u54AA_u9065_u63A7_u5668" class="headerlink" title="猫咪遥控器"></a>猫咪遥控器</h5><p>按着UDRL移动坐标画图<br>个人是画在了二位布尔数组上<br>最后输出方块到txt 改一下字号得flag<br>详见lazercat.cpp</p>
+<h5 id="u732B_u54AA_u9065_u63A7_u5668"><a href="#u732B_u54AA_u9065_u63A7_u5668" class="headerlink" title="猫咪遥控器"></a>猫咪遥控器</h5><p>按着UDRL移动坐标画图<br>个人是画在了二维布尔数组上<br>最后输出方块到txt 改一下字号得flag<br>详见lazercat.cpp</p>
 <hr>
 <h5 id="u5979_u7684_u8BD7"><a href="#u5979_u7684_u8BD7" class="headerlink" title="她的诗"></a>她的诗</h5><p>uuencode<br>将helper出来的东西再encode回去发现不一样<br>查询uuencode格式 第一位表示有几个字符<br>全改成最大的_再跑一遍helper<br>把多出来的拼起来就好了</p>
 <hr>

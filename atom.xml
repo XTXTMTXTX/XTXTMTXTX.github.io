@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://xtxtmtxtx.github.io/"/>
-  <updated>2018-10-23T12:34:20.619Z</updated>
+  <updated>2018-10-25T14:56:19.263Z</updated>
   <id>https://xtxtmtxtx.github.io/</id>
   
   <author>
@@ -15,11 +15,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[GearHost上的免费PHP空间]]></title>
+    <link href="https://xtxtmtxtx.github.io/2018/10/25/GearHost/"/>
+    <id>https://xtxtmtxtx.github.io/2018/10/25/GearHost/</id>
+    <published>2018-10-25T13:15:00.000Z</published>
+    <updated>2018-10-25T14:56:19.263Z</updated>
+    <content type="html"><![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
+<p>首先服务器是基于IIS的 因此支持php和aspx</p>
+<p>然后限制什么的都比较严格 每天60分钟的CPU Time 每月1Gb流量 100Mb存储空间 256Mb运行内存 另外还有10Mb免费数据库（Mysql是5Mb) 按教程的话来讲就最多跑个Wordpress</p>
+<p>连接速度应该还行 ping过去250ms左右（ping到我搭在GitHub Page上的blog是100ms）做个博客应该还行</p>
+<p>不过有个问题 免费空间不支持SSL 另外我尝试在空间上放<a href="https://github.com/HFIProgramming/mikutap/" target="_blank" rel="external">MikuTap</a>结果加载不出来 然后尝试.htaccess和httpb.ini实现301重定向都失败了 可能我的操作有问题</p>
+<p>最后是地址 <a href="http://php.xtxtmtxtx.xyz" target="_blank" rel="external">http://php.xtxtmtxtx.xyz</a> 什么都没有 都是拉的别人源码 目前还没有拿它来做什么的想法<br><del>最最最后请不要扫文件（</del></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
+<p>首先服务器是基于IIS的 因此支持php和]]>
+    </summary>
+    
+      <category term="GearHost" scheme="https://xtxtmtxtx.github.io/tags/GearHost/"/>
+    
+      <category term="PHP" scheme="https://xtxtmtxtx.github.io/tags/PHP/"/>
+    
+      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+    
+      <category term="Web" scheme="https://xtxtmtxtx.github.io/categories/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Hackergame2018]]></title>
     <link href="https://xtxtmtxtx.github.io/2018/10/23/Hackergame2018/"/>
     <id>https://xtxtmtxtx.github.io/2018/10/23/Hackergame2018/</id>
     <published>2018-10-23T11:57:13.000Z</published>
-    <updated>2018-10-23T12:34:20.619Z</updated>
+    <updated>2018-10-25T12:48:00.176Z</updated>
     <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br><del>一度17名最后20名发现奖项居然是中科大校内的 我哭了 你呢.jpg</del></p>
 <hr>
 <h5 id="u7B7E_u5230_u9898"><a href="#u7B7E_u5230_u9898" class="headerlink" title="签到题"></a>签到题</h5><p>f12把字数限制去了</p>
@@ -39,10 +67,10 @@
 <hr>
 <h5 id="u56DE_u5230_u8FC7_u53BB"><a href="#u56DE_u5230_u8FC7_u53BB" class="headerlink" title="回到过去"></a>回到过去</h5><p>百度ed编辑器<br>注意接受下来的按键记录文件藏了个ESC字符 所以后面那个c是假的<br>事实上我去OpenBSD里试了下 显示ESCc<br>就很怪 卡了好久</p>
 <hr>
-<h5 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h5><h6 id="u54F2_u5B66_u601D_u8003"><a href="#u54F2_u5B66_u601D_u8003" class="headerlink" title="哲学思考"></a>哲学思考</h6><p>HTTP 418<br>得到下一题链接</p>
+<h5 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h5><h6 id="u54F2_u5B66_u601D_u8003"><a href="#u54F2_u5B66_u601D_u8003" class="headerlink" title="哲学思考"></a>哲学思考</h6><p>搜索HTTP 418协议<br>得到下一题链接</p>
 <h6 id="Can_I_help_me_3F"><a href="#Can_I_help_me_3F" class="headerlink" title="Can I help me?"></a>Can I help me?</h6><p>思考 方式 把请求头get改成post一下 得到线索 CRF 7168 <a href="https://www.rfc-editor.org/rfc/rfc7168.txt" target="_blank" rel="external">https://www.rfc-editor.org/rfc/rfc7168.txt</a><br>好的 自定义请求头BREW 注意附上Content-Type: message/teapot\r\n\<br>因为不会使用telnet 专门打了个程序 teapot.cpp</p>
 <hr>
-<h5 id="u732B_u54AA_u9065_u63A7_u5668"><a href="#u732B_u54AA_u9065_u63A7_u5668" class="headerlink" title="猫咪遥控器"></a>猫咪遥控器</h5><p>按着UDRL移动坐标画图<br>个人是画在了二位布尔数组上<br>最后输出方块到txt 改一下字号得flag<br>详见lazercat.cpp</p>
+<h5 id="u732B_u54AA_u9065_u63A7_u5668"><a href="#u732B_u54AA_u9065_u63A7_u5668" class="headerlink" title="猫咪遥控器"></a>猫咪遥控器</h5><p>按着UDRL移动坐标画图<br>个人是画在了二维布尔数组上<br>最后输出方块到txt 改一下字号得flag<br>详见lazercat.cpp</p>
 <hr>
 <h5 id="u5979_u7684_u8BD7"><a href="#u5979_u7684_u8BD7" class="headerlink" title="她的诗"></a>她的诗</h5><p>uuencode<br>将helper出来的东西再encode回去发现不一样<br>查询uuencode格式 第一位表示有几个字符<br>全改成最大的_再跑一遍helper<br>把多出来的拼起来就好了</p>
 <hr>
@@ -96,7 +124,7 @@
     <link href="https://xtxtmtxtx.github.io/2016/08/08/Kreuz/"/>
     <id>https://xtxtmtxtx.github.io/2016/08/08/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
-    <updated>2018-10-23T12:21:33.962Z</updated>
+    <updated>2018-10-25T13:16:01.961Z</updated>
     <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>原BGA缩略图:<br><img src="https://ooo.0o0.ooo/2016/08/07/57a75311c80ac.jpg" alt="1">  </p>
 <hr>
 <blockquote>
