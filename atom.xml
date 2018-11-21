@@ -3,9 +3,9 @@
   <title><![CDATA[XTXTMTXTX]]></title>
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="https://xtxtmtxtx.github.io/"/>
-  <updated>2018-11-20T16:25:54.571Z</updated>
-  <id>https://xtxtmtxtx.github.io/</id>
+  <link href="https://www.xtxtmtxtx.xyz/"/>
+  <updated>2018-11-21T15:28:22.606Z</updated>
+  <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
     <name><![CDATA[XTXTMTXTX]]></name>
@@ -15,9 +15,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[为博客添加访问统计！]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/2018/11/21/TrafficStatistics/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/11/21/TrafficStatistics/</id>
+    <published>2018-11-21T14:43:45.000Z</published>
+    <updated>2018-11-21T15:28:22.606Z</updated>
+    <content type="html"><![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi.ibruce.info</a><br>网上搜HEXO+访问统计也能搜到讲这个东西的，不过我直接照着别人博客往自己的博客加会出现奇怪问题，后来发现官网上写：<br><code>因七牛强制过期『dn-lbstatics.qbox.me』域名，与客服沟通无果，只能更换域名到『busuanzi.ibruce.info』！</code><br>嗯，破案了。<br>首先地址要这么弄<br><code>脚本：&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code><br><code>网站流量统计：&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br><code>文章流量统计：&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br>需要注意的是其中pv、uv可以互换，区别就是pv是刷新一次算一次，uv是一个用户最多算一次。</p>
+<p>然后就是怎么实装了！</p>
+<p>首先找到HEXO文件夹里的\themes\你用的主题\layout\<br>在这个文件夹及子文件夹\_partial找文件<br>我用的是clean blog，所以是在\_partial\footer.ejs里放脚本以及网站流量统计，在\_partial\article-full.ejs里放的文章流量统计。<br>那么怎么放呢？<br>打开footer.ejs（编辑器自理），在\<footer\>后换一行加入脚本那一串代码即可，之后也不需要再引用了。然后拉到文件末尾区域，找到你博客类似“copyright”什么什么的文字，自行理解那几行分别是干什么的，然后在你觉得合适的地方插入网站流量统计的那串代码。<br>然后网站流量统计已经可以用了，不过如果你preview的话会发现那个流量统计的文字出奇的格格不入x<br>怎么解决呢？在每个\<span和紧接其后的id中间插入上下文中相同的class或者style或者之类的 然后再根据原本的文字十分居中在整个统计的那行代码左右分别插入\<center\="">和\<br>比如我本来上下文有<code>&lt;p class=&quot;copyright text-muted&quot;&gt;Adapted for &lt;a target=&quot;_blank&quot; href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; by &lt;a href=&quot;http://www.codeblocq.com/&quot; target=&quot;_blank&quot;&gt;Jonathan Klughertz&lt;/a&gt;&lt;/p&gt;</code><br>那我就把原本的统计代码弄成<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code><br>这样就可以配对啦。</span和紧接其后的id中间插入上下文中相同的class或者style或者之类的></footer\></p>
+<p>然后还有页面的访问量，我的是打开\_partial\article-full.ejs，然后找到类似’<!-- Comments -->‘或者之类能看出来表示某一个板块的代码段后加上了文章流量统计代码，为了显得更加和谐，我加入的代码是<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_page_pv&quot;&gt;本文总阅读量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code>还是看大家想怎么弄自行修改啦。</p>
+<p>然后就这么多，看不懂的话，，善用搜索引擎吧（雾）。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi]]>
+    </summary>
+    
+      <category term="HEXO" scheme="https://www.xtxtmtxtx.xyz/tags/HEXO/"/>
+    
+      <category term="不蒜子" scheme="https://www.xtxtmtxtx.xyz/tags/%E4%B8%8D%E8%92%9C%E5%AD%90/"/>
+    
+      <category term="博客" scheme="https://www.xtxtmtxtx.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="访问统计" scheme="https://www.xtxtmtxtx.xyz/tags/%E8%AE%BF%E9%97%AE%E7%BB%9F%E8%AE%A1/"/>
+    
+      <category term="Blog" scheme="https://www.xtxtmtxtx.xyz/categories/Blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[不越狱为iPad刷ipa文件]]></title>
-    <link href="https://xtxtmtxtx.github.io/2018/11/20/CydiaImpactor/"/>
-    <id>https://xtxtmtxtx.github.io/2018/11/20/CydiaImpactor/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2018/11/20/CydiaImpactor/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/11/20/CydiaImpactor/</id>
     <published>2018-11-20T13:43:39.000Z</published>
     <updated>2018-11-20T16:25:54.571Z</updated>
     <content type="html"><![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>不过这里讲得和编程没什么关系（大概）<br>总之来说就是分享一个软件</p>
@@ -31,20 +59,20 @@
     <![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，a]]>
     </summary>
     
-      <category term="Cydia Impactor" scheme="https://xtxtmtxtx.github.io/tags/Cydia-Impactor/"/>
+      <category term="Cydia Impactor" scheme="https://www.xtxtmtxtx.xyz/tags/Cydia-Impactor/"/>
     
-      <category term="iPad" scheme="https://xtxtmtxtx.github.io/tags/iPad/"/>
+      <category term="iPad" scheme="https://www.xtxtmtxtx.xyz/tags/iPad/"/>
     
-      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="ipa" scheme="https://xtxtmtxtx.github.io/categories/ipa/"/>
+      <category term="ipa" scheme="https://www.xtxtmtxtx.xyz/categories/ipa/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[GearHost上的免费PHP空间]]></title>
-    <link href="https://xtxtmtxtx.github.io/2018/10/25/GearHost/"/>
-    <id>https://xtxtmtxtx.github.io/2018/10/25/GearHost/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2018/10/25/GearHost/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/10/25/GearHost/</id>
     <published>2018-10-25T13:15:00.000Z</published>
     <updated>2018-11-20T15:09:08.039Z</updated>
     <content type="html"><![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
@@ -59,20 +87,20 @@
 <p>首先服务器是基于IIS的 因此支持php和]]>
     </summary>
     
-      <category term="GearHost" scheme="https://xtxtmtxtx.github.io/tags/GearHost/"/>
+      <category term="GearHost" scheme="https://www.xtxtmtxtx.xyz/tags/GearHost/"/>
     
-      <category term="PHP" scheme="https://xtxtmtxtx.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="https://www.xtxtmtxtx.xyz/tags/PHP/"/>
     
-      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="Web" scheme="https://xtxtmtxtx.github.io/categories/Web/"/>
+      <category term="Web" scheme="https://www.xtxtmtxtx.xyz/categories/Web/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hackergame2018]]></title>
-    <link href="https://xtxtmtxtx.github.io/2018/10/23/Hackergame2018/"/>
-    <id>https://xtxtmtxtx.github.io/2018/10/23/Hackergame2018/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2018/10/23/Hackergame2018/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/10/23/Hackergame2018/</id>
     <published>2018-10-23T11:57:13.000Z</published>
     <updated>2018-10-25T12:48:00.176Z</updated>
     <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br><del>一度17名最后20名发现奖项居然是中科大校内的 我哭了 你呢.jpg</del></p>
@@ -115,22 +143,22 @@
     <![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：]]>
     </summary>
     
-      <category term="C++" scheme="https://xtxtmtxtx.github.io/tags/C/"/>
+      <category term="C++" scheme="https://www.xtxtmtxtx.xyz/tags/C/"/>
     
-      <category term="CTF" scheme="https://xtxtmtxtx.github.io/tags/CTF/"/>
+      <category term="CTF" scheme="https://www.xtxtmtxtx.xyz/tags/CTF/"/>
     
-      <category term="Linux" scheme="https://xtxtmtxtx.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://www.xtxtmtxtx.xyz/tags/Linux/"/>
     
-      <category term="Reverse" scheme="https://xtxtmtxtx.github.io/tags/Reverse/"/>
+      <category term="Reverse" scheme="https://www.xtxtmtxtx.xyz/tags/Reverse/"/>
     
-      <category term="CTF" scheme="https://xtxtmtxtx.github.io/categories/CTF/"/>
+      <category term="CTF" scheme="https://www.xtxtmtxtx.xyz/categories/CTF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[无言投下]]></title>
-    <link href="https://xtxtmtxtx.github.io/2018/10/07/%E6%97%A0%E8%A8%80%E6%8A%95%E4%B8%8B/"/>
-    <id>https://xtxtmtxtx.github.io/2018/10/07/无言投下/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2018/10/07/%E6%97%A0%E8%A8%80%E6%8A%95%E4%B8%8B/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/10/07/无言投下/</id>
     <published>2018-10-06T21:21:12.000Z</published>
     <updated>2018-10-23T12:22:14.058Z</updated>
     <content type="html"><![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>其实应该是比不上高三那会儿那么任务繁重的 可能是自己变懒了吧<br>想想今后这个博客可能还是得积灰 尽可能多的写些杂事吧<br><del>比如debug失败爆出了什么奇妙错误啊啥啥啥的</del><br>感觉自己就是 所谓三分钟（也许是三天、三个月？）热情<br>从一开始的目标top 到最后失去兴趣只会对着桌面发呆<br><del>（现在靠着deadline过活）</del></p>
@@ -140,16 +168,16 @@
     <![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>其实应该是比不上高三那会儿那么任务繁重的 可能是自己]]>
     </summary>
     
-      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="Others" scheme="https://xtxtmtxtx.github.io/categories/Others/"/>
+      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[(已弃坑)BGA:Kreuz]]></title>
-    <link href="https://xtxtmtxtx.github.io/2016/08/08/Kreuz/"/>
-    <id>https://xtxtmtxtx.github.io/2016/08/08/Kreuz/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2016/08/08/Kreuz/"/>
+    <id>https://www.xtxtmtxtx.xyz/2016/08/08/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
     <updated>2018-10-25T13:16:01.961Z</updated>
     <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>原BGA缩略图:<br><img src="https://ooo.0o0.ooo/2016/08/07/57a75311c80ac.jpg" alt="1">  </p>
@@ -172,16 +200,16 @@
     <![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其]]>
     </summary>
     
-      <category term="音MAD" scheme="https://xtxtmtxtx.github.io/tags/%E9%9F%B3MAD/"/>
+      <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="OtoMAD" scheme="https://xtxtmtxtx.github.io/categories/OtoMAD/"/>
+      <category term="OtoMAD" scheme="https://www.xtxtmtxtx.xyz/categories/OtoMAD/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[(已填完)天坑预告x]]></title>
-    <link href="https://xtxtmtxtx.github.io/2016/07/09/%E5%A4%A9%E5%9D%91%E9%A2%84%E5%91%8Ax/"/>
-    <id>https://xtxtmtxtx.github.io/2016/07/09/天坑预告x/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2016/07/09/%E5%A4%A9%E5%9D%91%E9%A2%84%E5%91%8Ax/"/>
+    <id>https://www.xtxtmtxtx.xyz/2016/07/09/天坑预告x/</id>
     <published>2016-07-08T16:00:00.000Z</published>
     <updated>2018-10-23T12:22:03.221Z</updated>
     <content type="html"><![CDATA[<p>没错，这个坑就是Calamity Fortune(<br><a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>终于是填完了啊,最后的部分做得有点不像= =<br>但不管怎么说断断续续做了半年(orz)的坑终于做完了还是非常高兴的ww</p>
@@ -214,16 +242,16 @@
     <![CDATA[<p>没错，这个坑就是Calamity Fortune(<br><a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>终于是填完了啊,最]]>
     </summary>
     
-      <category term="音MAD" scheme="https://xtxtmtxtx.github.io/tags/%E9%9F%B3MAD/"/>
+      <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="OtoMAD" scheme="https://xtxtmtxtx.github.io/categories/OtoMAD/"/>
+      <category term="OtoMAD" scheme="https://www.xtxtmtxtx.xyz/categories/OtoMAD/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[FX Particle Builder]]></title>
-    <link href="https://xtxtmtxtx.github.io/2016/05/14/FX%20Particle%20Builder/"/>
-    <id>https://xtxtmtxtx.github.io/2016/05/14/FX Particle Builder/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2016/05/14/FX%20Particle%20Builder/"/>
+    <id>https://www.xtxtmtxtx.xyz/2016/05/14/FX Particle Builder/</id>
     <published>2016-05-14T05:34:00.000Z</published>
     <updated>2018-10-23T12:20:56.497Z</updated>
     <content type="html"><![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。<br><a id="more"></a><br><img src="https://ooo.0o0.ooo/2016/05/14/5736c847a509f.jpg" alt="Inline FXPB.jpg"></p>
@@ -246,16 +274,16 @@
     
     </summary>
     
-      <category term="AE" scheme="https://xtxtmtxtx.github.io/tags/AE/"/>
+      <category term="AE" scheme="https://www.xtxtmtxtx.xyz/tags/AE/"/>
     
-      <category term="AE" scheme="https://xtxtmtxtx.github.io/categories/AE/"/>
+      <category term="AE" scheme="https://www.xtxtmtxtx.xyz/categories/AE/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[==]]></title>
-    <link href="https://xtxtmtxtx.github.io/2016/04/09/==/"/>
-    <id>https://xtxtmtxtx.github.io/2016/04/09/==/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2016/04/09/==/"/>
+    <id>https://www.xtxtmtxtx.xyz/2016/04/09/==/</id>
     <published>2016-04-09T12:19:00.000Z</published>
     <updated>2018-10-23T12:10:50.946Z</updated>
     <content type="html"><![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>所以各种坑之类的只有到暑假才能填了<br><del>写这个只是为了表示我还活着x</del>  </p>
@@ -265,16 +293,16 @@
 ]]>
     </summary>
     
-      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="Others" scheme="https://xtxtmtxtx.github.io/categories/Others/"/>
+      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[第一篇]]></title>
-    <link href="https://xtxtmtxtx.github.io/2016/01/20/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>https://xtxtmtxtx.github.io/2016/01/20/第一篇/</id>
+    <link href="https://www.xtxtmtxtx.xyz/2016/01/20/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>https://www.xtxtmtxtx.xyz/2016/01/20/第一篇/</id>
     <published>2016-01-20T13:19:38.000Z</published>
     <updated>2018-10-23T12:21:45.626Z</updated>
     <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br><del>不要吐槽这奇怪的样式</del><br>还是可能什么东西都不写吧</p>
@@ -284,9 +312,9 @@
 ]]>
     </summary>
     
-      <category term="杂" scheme="https://xtxtmtxtx.github.io/tags/%E6%9D%82/"/>
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="Others" scheme="https://xtxtmtxtx.github.io/categories/Others/"/>
+      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
     
   </entry>
   
