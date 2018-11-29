@@ -30,6 +30,7 @@ let Combo=0;
 let LineHold=[-1,-1,-1,-1];
 let LaserTime=150;
 let offset=-40;
+let Scale=100;
 let Result=[0,0,0,0,0,0,0];
 let FastCount=0,SlowCount=0,MaxCombo=0;
 const bindKey=[68,70,74,75];
