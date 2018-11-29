@@ -1,1 +1,674 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('"4M 49";b 1N=3X;b g=0;b k;b V=0;b 18=0;b 11={};b t={};b 1o=0;b 1F=2e;b 14=0;b 1c=0;b 1d=1e;b 2b=4;b 2u=2b*14;b p=0;b 1q=2Q;b B=[{},{},{},{}],1v=[0,0,0,0],S=[0,0,0,0];b m=[16,37,2P,1e,3Z,4i];b D=O.P("4j");b 21=[R,R,R,R];b 1t=[0,0,0,0];b 2J=2e;b 1h=0;b 1R=0;b 2n=R;b 1T=0;b 17=0,1r=0;b 15=0;b 10=[-1,-1,-1,-1];b 2A=Y;b 29=-40;b J=[0,0,0,0,0,0,0];b 22=0,1X=0,1V=0;4o 2H=[4p,2P,4m,2G];b c=O.P("4n");b 7=c.4d("2d");b 2k=7.4h(2G,4f,2G,2e);2k.2T(0,"#4e");2k.2T(1,"4g(0,0,0,0)");u 3e(2R){b 1b={N:/^\\s*\\[\\s*([^\\]]*)\\s*\\]\\s*$/,2s:/^\\s*([\\w.\\-4b]+)\\s*:\\s*(.*?)\\s*$/,2z:/^\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*$/,2w:/^\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*/,2N:/^\\s*\\/\\/.*$/};b T={};b 2U=2R.4a(/\\r\\n|\\r|\\n/);b N=1Z;2U.4c(u(19){9(1b.2N.1S(19)){z}o 9(1b.2s.1S(19)){b K=19.K(1b.2s);9(N){T[N][K[1]]=K[2]}o{T[K[1]]=K[2]}}o 9(1b.2z.1S(19)){b K=19.K(1b.2z);T[N][V]={};Q(b i=0;i<8;i++)9(N){T[N][V][i]=12(K[1+i])}V++}o 9(1b.2w.1S(19)){b K=19.K(1b.2w);T[N][1o]={};Q(b i=0;i<6;i++)9(N){T[N][1o][i]=12(K[1+i])}1o++}o 9(1b.N.1S(19)){b K=19.K(1b.N);T[K[1]]={};N=K[1]}o 9(19.4k===0&&N){N=1Z}});z T}13.3a=(u(2E){z 13.41||13.3W||13.47||13.46||13.48||u(2E){13.2V(2E,39/2Q)}})();O.43=u(e){e.42();z R}u 20(){9(1N>0){g=-1N+29;2v();1N-=5;2V(20,5);z}9(1N===0){D.2D();1N=-1}9(D.1x){32();3N()}9(D.1x||D.1B)z;g=D.45*39+29;28(p<V-1&&g>=k["v"][p+1][0])p++;2v();9(!(D.1x||D.1B))3a(20)}u 44(){b 26=O.P("4N").3i[0];b 1k=3f 31();1k.2X=u(f){O.P("4O").1L("1K","2t:2o;");O.P("38").1L("1K","33-35: 1Q; 3b: 3c; 2q: 2y; 2O: 0; 2W: 0; 2L: 0; 1l: 0; 2a: 2M;");k=4P.36;k=3e(k);Q(b i=0;i<V;i++)9(k["v"][i][1]<0)k["v"][i][8]=18-1;o{k["v"][i][8]=18;11[18]={};11[18][0]=k["v"][i][0];11[18][1]=k["v"][i][1];11[18][2]=k["v"][i][2];18++}Q(b i=0;i<1o;i++){t[i]={};t[i]["h"]=2j.4J(k["2p"][i][0]/(4K/4));9(t[i]["h"]>=4)t[i]["h"]=3;t[i]["1W"]=k["2p"][i][2];t[i]["1f"]=k["2p"][i][5];9(t[i]["1f"]>0)1T++;t[i]["1a"]=1i;B[t[i]["h"]][1v[t[i]["h"]]++]=i}1r=(1T+1o)*5}1k.2S=u(2m){3h("2Z")}1k.4L(26,"4Q-8")}u 4V(){b 26=O.P("4U").3i[0];b 1k=3f 31();b k;1k.2X=u(2m){k=2m.4S.36;D.4T=k;D.2D();D.3L();O.P("38").1L("1K","2t: 2o;");O.P("3j").1L("1K","33-35: 1Q; 3b: 3c; 2q: 2y; 2O: 0; 2W: 0; 2L: 0; 1l: 0; 2a: 2M;")}1k.2S=u(2m){3h("2Z")}k=1k.4E(26)}u 3k(){13.34("2Y",2F,1i);13.34("3g",2C,1i)}u 32(){13.30("2Y",2F,1i);13.30("3g",2C,1i)}u 2l(U){b 1G=p;28(1G>0&&U<k["v"][1G][0])1G--;U=12(U);b 2f=0;b X=0;b 14=0;b c=0;Q(b i=1G;i<V;i++){14=11[k["v"][i][8]][1];9(k["v"][i][1]>0)1d=1;o 1d=-k["v"][i][1]/1e;9(i===V-1||k["v"][i+1][0]>g)c=(g-k["v"][i][0])*Z/(1F*14*1d/1c);o c=(k["v"][i+1][0]-k["v"][i][0])*Z/(1F*14*1d/1c);2f=2f+c;9(i===V-1||k["v"][i+1][0]>g)I}Q(b i=1G;i<V;i++){14=11[k["v"][i][8]][1];9(k["v"][i][1]>0)1d=1;o 1d=-k["v"][i][1]/1e;9(i===V-1||k["v"][i+1][0]>U)c=(U-k["v"][i][0])*Z/(1F*14*1d/1c);o c=(k["v"][i+1][0]-k["v"][i][0])*Z/(1F*14*1d/1c);X=X+c;9(i===V-1||k["v"][i+1][0]>U)I}z 12(X-2f)}u 4A(){O.P("3j").1L("1K","2t: 2o;");O.P("4C").1L("1K","2x: 4G; 2q:0 2y;");1F=12(O.P("4t").T);29=12(O.P("4y").T);9(O.P("3d").T!=="")1c=4R/12(O.P("3d").T);o{1c=12(k["v"][0][1]);Q(b i=1;i<V;i++)9(12(k["v"][i][1])>0)1c=(1c<12(k["v"][i][1])?1c:12(k["v"][i][1]))}3k();20()}u 1U(1I){15=0;2n=1I;1R=6;J[6]++;1h=g+2J;9(1I)22++;o 1X++}u H(h,1C,1I){9(1C<5)15++;o 15=0;9(15>1V)1V=15;17+=5-1C;2n=1I;1R=1C;9(1C!==0)9(1I)22++;o 1X++;J[1C]++;1h=g+2J}u 2F(e){b 1Y=e.3P,h=0,1D=R;9(1Z!=D&&(!D.1x)&&g>0){9(1Y===27){D.1B?D.2D():D.3L();9(!(D.1x||D.1B))20()}}Q(b i=0;i<4;i++){9(2H[i]===1Y&&!21[i]){21[i]=1i;1t[i]=-1;1D=1i;h=i;I}}9(g<0)z;9(!1D)z;9(1Z!=D&&!D.1x&&!D.1B){10[h]=-1;b i=S[h];28(i<1v[h]&&!t[B[h][i]]["1a"])i++;9(i>=1v[h])z;b l=t[B[h][i]]["1W"],F=t[B[h][i]]["1f"];9(g+m[5]<l)z;9(F===0){9(l<g-m[5]){1U(g<l);S[h]=i+1;z}9(g-m[0]<=l&&l<=g+m[0]){H(h,0);S[h]=i+1}o 9(g-m[1]<=l&&l<=g+m[1]){H(h,1,g<l);S[h]=i+1}o 9(g-m[2]<=l&&l<=g+m[2]){H(h,2,g<l);S[h]=i+1}o 9(g-m[3]<=l&&l<=g+m[3]){H(h,3,g<l);S[h]=i+1}o 9(g-m[4]<=l&&l<=g+m[4]){H(h,4,g<l);S[h]=i+1}o{H(h,5,g<l);S[h]=i+1}}o 9(t[B[h][i]]["1a"]){9(l<g-m[5]){1U(g<l);10[h]=-1;t[B[h][i]]["1a"]=R;z}10[h]=B[h][i];9(g-m[0]<=l&&l<=g+m[0]){H(h,0,g<l)}o 9(g-m[1]<=l&&l<=g+m[1]){H(h,1,g<l)}o 9(g-m[2]<=l&&l<=g+m[2]){H(h,2,g<l)}o 9(g-m[3]<=l&&l<=g+m[3]){H(h,3,g<l)}o 9(g-m[4]<=l&&l<=g+m[4]){H(h,4,g<l)}o{H(h,5,g<l)}}}}u 2C(e){b 1Y=e.3P,h=0,1D=R;Q(b i=0;i<4;i++){9(2H[i]===1Y&&21[i]){21[i]=R;1t[i]=2A+g;1D=1i;h=i;I}}9(g<0)z;9(!1D)z;9(1Z!=D&&!D.1x&&!D.1B){b i=S[h];28(i<1v[h]&&!t[B[h][i]]["1a"])i++;9(i>=1v[h])z;9(10[h]===-1)z;9(B[h][i]!==10[h]){10[h]=-1;z}b F=t[B[h][i]]["1f"];10[h]=-1;t[B[h][i]]["1a"]=R;9(g+m[5]<F){1U(g<F);z}o 9(g>=F){H(h,0,g<F);z}9(g-m[0]<=F&&F<=g+m[0]){H(h,0,g<F)}o 9(g-m[1]<=F&&F<=g+m[1]){H(h,1,g<F)}o 9(g-m[2]<=F&&F<=g+m[2]){H(h,2,g<F)}o 9(g-m[3]<=F&&F<=g+m[3]){H(h,3,g<F)}o 9(g-m[4]<=F&&F<=g+m[4]){H(h,4,g<F)}o{H(h,5,g<F)}}}u 3o(){7.1g();Q(b i=k["v"][p][8];i<18;i++){2b=11[i][2];14=11[i][1];2u=2b*14;b a=R;Q(b U=11[i][0];i===18-1||(i<18-1&&U<11[i+1][0]);U=U+2u){a=1i;9(U<g)1s;b X=2l(U);9(X>Z+1q)I;7.y="#1m";7.2h(0,Z-X+1q,4r,2);a=R}9(a)I}7.1j()}u 3N(){7.3F(0,0,c.2x,c.2a);7.1g();7.1P="1O 4z 1E";7.1A="4F";7.1J="1l";7.1p=2;7.y="#3H";7.C="#3G";7.E("x : "+A(J[0]),j,Y-j);7.G("x : "+A(J[0]),j,Y-j);7.y="#3z";7.C="#3y";7.E("x : "+A(J[1]),j,3K-j);7.G("x : "+A(J[1]),j,3K-j);7.y="#3x";7.C="#3C";7.E("3V : "+A(J[2]),j,M-j);7.G("3V : "+A(J[2]),j,M-j);7.y="#23";7.C="#24";7.E("1e : "+A(J[3]),j,3U-j);7.G("1e : "+A(J[3]),j,3U-j);7.y="#1n";7.C="#4D";7.E("j : "+A(J[4]),j,3T-j);7.G("j : "+A(J[4]),j,3T-j);7.y="#1m";7.C="#1w";7.E("1M : "+A(J[5]+J[6]),j,3R-j);7.G("1M : "+A(J[5]+J[6]),j,3R-j);7.y="#23";7.C="#24";7.E("25 : "+A(22),j,3J-j);7.G("25 : "+A(22),j,3J-j);7.y="#1m";7.C="#1w";7.E("3t : "+A(1X),j,3s-j);7.G("3t : "+A(1X),j,3s-j);7.y="#1u";7.C="#1n";7.E("17 : "+A(17)+"/"+A(1r),j,3r-j);7.G("17 : "+A(17)+"/"+A(1r),j,3r-j);7.y="#1u";7.C="#1n";7.E("15 : "+A(1V)+"/"+A(1o+1T),j,3w-j);7.G("15 : "+A(1V)+"/"+A(1o+1T),j,3w-j);7.y="#1u";7.C="#1n";7.E("3v : "+A(2j.2r(17/1r*2I)/1e)+"%",j,Z-j);7.G("3v : "+A(2j.2r(17/1r*2I)/1e)+"%",j,Z-j);7.1j()}u 3q(){7.1g();Q(b q=0;q<4;q++){Q(b i=S[q];i<1v[q];i++){9(t[B[q][i]]["1f"]>0&&g-t[B[q][i]]["1f"]>0){9(t[B[q][i]]["1a"]&&10[q]===B[q][i]){H(q,0);10[q]=-1;S[q]=i+1;1s}}9(10[q]!==B[q][i]){9(t[B[q][i]]["1a"])9(g-t[B[q][i]]["1W"]>m[5]){1U(g<t[B[q][i]]["1W"]);9(t[B[q][i]]["1f"]===0){S[q]=i+1;1s}o{t[B[q][i]]["1a"]=R}}}b L=0;b 1y="#1u";7.C="#1m";2B(q){W 1:L=Y;1y="#3u";I;W 2:L=x;1y="#3u";I;W 3:L=4B;I}9(!t[B[q][i]]["1a"]){1y="#1n";7.C="#1w";2B(q){W 1:1y="#4H";I;W 2:1y="#4I";I;W 3:I}}7.y=1y;7.1p=4;b X=2l(t[B[q][i]]["1W"]);9(X>Z+1q)I;9(t[B[q][i]]["1f"]!==0){b 1H=2l(t[B[q][i]]["1f"]);9(1H<0){1s}7.2h(L,Z-1H,Y,1H-X+1q);7.4s(L+2,Z-1H+2,Y-4,1H-X+1q-4)}o{9(X<0){1s}7.2h(L,Z-X,Y,1q)}}}7.1j()}u 3l(){7.1g();Q(b q=0;q<4;q++){9(1t[q]===0)1s;b 1z=0;9(1t[q]===-1)1z=Y;o 1z=(1t[q]-g)*Y/2A;9(1z<0){1t[q]=0;1s}b L=q*Y;7.y=2k;7.4q=1z/Y;7.2h(L+(Y-1z)/2,2e,1z,x);}7.1j()}u 3m(){9(15===0)z;7.1g();7.1P="1O 4u 1E";7.1A="1Q";7.1J="1l";7.y="#1u";7.C="#1n";7.1p=4;7.G(15,x,3p);7.E(15,x,3p);7.1j()}u 3n(){7.1g();7.1P="1O 4x 1E";7.1A="3E";7.1J="1l";7.y="#1u";7.C="#1n";7.1p=4;7.G(17,2i,j);7.E(17,2i,j);7.1j()}u 3S(){7.1g();7.1P="1O 4v 1E";7.1A="3E";7.1J="1l";7.y="#1u";7.C="#1n";7.1p=4;b 2K=2j.2r(17/1r*2I)/1e;7.G(2K+"%",2i,3D);7.E(2K+"%",2i,3D);7.1j()}u 3O(){9(1h==0)z;9(1h-g<0){1h=0;z}7.1g();7.1P="1O 4w 1E";7.1A="1Q";7.1J="1l";7.1p=4;2B(1R){W 0:7.y="#3H";7.C="#3G";7.E("2c",x,M);7.G("2c",x,M);I;W 1:7.y="#3z";7.C="#3y";7.E("2c",x,M);7.G("2c",x,M);I;W 2:7.y="#3x";7.C="#3C";7.E("3Q",x,M);7.G("3Q",x,M);I;W 3:7.y="#23";7.C="#24";7.E("3A",x,M);7.G("3A",x,M);I;W 4:7.y="#1m";7.C="#1w";7.E("3B",x,M);7.G("3B",x,M);I;W 5:7.y="#1m";7.C="#1w";7.E("1M",x,M);7.G("1M",x,M);I;W 6:7.y="#1m";7.C="#1w";7.E("1M",x,M);7.G("1M",x,M);I;3Y:}7.1j()}u 3M(){9(1h==0)z;9(1h-g<0){1h=0;z}9(1R==0)z;7.1g();7.1P="1O 4l 1E";7.1A="1Q";7.1J="1l";7.1p=2;9(2n){7.y="#23";7.C="#24";7.G("25",x,2g);7.E("25",x,2g)}o{7.y="#1m";7.C="#1w";7.G("3I",x,2g);7.E("3I",x,2g)}7.1j()}u 2v(){7.3F(0,0,c.2x,c.2a);3o();3q();3l();3m();3n();3S();3O();3M()}',62,306,'|||||||ctx||if||let|||||time|Key||50|content|st|timing||else||Col|||Objs|function|TimingPoints||300|fillStyle|return|String|LineQueue|strokeStyle|audio1|fillText|et|strokeText|HitEvent|break|Result|match||280|section|document|getElementById|for|false|LineQueueHead|value|tt|TPnums|case|pos|150|800|LineHold|BPMs|Number|window|MpB|Combo||Score|BPMnums|line|Available|regex|baseMpB|percent|100|EndTime|save|JudgeNew|true|restore|reader|bottom|FF0000|7F7F7F|HOnums|lineWidth|noteThick|EndScore|continue|keyLaserTime|FFFFFF|LineQueueTail|7F0000|ended|color|Width|textAlign|paused|number|Finded|Arial|scrollDuration|p1|pos2|early|textBaseline|style|setAttribute|MISS|preTime|bold|font|center|JudgeType|test|LN|MissEvent|MaxCombo|StartTime|SlowCount|keys|null|startTime|keyAsync|FastCount|0000FF|00007F|FAST|localFile||while|offset|height|BpB|PERFECT||500|tpos|192|fillRect|580|Math|linear|calcPOS|event|FSType|none|HitObjects|margin|round|param|display|measure|draw|param3|width|auto|param2|LaserTime|switch|processKeyup|play|callback|processKeydown|75|bindKey|10000|JudgeTime|Accuracy|right|0px|comment|top|70|60|data|onerror|addColorStop|lines|setTimeout|left|onload|keydown|error|removeEventListener|FileReader|removeKeyListener|text|addEventListener|align|result||audiodiv|1000|requestAnimFrame|position|absolute|baseBPM|parseOsuString|new|keyup|alert|files|startdiv|initKeyListener|draw_Lasers|draw_Combo|draw_Score|draw_Bar_Line|180|draw_Notes|670|605|SLOW|0BFFFF|ACC|735|00FF00|7F7F00|FFFF00|GOOD|BAD|007F00|80|end|clearRect|007F7F|00FFFF|LATE|540|215|pause|draw_FS|EndingScene|draw_Judge|keyCode|GREAT|475|draw_ACC|410|345|200|webkitRequestAnimationFrame|2000|default|123||requestAnimationFrame|preventDefault|ontouchmove|readOsu|currentTime|oRequestAnimationFrame|mozRequestAnimationFrame|msRequestAnimaitonFrame|strict|split|_|forEach|getContext|9ED3FF|850|rgba|createLinearGradient|161|audioPlayer|length|20px|74|myCanvas|const|68|globalAlpha|600|strokeRect|scrollDurationInput|80px|25px|90px|40px|inputOffset|50px|bt_start_onclick|450|canvasdiv|3F3F3F|readAsDataURL|start|600px|0b7f7f|0B7F7F|floor|512|readAsText|use|uploadOsu|osudiv|this|UTF|60000|target|src|uploadAudio|readAudio'.split('|'),0,{}))
+"use strict";
+let preTime=2000;
+let time=0;
+let content;
+let TPnums=0;
+let BPMnums=0;
+let BPMs={};
+let Objs={};
+let HOnums=0;
+let scrollDuration=500;
+let MpB=0;
+let baseMpB=0;
+let percent=100;
+let BpB=4;
+let measure=BpB*MpB;
+let p=0;
+let noteThick=60;
+let LineQueue=[{},{},{},{}],LineQueueTail=[0,0,0,0],LineQueueHead=[0,0,0,0];
+let timing=[16,37,70,100,123,161];
+let audio1=document.getElementById("audioPlayer");
+let keyAsync=[false,false,false,false];
+let keyLaserTime=[0,0,0,0];
+let JudgeTime=500;
+let JudgeNew=0;
+let JudgeType=0;
+let FSType=false;
+let LN=0;
+let Score=0,EndScore=0;
+let Combo=0;
+let LineHold=[-1,-1,-1,-1];
+let LaserTime=150;
+let offset=-40;
+let Result=[0,0,0,0,0,0,0];
+let FastCount=0,SlowCount=0,MaxCombo=0;
+const bindKey=[68,70,74,75];
+let c=document.getElementById("myCanvas");
+let ctx=c.getContext("2d");
+let linear = ctx.createLinearGradient(75,850,75,500);
+linear.addColorStop(0,"#9ED3FF");
+linear.addColorStop(1,"rgba(0,0,0,0)");
+function parseOsuString(data) {
+    let regex = {
+        section: /^\s*\[\s*([^\]]*)\s*\]\s*$/,
+        param: /^\s*([\w.\-_]+)\s*:\s*(.*?)\s*$/,
+        param2: /^\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*$/,
+        param3: /^\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*/,
+        comment: /^\s*\/\/.*$/
+    };
+    let value = {};
+    let lines = data.split(/\r\n|\r|\n/);
+    let section = null;
+    lines.forEach(function(line){
+        if(regex.comment.test(line)){
+            return;
+        }else if(regex.param.test(line)){
+            let match = line.match(regex.param);
+            if(section){
+                value[section][match[1]] = match[2];
+            }else{
+                value[match[1]] = match[2];
+            }
+        }else if(regex.param2.test(line)){
+            let match = line.match(regex.param2);
+            value[section][TPnums]={};
+            for(let i=0;i<8;i++)
+                if(section){
+                    value[section][TPnums][i] = Number(match[1+i]);
+                }
+            TPnums++;
+        }else if(regex.param3.test(line)){
+            let match = line.match(regex.param3);
+            value[section][HOnums]={};
+            for(let i=0;i<6;i++)
+                if(section){
+                    value[section][HOnums][i] = Number(match[1+i]);
+                }
+            HOnums++;
+        }else if(regex.section.test(line)){
+            let match = line.match(regex.section);
+            value[match[1]] = {};
+            section = match[1];
+        }else if(line.length === 0 && section){
+            section = null;
+        };
+    });
+    return value;
+}
+window.requestAnimFrame = (function (callback) {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimaitonFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000/60);
+        };
+})();
+document.ontouchmove = function (e) {
+    e.preventDefault();
+    return false;
+}
+function startTime() {
+    if(preTime>0){
+        time=-preTime+offset;
+        draw();
+        preTime-=5;
+        setTimeout(startTime,5);
+        return;
+    }
+    if(preTime===0){
+        audio1.play();
+        preTime=-1;
+    }
+    if(audio1.ended){
+        removeKeyListener();
+        EndingScene();
+    }
+    if(audio1.ended||audio1.paused)return;
+    time=audio1.currentTime * 1000+offset;
+    while(p<TPnums-1&&time>=content["TimingPoints"][p+1][0])p++;
+    draw();
+    if(!(audio1.ended||audio1.paused))requestAnimFrame(startTime);
+
+}
+function readOsu() {
+    let localFile = document.getElementById("uploadOsu").files[0];
+    let reader = new FileReader();
+    reader.onload = function (f) {
+        document.getElementById("osudiv").setAttribute("style","display:none;");
+        document.getElementById("audiodiv").setAttribute("style","text-align: center; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; height: 0px;");
+        content = this.result;
+        content = parseOsuString(content);
+        for(let i=0;i<TPnums;i++)if(content["TimingPoints"][i][1]<0)content["TimingPoints"][i][8]=BPMnums-1;else{
+            content["TimingPoints"][i][8]=BPMnums;
+            BPMs[BPMnums]={};
+            BPMs[BPMnums][0]=content["TimingPoints"][i][0];
+            BPMs[BPMnums][1]=content["TimingPoints"][i][1];
+            BPMs[BPMnums][2]=content["TimingPoints"][i][2];
+            BPMnums++;
+        }
+        for(let i=0;i<HOnums;i++){
+            Objs[i]={};
+            Objs[i]["Key"]=Math.floor(content["HitObjects"][i][0]/(512/4));
+			if(Objs[i]["Key"]>=4)Objs[i]["Key"]=3;
+            Objs[i]["StartTime"]=content["HitObjects"][i][2];
+            Objs[i]["EndTime"]=content["HitObjects"][i][5];
+            if(Objs[i]["EndTime"]>0)LN++;
+            Objs[i]["Available"]=true;
+            LineQueue[Objs[i]["Key"]][LineQueueTail[Objs[i]["Key"]]++]=i;
+        }
+        EndScore=(LN+HOnums)*5;
+    }
+    reader.onerror = function (event) {
+        alert("error");
+    }
+    reader.readAsText(localFile, "UTF-8");
+}
+function readAudio() {
+    let localFile = document.getElementById("uploadAudio").files[0];
+    let reader = new FileReader();
+    let content;
+    reader.onload = function (event) {
+        content = event.target.result;
+        audio1.src = content;
+        audio1.play();
+        audio1.pause();
+        document.getElementById("audiodiv").setAttribute("style","display: none;");
+        document.getElementById("startdiv").setAttribute("style","text-align: center; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; height: 0px;");
+    }
+    reader.onerror = function (event) {
+        alert("error");
+    }
+    content = reader.readAsDataURL(localFile);
+}
+function initKeyListener() {
+    window.addEventListener("keydown",processKeydown, true);
+    window.addEventListener("keyup", processKeyup, true);
+}
+function removeKeyListener() {
+    window.removeEventListener("keydown",processKeydown, true);
+    window.removeEventListener("keyup", processKeyup, true);
+}
+function calcPOS(tt) {
+    let p1=p;
+    while(p1>0&&tt<content["TimingPoints"][p1][0])p1--;
+    tt=Number(tt);
+    let tpos=0;
+    let pos=0;
+    let MpB=0;
+    let c=0;
+    for(let i=p1;i<TPnums;i++){
+        MpB=BPMs[content["TimingPoints"][i][8]][1];
+        if(content["TimingPoints"][i][1]>0)percent=1;else percent=-content["TimingPoints"][i][1]/100;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>time)
+            c=(time-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        else
+            c=(content["TimingPoints"][i+1][0]-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        tpos=tpos+c;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>time)break;
+    }
+    for(let i=p1;i<TPnums;i++){
+        MpB=BPMs[content["TimingPoints"][i][8]][1];
+        if(content["TimingPoints"][i][1]>0)percent=1;else percent=-content["TimingPoints"][i][1]/100;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>tt)
+            c=(tt-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        else
+            c=(content["TimingPoints"][i+1][0]-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        pos=pos+c;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>tt)break;
+    }
+
+    return Number(pos-tpos);
+}
+function bt_start_onclick() {
+    document.getElementById("startdiv").setAttribute("style","display: none;");
+    document.getElementById("canvasdiv").setAttribute("style","width: 600px; margin:0 auto;");
+    scrollDuration=Number(document.getElementById("scrollDurationInput").value);
+    offset=Number(document.getElementById("inputOffset").value);
+    if(document.getElementById("baseBPM").value!=="")baseMpB=60000/Number(document.getElementById("baseBPM").value);else{
+        baseMpB=Number(content["TimingPoints"][0][1]);
+        for(let i=1;i<TPnums;i++)if(Number(content["TimingPoints"][i][1])>0)baseMpB=(baseMpB<Number(content["TimingPoints"][i][1])?baseMpB:Number(content["TimingPoints"][i][1]));
+    }
+    initKeyListener();
+    startTime();
+}
+function MissEvent(early) {
+    Combo=0;
+    FSType=early;
+    JudgeType=6;
+    Result[6]++;
+    JudgeNew=time+JudgeTime;
+    if(early)FastCount++;else SlowCount++;
+}
+function HitEvent(Key, number, early) {
+    if(number<5)Combo++;else Combo=0;
+    if(Combo>MaxCombo)MaxCombo=Combo;
+    Score+=5-number;
+    FSType=early;
+    JudgeType=number;
+    if(number!==0)
+        if(early)FastCount++;else SlowCount++;
+    Result[number]++;
+    JudgeNew=time+JudgeTime;
+}
+function processKeydown(e) {
+    let keys = e.keyCode,Key=0,Finded=false;
+    if(null != audio1&&(!audio1.ended)&&time>0) {
+        if(keys===27){
+            audio1.paused?audio1.play():audio1.pause();
+            if(!(audio1.ended||audio1.paused))startTime();
+        }
+    }
+    for(let i=0;i<4;i++) {
+        if (bindKey[i] === keys && !keyAsync[i]) {
+            keyAsync[i] = true;
+            keyLaserTime[i] = -1;
+            Finded=true;
+            Key=i;
+            break;
+        }
+    }
+    if(time<0)return;
+    if(!Finded)return;
+    if(null != audio1&&!audio1.ended&&!audio1.paused) {
+        LineHold[Key]=-1;
+        let i=LineQueueHead[Key];
+        while(i<LineQueueTail[Key]&&!Objs[LineQueue[Key][i]]["Available"])i++;
+        if (i >= LineQueueTail[Key]) return;
+        let st = Objs[LineQueue[Key][i]]["StartTime"],
+            et = Objs[LineQueue[Key][i]]["EndTime"];
+        if (time + timing[5] < st) return;
+
+        if (et === 0) {
+            if (st < time - timing[5]) {
+                MissEvent(time<st);
+                LineQueueHead[Key]=i+1;
+                return;
+            }
+            if (time - timing[0] <= st && st <= time + timing[0]) {
+                HitEvent(Key, 0);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[1] <= st && st <= time + timing[1]) {
+                HitEvent(Key, 1, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[2] <= st && st <= time + timing[2]) {
+                HitEvent(Key, 2, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[3] <= st && st <= time + timing[3]) {
+                HitEvent(Key, 3, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[4] <= st && st <= time + timing[4]) {
+                HitEvent(Key, 4, time<st);
+                LineQueueHead[Key]=i+1;
+            } else {
+                HitEvent(Key, 5, time<st);
+                LineQueueHead[Key]=i+1;
+            }
+        } else if(Objs[LineQueue[Key][i]]["Available"]){
+            if (st < time - timing[5]) {
+                MissEvent(time<st);
+                LineHold[Key]=-1;
+                Objs[LineQueue[Key][i]]["Available"] = false;
+                return;
+            }
+            LineHold[Key]=LineQueue[Key][i];
+            if (time - timing[0] <= st && st <= time + timing[0]) {
+                HitEvent(Key, 0, time<st);
+            } else if (time - timing[1] <= st && st <= time + timing[1]) {
+                HitEvent(Key, 1, time<st);
+            } else if (time - timing[2] <= st && st <= time + timing[2]) {
+                HitEvent(Key, 2, time<st);
+            } else if (time - timing[3] <= st && st <= time + timing[3]) {
+                HitEvent(Key, 3, time<st);
+            } else if (time - timing[4] <= st && st <= time + timing[4]) {
+                HitEvent(Key, 4, time<st);
+            } else {
+                HitEvent(Key, 5, time<st);
+            }
+        }
+    }
+}
+function processKeyup(e){
+    let keys = e.keyCode,Key=0,Finded=false;
+    for(let i=0;i<4;i++) {
+        if (bindKey[i] === keys && keyAsync[i]) {
+            keyAsync[i] = false;
+            keyLaserTime[i] = LaserTime+time;
+            Finded=true;
+            Key=i;
+            break;
+        }
+    }
+    if(time<0)return;
+    if(!Finded)return;
+    if(null != audio1&&!audio1.ended&&!audio1.paused) {
+        let i=LineQueueHead[Key];
+        while(i<LineQueueTail[Key]&&!Objs[LineQueue[Key][i]]["Available"])i++;
+        if (i >= LineQueueTail[Key]) return;
+        if (LineHold[Key] === -1) return;
+        if (LineQueue[Key][i] !== LineHold[Key]) {
+            LineHold[Key] = -1;
+            return;
+        }
+        let et = Objs[LineQueue[Key][i]]["EndTime"];
+        LineHold[Key] = -1;
+        Objs[LineQueue[Key][i]]["Available"] = false;
+        if (time + timing[5] < et) {
+            MissEvent(time<et);
+
+            return;
+        }else if (time >= et) {
+            HitEvent(Key, 0, time<et);
+            return;
+        }
+        if (time - timing[0] <= et && et <= time + timing[0]) {
+            HitEvent(Key, 0, time<et);
+        } else if (time - timing[1] <= et && et <= time + timing[1]) {
+            HitEvent(Key, 1, time<et);
+        } else if (time - timing[2] <= et && et <= time + timing[2]) {
+            HitEvent(Key, 2, time<et);
+        } else if (time - timing[3] <= et && et <= time + timing[3]) {
+            HitEvent(Key, 3, time<et);
+        } else if (time - timing[4] <= et && et <= time + timing[4]) {
+            HitEvent(Key, 4, time<et);
+        } else {
+            HitEvent(Key, 5, time<et);
+        }
+
+    }
+}
+function draw_Bar_Line() {
+    ctx.save();
+    for(let i=content["TimingPoints"][p][8];i<BPMnums;i++){
+        BpB=BPMs[i][2];
+        MpB=BPMs[i][1];
+        measure=BpB*MpB;
+        let a=false;
+        for(let tt=BPMs[i][0]; i===BPMnums-1||(i<BPMnums-1&&tt<BPMs[i+1][0]); tt=tt+measure){
+            a=true;
+            if(tt<time)continue;
+            let pos=calcPOS(tt);
+            if(pos>800+noteThick)break;
+            ctx.fillStyle="#FF0000";
+            ctx.fillRect(0,800-pos+noteThick,600,2);
+            a=false;
+        }
+        if(a)break;
+    }
+    ctx.restore();
+}
+function EndingScene() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.save();
+    ctx.font = "bold 50px Arial";
+    ctx.textAlign = "start";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=2;
+    ctx.fillStyle = "#00FFFF";
+    ctx.strokeStyle = "#007F7F";
+    ctx.fillText("300 : "+String(Result[0]), 50, 150-50);
+    ctx.strokeText("300 : "+String(Result[0]), 50, 150-50);
+    ctx.fillStyle = "#FFFF00";
+    ctx.strokeStyle = "#7F7F00";
+    ctx.fillText("300 : "+String(Result[1]), 50, 215-50);
+    ctx.strokeText("300 : "+String(Result[1]), 50, 215-50);
+    ctx.fillStyle = "#00FF00";
+    ctx.strokeStyle = "#007F00";
+    ctx.fillText("200 : "+String(Result[2]), 50, 280-50);
+    ctx.strokeText("200 : "+String(Result[2]), 50, 280-50);
+    ctx.fillStyle = "#0000FF";
+    ctx.strokeStyle = "#00007F";
+    ctx.fillText("100 : "+String(Result[3]), 50, 345-50);
+    ctx.strokeText("100 : "+String(Result[3]), 50, 345-50);
+    ctx.fillStyle = "#7F7F7F";
+    ctx.strokeStyle = "#3F3F3F";
+    ctx.fillText("50 : "+String(Result[4]), 50, 410-50);
+    ctx.strokeText("50 : "+String(Result[4]), 50, 410-50);
+    ctx.fillStyle = "#FF0000";
+    ctx.strokeStyle = "#7F0000";
+    ctx.fillText("MISS : "+String(Result[5]+Result[6]), 50, 475-50);
+    ctx.strokeText("MISS : "+String(Result[5]+Result[6]), 50, 475-50);
+    ctx.fillStyle = "#0000FF";
+    ctx.strokeStyle = "#00007F";
+    ctx.fillText("FAST : "+String(FastCount), 50, 540-50);
+    ctx.strokeText("FAST : "+String(FastCount), 50, 540-50);
+    ctx.fillStyle = "#FF0000";
+    ctx.strokeStyle = "#7F0000";
+    ctx.fillText("SLOW : "+String(SlowCount), 50, 605-50);
+    ctx.strokeText("SLOW : "+String(SlowCount), 50, 605-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("Score : "+String(Score)+"/"+String(EndScore), 50, 670-50);
+    ctx.strokeText("Score : "+String(Score)+"/"+String(EndScore), 50, 670-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("Combo : "+String(MaxCombo)+"/"+String(HOnums+LN), 50, 735-50);
+    ctx.strokeText("Combo : "+String(MaxCombo)+"/"+String(HOnums+LN), 50, 735-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("ACC : "+String(Math.round(Score/EndScore*10000)/100)+"%", 50, 800-50);
+    ctx.strokeText("ACC : "+String(Math.round(Score/EndScore*10000)/100)+"%", 50, 800-50);
+    ctx.restore();
+}
+function draw_Notes() {
+    ctx.save();
+    for(let Col=0;Col<4;Col++){
+        for(let i=LineQueueHead[Col];i<LineQueueTail[Col];i++){
+
+            if(Objs[LineQueue[Col][i]]["EndTime"]>0&&time-Objs[LineQueue[Col][i]]["EndTime"]>0){
+                if(Objs[LineQueue[Col][i]]["Available"]&&LineHold[Col]===LineQueue[Col][i]){
+                    HitEvent(Col, 0);
+                    LineHold[Col]=-1;
+                    LineQueueHead[Col]=i+1;
+                    continue;
+                }
+            }
+            if(LineHold[Col]!==LineQueue[Col][i]) {
+                if(Objs[LineQueue[Col][i]]["Available"])
+                    if (time - Objs[LineQueue[Col][i]]["StartTime"] > timing[5]) {
+                        MissEvent(time<Objs[LineQueue[Col][i]]["StartTime"]);
+                        if (Objs[LineQueue[Col][i]]["EndTime"] === 0) {
+                            LineQueueHead[Col] = i + 1;
+                            continue;
+                        } else {
+                            Objs[LineQueue[Col][i]]["Available"] = false;
+                        }
+
+                    }
+            }
+            let L=0;
+            let color="#FFFFFF";
+            ctx.strokeStyle="#FF0000";
+            switch(Col){
+                case 1:
+                    L=150;
+                    color="#0BFFFF";
+                    break;
+                case 2:
+                    L=300;
+                    color="#0BFFFF";
+                    break;
+                case 3:
+                    L=450;
+                    break;
+            }
+            if(!Objs[LineQueue[Col][i]]["Available"]){
+                color="#7F7F7F";
+                ctx.strokeStyle="#7F0000";
+                switch(Col){
+                    case 1:
+                        color="#0b7f7f";
+                        break;
+                    case 2:
+                        color="#0B7F7F";
+                        break;
+                    case 3:
+                        break;
+                }
+            }
+            ctx.fillStyle=color;
+
+            ctx.lineWidth=4;
+            let pos=calcPOS(Objs[LineQueue[Col][i]]["StartTime"]);
+            if(pos>800+noteThick)break;
+            if(Objs[LineQueue[Col][i]]["EndTime"]!==0){
+                let pos2=calcPOS(Objs[LineQueue[Col][i]]["EndTime"]);
+                if(pos2<0){
+                    continue;
+                }
+                ctx.fillRect(L,800-pos2,150,pos2-pos+noteThick);
+                ctx.strokeRect(L+2,800-pos2+2,150-4,pos2-pos+noteThick-4);
+
+            }else{
+                if(pos<0){
+                    continue;
+                }
+                ctx.fillRect(L,800-pos,150,noteThick);
+            }
+        }
+    }
+    ctx.restore();
+}
+function draw_Lasers() {
+    ctx.save();
+    for(let Col=0;Col<4;Col++){
+        if(keyLaserTime[Col]===0)continue;
+        let Width=0;
+        if(keyLaserTime[Col]===-1)Width=150;else
+            Width=(keyLaserTime[Col]-time)*150/LaserTime;
+        if(Width<0){
+            keyLaserTime[Col]=0;
+            continue;
+        }
+        let L=Col*150;
+        ctx.fillStyle=linear;
+        ctx.globalAlpha=Width/150;
+        ctx.fillRect(L+(150-Width)/2,500,Width,300);
+        //ctx.globalAlpha=1;
+    }
+    ctx.restore();
+}
+function draw_Combo() {
+    if(Combo===0)return;
+    ctx.save();
+    ctx.font = "bold 80px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    ctx.strokeText(Combo, 300, 180);
+    ctx.fillText(Combo, 300, 180);
+    ctx.restore();
+}
+function draw_Score() {
+    ctx.save();
+    ctx.font = "bold 40px Arial";
+    ctx.textAlign = "end";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    ctx.strokeText(Score, 580, 50);
+    ctx.fillText(Score, 580, 50);
+    ctx.restore();
+}
+function draw_ACC() {
+    ctx.save();
+    ctx.font = "bold 25px Arial";
+    ctx.textAlign = "end";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    let Accuracy=Math.round(Score/EndScore*10000)/100;
+    ctx.strokeText(Accuracy+"%", 580, 80);
+    ctx.fillText(Accuracy+"%", 580, 80);
+    ctx.restore();
+}
+function draw_Judge() {
+    if(JudgeNew==0)return;
+    if(JudgeNew-time<0){
+        JudgeNew=0;
+        return;
+    }
+    ctx.save();
+    ctx.font = "bold 90px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=4;
+    switch(JudgeType){
+        case 0:
+            ctx.fillStyle = "#00FFFF";
+            ctx.strokeStyle = "#007F7F";
+            ctx.fillText("PERFECT", 300, 280);
+            ctx.strokeText("PERFECT", 300, 280);
+            break;
+        case 1:
+            ctx.fillStyle = "#FFFF00";
+            ctx.strokeStyle = "#7F7F00";
+            ctx.fillText("PERFECT", 300, 280);
+            ctx.strokeText("PERFECT", 300, 280);
+            break;
+        case 2:
+            ctx.fillStyle = "#00FF00";
+            ctx.strokeStyle = "#007F00";
+            ctx.fillText("GREAT", 300, 280);
+            ctx.strokeText("GREAT", 300, 280);
+            break;
+        case 3:
+            ctx.fillStyle = "#0000FF";
+            ctx.strokeStyle = "#00007F";
+            ctx.fillText("GOOD", 300, 280);
+            ctx.strokeText("GOOD", 300, 280);
+            break;
+        case 4:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("BAD", 300, 280);
+            ctx.strokeText("BAD", 300, 280);
+            break;
+        case 5:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("MISS", 300, 280);
+            ctx.strokeText("MISS", 300, 280);
+            break;
+        case 6:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("MISS", 300, 280);
+            ctx.strokeText("MISS", 300, 280);
+            break;
+        default:
+    }
+    ctx.restore();
+}
+function draw_FS() {
+    if(JudgeNew==0)return;
+    if(JudgeNew-time<0){
+        JudgeNew=0;
+        return;
+    }
+    if(JudgeType==0)return;
+    ctx.save();
+    ctx.font = "bold 20px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=2;
+    if(FSType) {
+        ctx.fillStyle = "#0000FF";
+        ctx.strokeStyle = "#00007F";
+        ctx.strokeText("FAST", 300, 192);
+        ctx.fillText("FAST", 300, 192);
+    }else{
+        ctx.fillStyle = "#FF0000";
+        ctx.strokeStyle = "#7F0000";
+        ctx.strokeText("LATE", 300, 192);
+        ctx.fillText("LATE", 300, 192);
+    }
+
+    ctx.restore();
+}
+function draw() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    draw_Bar_Line();
+    draw_Notes();
+    draw_Lasers();
+    draw_Combo();
+    draw_Score();
+    draw_ACC();
+    draw_Judge();
+    draw_FS();
+}

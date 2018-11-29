@@ -1,1 +1,715 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('"59 45";b 1N=47;b g=0;b j;b T=0;b K=0;b R={};b k={};b 1d=0;b 1R=2a;b 13=0;b 1f=0;b 1m=1i;b 2m=4;b 2G=2m*13;b p=0;b 1w=3v;b v=[{},{},{},{}],1s=[0,0,0,0],U=[0,0,0,0];b o=[16,37,3L,1i,49,48];b z=I.J("4e");b 26=[S,S,S,S];b 1C=[0,0,0,0];b 2E=2a;b 1g=0;b 1X=0;b 2t=S;b 1v=0;b 12=0,1q=0;b 14=0;b 1b=[-1,-1,-1,-1];b 2B=10;b 2q=-40;b M=[0,0,0,0,0,0,0];b 21=0,22=0,23=0;4b 2x=[4c,3L,4w,2y];b c=I.J("4x");b 7=c.4u("2d");b 29=7.4h(2y,4f,2y,2a);29.3B(0,"#4g");29.3B(1,"4k(0,0,0,0)");u 2O(35){b 1e={Q:/^\\s*\\[\\s*([^\\]]*)\\s*\\]\\s*$/,2z:/^\\s*([\\w.\\-4l]+)\\s*:\\s*(.*?)\\s*$/,2F:/^\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*$/,2C:/^\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*,\\s*([?.\\-\\d]+)\\s*/,38:/^\\s*\\/\\/.*$/};b V={};b 3a=35.4n(/\\r\\n|\\r|\\n/);b Q=1y;3a.4m(u(19){9(1e.38.1V(19)){y}l 9(1e.2z.1V(19)){b P=19.P(1e.2z);9(Q){V[Q][P[1]]=P[2]}l{V[P[1]]=P[2]}}l 9(1e.2F.1V(19)){b P=19.P(1e.2F);V[Q][T]={};O(b i=0;i<8;i++)9(Q){V[Q][T][i]=15(P[1+i])}T++}l 9(1e.2C.1V(19)){b P=19.P(1e.2C);V[Q][1d]={};O(b i=0;i<6;i++)9(Q){V[Q][1d][i]=15(P[1+i])}1d++}l 9(1e.Q.1V(19)){b P=19.P(1e.Q);V[P[1]]={};Q=P[1]}l 9(19.4j===0&&Q){Q=1y}});y V}X.3t=(u(2A){y X.4i||X.4o||X.4v||X.4t||X.4q||u(2A){X.3w(2A,3s/3v)}})();I.4p=u(e){e.4s();y S}u 24(){9(1N>0){g=-1N+2q;2T();1N-=5;3w(24,5);y}9(1N===0){z.2o();1N=-1}9(z.1B){3d();32()}9(z.1B||z.1H)y;g=z.4r*3s+2q;2n(p<T-1&&g>=j["t"][p+1][0])p++;2T();9(!(z.1B||z.1H))3t(24)}u 46(){b 2k=I.J("4d").3j[0];b 1r=2l 3i();1r.3k=u(f){I.J("3u").1h("1j","1Y:1W;");I.J("2N").1h("1j","2Q-2R: 1M; 2J: 2I; 2e: 2h; 2H: 0; 2M: 0; 2L: 0; 1l: 0; 20: 2D;");j=4a.3m;j=2O(j);O(b i=0;i<T;i++)9(j["t"][i][1]<0)j["t"][i][8]=K-1;l{j["t"][i][8]=K;R[K]={};R[K][0]=j["t"][i][0];R[K][1]=j["t"][i][1];R[K][2]=j["t"][i][2];K++}O(b i=0;i<1d;i++){k[i]={};k[i]["h"]=1Z.3p(j["1E"][i][0]/(3n/4));9(k[i]["h"]>=4)k[i]["h"]=3;k[i]["1S"]=j["1E"][i][2];k[i]["1c"]=j["1E"][i][5];9(k[i]["1c"]>0)1v++;k[i]["17"]=18;v[k[i]["h"]][1s[k[i]["h"]]++]=i}1q=(1v+1d)*5}1r.3l=u(2r){2V("2U")}1r.44(2k,"43-8")}u 4y(){b 2k=I.J("4Z").3j[0];b 1r=2l 3i();b j;1r.3k=u(2r){j=2r.4Y.3m;z.52=j;z.2o();z.2Y();I.J("2N").1h("1j","1Y: 1W;");I.J("2P").1h("1j","2Q-2R: 1M; 2J: 2I; 2e: 2h; 2H: 0; 2M: 0; 2L: 0; 1l: 0; 20: 2D;")}1r.3l=u(2r){2V("2U")}j=1r.51(2k)}u 3r(){X.3e("3f",2w,18);X.3e("3g",2v,18)}u 3d(){X.3h("3f",2w,18);X.3h("3g",2v,18)}u 2c(Z){b 1K=p;2n(1K>0&&Z<j["t"][1K][0])1K--;Z=15(Z);b 2i=0;b W=0;b 13=0;b c=0;O(b i=1K;i<T;i++){13=R[j["t"][i][8]][1];9(j["t"][i][1]>0)1m=1;l 1m=-j["t"][i][1]/1i;9(i===T-1||j["t"][i+1][0]>g)c=(g-j["t"][i][0])*11/(1R*13*1m/1f);l c=(j["t"][i+1][0]-j["t"][i][0])*11/(1R*13*1m/1f);2i=2i+c;9(i===T-1||j["t"][i+1][0]>g)H}O(b i=1K;i<T;i++){13=R[j["t"][i][8]][1];9(j["t"][i][1]>0)1m=1;l 1m=-j["t"][i][1]/1i;9(i===T-1||j["t"][i+1][0]>Z)c=(Z-j["t"][i][0])*11/(1R*13*1m/1f);l c=(j["t"][i+1][0]-j["t"][i][0])*11/(1R*13*1m/1f);W=W+c;9(i===T-1||j["t"][i+1][0]>Z)H}y 15(W-2i)}u 4T(){I.J("2P").1h("1j","1Y: 1W;");I.J("4W").1h("1j","2S: 4V; 2e:0 2h;");1R=15(I.J("58").V);2q=15(I.J("54").V);9(I.J("3o").V!=="")1f=57/15(I.J("3o").V);l{1f=15(j["t"][0][1]);O(b i=1;i<T;i++)9(15(j["t"][i][1])>0)1f=(1f<15(j["t"][i][1])?1f:15(j["t"][i][1]))}3r();24()}u 25(1O){14=0;2t=1O;1X=6;M[6]++;1g=g+2E;9(1O)21++;l 22++}u G(h,1Q,1O){9(1Q<5)14++;l 14=0;9(14>23)23=14;12+=5-1Q;2t=1O;1X=1Q;9(1Q!==0)9(1O)21++;l 22++;M[1Q]++;1g=g+2E}u 2w(e){b 28=e.31,h=0,1P=S;9(1y!=z&&(!z.1B)&&g>0){9(28===27){z.1H?z.2o():z.2Y();9(!(z.1B||z.1H))24()}}O(b i=0;i<4;i++){9(2x[i]===28&&!26[i]){26[i]=18;1C[i]=-1;1P=18;h=i;H}}9(g<0)y;9(!1P)y;9(1y!=z&&!z.1B&&!z.1H){1b[h]=-1;b i=U[h];2n(i<1s[h]&&!k[v[h][i]]["17"])i++;9(i>=1s[h])y;b m=k[v[h][i]]["1S"],D=k[v[h][i]]["1c"];9(g+o[5]<m)y;9(D===0){9(m<g-o[5]){25(g<m);U[h]=i+1;y}9(g-o[0]<=m&&m<=g+o[0]){G(h,0);U[h]=i+1}l 9(g-o[1]<=m&&m<=g+o[1]){G(h,1,g<m);U[h]=i+1}l 9(g-o[2]<=m&&m<=g+o[2]){G(h,2,g<m);U[h]=i+1}l 9(g-o[3]<=m&&m<=g+o[3]){G(h,3,g<m);U[h]=i+1}l 9(g-o[4]<=m&&m<=g+o[4]){G(h,4,g<m);U[h]=i+1}l{G(h,5,g<m);U[h]=i+1}}l 9(k[v[h][i]]["17"]){9(m<g-o[5]){25(g<m);1b[h]=-1;k[v[h][i]]["17"]=S;y}1b[h]=v[h][i];9(g-o[0]<=m&&m<=g+o[0]){G(h,0,g<m)}l 9(g-o[1]<=m&&m<=g+o[1]){G(h,1,g<m)}l 9(g-o[2]<=m&&m<=g+o[2]){G(h,2,g<m)}l 9(g-o[3]<=m&&m<=g+o[3]){G(h,3,g<m)}l 9(g-o[4]<=m&&m<=g+o[4]){G(h,4,g<m)}l{G(h,5,g<m)}}}}u 2v(e){b 28=e.31,h=0,1P=S;O(b i=0;i<4;i++){9(2x[i]===28&&26[i]){26[i]=S;1C[i]=2B+g;1P=18;h=i;H}}9(g<0)y;9(!1P)y;9(1y!=z&&!z.1B&&!z.1H){b i=U[h];2n(i<1s[h]&&!k[v[h][i]]["17"])i++;9(i>=1s[h])y;9(1b[h]===-1)y;9(v[h][i]!==1b[h]){1b[h]=-1;y}b D=k[v[h][i]]["1c"];1b[h]=-1;k[v[h][i]]["17"]=S;9(g+o[5]<D){25(g<D);y}l 9(g>=D){G(h,0,g<D);y}9(g-o[0]<=D&&D<=g+o[0]){G(h,0,g<D)}l 9(g-o[1]<=D&&D<=g+o[1]){G(h,1,g<D)}l 9(g-o[2]<=D&&D<=g+o[2]){G(h,2,g<D)}l 9(g-o[3]<=D&&D<=g+o[3]){G(h,3,g<D)}l 9(g-o[4]<=D&&D<=g+o[4]){G(h,4,g<D)}l{G(h,5,g<D)}}}u 3C(){7.1k();O(b i=j["t"][p][8];i<K;i++){2m=R[i][2];13=R[i][1];2G=2m*13;b a=S;O(b Z=R[i][0];i===K-1||(i<K-1&&Z<R[i+1][0]);Z=Z+2G){a=18;9(Z<g)1t;b W=2c(Z);9(W>11+1w)H;7.B="#1o";7.2b(0,11-W+1w,4C,2);a=S}9(a)H}7.1n()}u 32(){7.3E(0,0,c.2S,c.20);7.1k();7.1T="1U 4Q 1G";7.1F="4K";7.1L="1l";7.1x=2;7.B="#3F";7.C="#3K";7.E("x : "+A(M[0]),50,10-50);7.F("x : "+A(M[0]),50,10-50);7.B="#3H";7.C="#3I";7.E("x : "+A(M[1]),50,33-50);7.F("x : "+A(M[1]),50,33-50);7.B="#3y";7.C="#3J";7.E("2K : "+A(M[2]),50,N-50);7.F("2K : "+A(M[2]),50,N-50);7.B="#2p";7.C="#2s";7.E("1i : "+A(M[3]),50,3V-50);7.F("1i : "+A(M[3]),50,3V-50);7.B="#1p";7.C="#4J";7.E("50 : "+A(M[4]),50,3R-50);7.F("50 : "+A(M[4]),50,3R-50);7.B="#1o";7.C="#1z";7.E("1I : "+A(M[5]+M[6]),50,3Q-50);7.F("1I : "+A(M[5]+M[6]),50,3Q-50);7.B="#2p";7.C="#2s";7.E("2u : "+A(21),50,3T-50);7.F("2u : "+A(21),50,3T-50);7.B="#1o";7.C="#1z";7.E("3O : "+A(22),50,42-50);7.F("3O : "+A(22),50,42-50);7.B="#1D";7.C="#1p";7.E("12 : "+A(12)+"/"+A(1q),50,3X-50);7.F("12 : "+A(12)+"/"+A(1q),50,3X-50);7.B="#1D";7.C="#1p";7.E("14 : "+A(23)+"/"+A(1d+1v),50,3Z-50);7.F("14 : "+A(23)+"/"+A(1d+1v),50,3Z-50);7.B="#1D";7.C="#1p";7.E("3Y : "+A(1Z.2Z(12/1q*2W)/1i)+"%",50,11-50);7.F("3Y : "+A(1Z.2Z(12/1q*2W)/1i)+"%",50,11-50);7.1n()}u 3W(){7.1k();O(b q=0;q<4;q++){O(b i=U[q];i<1s[q];i++){9(k[v[q][i]]["1c"]>0&&g-k[v[q][i]]["1c"]>0){9(k[v[q][i]]["17"]&&1b[q]===v[q][i]){G(q,0);1b[q]=-1;U[q]=i+1;1t}}9(1b[q]!==v[q][i]){9(k[v[q][i]]["17"])9(g-k[v[q][i]]["1S"]>o[5]){25(g<k[v[q][i]]["1S"]);9(k[v[q][i]]["1c"]===0){U[q]=i+1;1t}l{k[v[q][i]]["17"]=S}}}b L=0;b 1u="#1D";7.C="#1o";30(q){Y 1:L=10;1u="#3x";H;Y 2:L=x;1u="#3x";H;Y 3:L=4M;H}9(!k[v[q][i]]["17"]){1u="#1p";7.C="#1z";30(q){Y 1:1u="#4L";H;Y 2:1u="#4R";H;Y 3:H}}7.B=1u;7.1x=4;b W=2c(k[v[q][i]]["1S"]);9(W>11+1w)H;9(k[v[q][i]]["1c"]!==0){b 1J=2c(k[v[q][i]]["1c"]);9(1J<0){1t}7.2b(L,11-1J,10,1J-W+1w);7.4O(L+2,11-1J+2,10-4,1J-W+1w-4)}l{9(W<0){1t}7.2b(L,11-W,10,1w)}}}7.1n()}u 41(){7.1k();O(b q=0;q<4;q++){9(1C[q]===0)1t;b 1A=0;9(1C[q]===-1)1A=10;l 1A=(1C[q]-g)*10/2B;9(1A<0){1C[q]=0;1t}b L=q*10;7.B=29;7.4P=1A/10;7.2b(L+(10-1A)/2,2a,1A,x);}7.1n()}u 3S(){9(14===0)y;7.1k();7.1T="1U 55 1G";7.1F="1M";7.1L="1l";7.B="#1D";7.C="#1p";7.1x=4;7.F(14,x,3A);7.E(14,x,3A);7.1n()}u 3U(){7.1k();7.1T="1U 56 1G";7.1F="3P";7.1L="1l";7.B="#1D";7.C="#1p";7.1x=4;7.F(12,2g,50);7.E(12,2g,50);7.1n()}u 3b(){7.1k();7.1T="1U 4U 1G";7.1F="3P";7.1L="1l";7.B="#1D";7.C="#1p";7.1x=4;b 2X=1Z.2Z(12/1q*2W)/1i;7.F(2X+"%",2g,3z);7.E(2X+"%",2g,3z);7.1n()}u 36(){9(1g==0)y;9(1g-g<0){1g=0;y}7.1k();7.1T="1U 4F 1G";7.1F="1M";7.1L="1l";7.1x=4;30(1X){Y 0:7.B="#3F";7.C="#3K";7.E("2f",x,N);7.F("2f",x,N);H;Y 1:7.B="#3H";7.C="#3I";7.E("2f",x,N);7.F("2f",x,N);H;Y 2:7.B="#3y";7.C="#3J";7.E("3G",x,N);7.F("3G",x,N);H;Y 3:7.B="#2p";7.C="#2s";7.E("3M",x,N);7.F("3M",x,N);H;Y 4:7.B="#1o";7.C="#1z";7.E("3N",x,N);7.F("3N",x,N);H;Y 5:7.B="#1o";7.C="#1z";7.E("1I",x,N);7.F("1I",x,N);H;Y 6:7.B="#1o";7.C="#1z";7.E("1I",x,N);7.F("1I",x,N);H;4S:}7.1n()}u 3c(){9(1g==0)y;9(1g-g<0){1g=0;y}9(1X==0)y;7.1k();7.1T="1U 4N 1G";7.1F="1M";7.1L="1l";7.1x=2;9(2t){7.B="#2p";7.C="#2s";7.F("2u",x,2j);7.E("2u",x,2j)}l{7.B="#1o";7.C="#1z";7.F("3D",x,2j);7.E("3D",x,2j)}7.1n()}u 2T(){7.3E(0,0,c.2S,c.20);3C();3W();41();3S();3U();3b();36();3c()}b 1a=1y;9(X.39){1a=2l 39()}l 9(X.34){1a=2l 34("4D.4B")}9(1a){1a.4z("4A",I.J("4H").4I,18);1a.4G=u(){9(1a.4E===4){9(1a.3q==2K||1a.3q==0){j=1a.53;j=2O(j);O(b i=0;i<T;i++)9(j["t"][i][1]<0)j["t"][i][8]=K-1;l{j["t"][i][8]=K;R[K]={};R[K][0]=j["t"][i][0];R[K][1]=j["t"][i][1];R[K][2]=j["t"][i][2];K++}O(b i=0;i<1d;i++){k[i]={};k[i]["h"]=1Z.3p(j["1E"][i][0]/(3n/4));9(k[i]["h"]>=4)k[i]["h"]=3;k[i]["1S"]=j["1E"][i][2];k[i]["1c"]=j["1E"][i][5];9(k[i]["1c"]>0)1v++;k[i]["17"]=18;v[k[i]["h"]][1s[k[i]["h"]]++]=i}1q=(1v+1d)*5}}}1a.4X(1y)}l{2V("2U")}z.2o();z.2Y();I.J("3u").1h("1j","1Y:1W;");I.J("2N").1h("1j","1Y: 1W;");I.J("2P").1h("1j","2Q-2R: 1M; 2J: 2I; 2e: 2h; 2H: 0; 2M: 0; 2L: 0; 1l: 0; 20: 2D;");',62,320,'|||||||ctx||if||let|||||time|Key||content|Objs|else|st||timing||Col|||TimingPoints|function|LineQueue||300|return|audio1|String|fillStyle|strokeStyle|et|fillText|strokeText|HitEvent|break|document|getElementById|BPMnums||Result|280|for|match|section|BPMs|false|TPnums|LineQueueHead|value|pos|window|case|tt|150|800|Score|MpB|Combo|Number||Available|true|line|request|LineHold|EndTime|HOnums|regex|baseMpB|JudgeNew|setAttribute|100|style|save|bottom|percent|restore|FF0000|7F7F7F|EndScore|reader|LineQueueTail|continue|color|LN|noteThick|lineWidth|null|7F0000|Width|ended|keyLaserTime|FFFFFF|HitObjects|textAlign|Arial|paused|MISS|pos2|p1|textBaseline|center|preTime|early|Finded|number|scrollDuration|StartTime|font|bold|test|none|JudgeType|display|Math|height|FastCount|SlowCount|MaxCombo|startTime|MissEvent|keyAsync||keys|linear|500|fillRect|calcPOS||margin|PERFECT|580|auto|tpos|192|localFile|new|BpB|while|play|0000FF|offset|event|00007F|FSType|FAST|processKeyup|processKeydown|bindKey|75|param|callback|LaserTime|param3|0px|JudgeTime|param2|measure|top|absolute|position|200|right|left|audiodiv|parseOsuString|startdiv|text|align|width|draw|error|alert|10000|Accuracy|pause|round|switch|keyCode|EndingScene|215|ActiveXObject|data|draw_Judge||comment|XMLHttpRequest|lines|draw_ACC|draw_FS|removeKeyListener|addEventListener|keydown|keyup|removeEventListener|FileReader|files|onload|onerror|result|512|baseBPM|floor|status|initKeyListener|1000|requestAnimFrame|osudiv|60|setTimeout|0BFFFF|00FF00|80|180|addColorStop|draw_Bar_Line|LATE|clearRect|00FFFF|GREAT|FFFF00|7F7F00|007F00|007F7F|70|GOOD|BAD|SLOW|end|475|410|draw_Combo|540|draw_Score|345|draw_Notes|670|ACC|735||draw_Lasers|605|UTF|readAsText|strict|readOsu|2000|161|123|this|const|68|uploadOsu|audioPlayer|850|9ED3FF|createLinearGradient|requestAnimationFrame|length|rgba|_|forEach|split|webkitRequestAnimationFrame|ontouchmove|msRequestAnimaitonFrame|currentTime|preventDefault|oRequestAnimationFrame|getContext|mozRequestAnimationFrame|74|myCanvas|readAudio|open|GET|XMLHTTP|600|Microsoft|readyState|90px|onreadystatechange|filename|innerHTML|3F3F3F|start|0b7f7f|450|20px|strokeRect|globalAlpha|50px|0B7F7F|default|bt_start_onclick|25px|600px|canvasdiv|send|target|uploadAudio||readAsDataURL|src|responseText|inputOffset|80px|40px|60000|scrollDurationInput|use'.split('|'),0,{}))
+"use strict";
+let preTime=2000;
+let time=0;
+let content;
+let TPnums=0;
+let BPMnums=0;
+let BPMs={};
+let Objs={};
+let HOnums=0;
+let scrollDuration=500;
+let MpB=0;
+let baseMpB=0;
+let percent=100;
+let BpB=4;
+let measure=BpB*MpB;
+let p=0;
+let noteThick=60;
+let LineQueue=[{},{},{},{}],LineQueueTail=[0,0,0,0],LineQueueHead=[0,0,0,0];
+let timing=[16,37,70,100,123,161];
+let audio1=document.getElementById("audioPlayer");
+let keyAsync=[false,false,false,false];
+let keyLaserTime=[0,0,0,0];
+let JudgeTime=500;
+let JudgeNew=0;
+let JudgeType=0;
+let FSType=false;
+let LN=0;
+let Score=0,EndScore=0;
+let Combo=0;
+let LineHold=[-1,-1,-1,-1];
+let LaserTime=150;
+let offset=-40;
+let Result=[0,0,0,0,0,0,0];
+let FastCount=0,SlowCount=0,MaxCombo=0;
+const bindKey=[68,70,74,75];
+let c=document.getElementById("myCanvas");
+let ctx=c.getContext("2d");
+let linear = ctx.createLinearGradient(75,850,75,500);
+linear.addColorStop(0,"#9ED3FF");
+linear.addColorStop(1,"rgba(0,0,0,0)");
+function parseOsuString(data) {
+    let regex = {
+        section: /^\s*\[\s*([^\]]*)\s*\]\s*$/,
+        param: /^\s*([\w.\-_]+)\s*:\s*(.*?)\s*$/,
+        param2: /^\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*$/,
+        param3: /^\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*,\s*([?.\-\d]+)\s*/,
+        comment: /^\s*\/\/.*$/
+    };
+    let value = {};
+    let lines = data.split(/\r\n|\r|\n/);
+    let section = null;
+    lines.forEach(function(line){
+        if(regex.comment.test(line)){
+            return;
+        }else if(regex.param.test(line)){
+            let match = line.match(regex.param);
+            if(section){
+                value[section][match[1]] = match[2];
+            }else{
+                value[match[1]] = match[2];
+            }
+        }else if(regex.param2.test(line)){
+            let match = line.match(regex.param2);
+            value[section][TPnums]={};
+            for(let i=0;i<8;i++)
+                if(section){
+                    value[section][TPnums][i] = Number(match[1+i]);
+                }
+            TPnums++;
+        }else if(regex.param3.test(line)){
+            let match = line.match(regex.param3);
+            value[section][HOnums]={};
+            for(let i=0;i<6;i++)
+                if(section){
+                    value[section][HOnums][i] = Number(match[1+i]);
+                }
+            HOnums++;
+        }else if(regex.section.test(line)){
+            let match = line.match(regex.section);
+            value[match[1]] = {};
+            section = match[1];
+        }else if(line.length === 0 && section){
+            section = null;
+        };
+    });
+    return value;
+}
+window.requestAnimFrame = (function (callback) {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimaitonFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000/60);
+        };
+})();
+document.ontouchmove = function (e) {
+    e.preventDefault();
+    return false;
+}
+function startTime() {
+    if(preTime>0){
+        time=-preTime+offset;
+        draw();
+        preTime-=5;
+        setTimeout(startTime,5);
+        return;
+    }
+    if(preTime===0){
+        audio1.play();
+        preTime=-1;
+    }
+    if(audio1.ended){
+        removeKeyListener();
+        EndingScene();
+    }
+    if(audio1.ended||audio1.paused)return;
+    time=audio1.currentTime * 1000+offset;
+    while(p<TPnums-1&&time>=content["TimingPoints"][p+1][0])p++;
+    draw();
+    if(!(audio1.ended||audio1.paused))requestAnimFrame(startTime);
+
+}
+function readOsu() {
+    let localFile = document.getElementById("uploadOsu").files[0];
+    let reader = new FileReader();
+    reader.onload = function (f) {
+        document.getElementById("osudiv").setAttribute("style","display:none;");
+        document.getElementById("audiodiv").setAttribute("style","text-align: center; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; height: 0px;");
+        content = this.result;
+        content = parseOsuString(content);
+        for(let i=0;i<TPnums;i++)if(content["TimingPoints"][i][1]<0)content["TimingPoints"][i][8]=BPMnums-1;else{
+            content["TimingPoints"][i][8]=BPMnums;
+            BPMs[BPMnums]={};
+            BPMs[BPMnums][0]=content["TimingPoints"][i][0];
+            BPMs[BPMnums][1]=content["TimingPoints"][i][1];
+            BPMs[BPMnums][2]=content["TimingPoints"][i][2];
+            BPMnums++;
+        }
+        for(let i=0;i<HOnums;i++){
+            Objs[i]={};
+            Objs[i]["Key"]=Math.floor(content["HitObjects"][i][0]/(512/4));
+			if(Objs[i]["Key"]>=4)Objs[i]["Key"]=3;
+            Objs[i]["StartTime"]=content["HitObjects"][i][2];
+            Objs[i]["EndTime"]=content["HitObjects"][i][5];
+            if(Objs[i]["EndTime"]>0)LN++;
+            Objs[i]["Available"]=true;
+            LineQueue[Objs[i]["Key"]][LineQueueTail[Objs[i]["Key"]]++]=i;
+        }
+        EndScore=(LN+HOnums)*5;
+    }
+    reader.onerror = function (event) {
+        alert("error");
+    }
+    reader.readAsText(localFile, "UTF-8");
+}
+function readAudio() {
+    let localFile = document.getElementById("uploadAudio").files[0];
+    let reader = new FileReader();
+    let content;
+    reader.onload = function (event) {
+        content = event.target.result;
+        audio1.src = content;
+        audio1.play();
+        audio1.pause();
+        document.getElementById("audiodiv").setAttribute("style","display: none;");
+        document.getElementById("startdiv").setAttribute("style","text-align: center; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; height: 0px;");
+    }
+    reader.onerror = function (event) {
+        alert("error");
+    }
+    content = reader.readAsDataURL(localFile);
+}
+function initKeyListener() {
+    window.addEventListener("keydown",processKeydown, true);
+    window.addEventListener("keyup", processKeyup, true);
+}
+function removeKeyListener() {
+    window.removeEventListener("keydown",processKeydown, true);
+    window.removeEventListener("keyup", processKeyup, true);
+}
+function calcPOS(tt) {
+    let p1=p;
+    while(p1>0&&tt<content["TimingPoints"][p1][0])p1--;
+    tt=Number(tt);
+    let tpos=0;
+    let pos=0;
+    let MpB=0;
+    let c=0;
+    for(let i=p1;i<TPnums;i++){
+        MpB=BPMs[content["TimingPoints"][i][8]][1];
+        if(content["TimingPoints"][i][1]>0)percent=1;else percent=-content["TimingPoints"][i][1]/100;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>time)
+            c=(time-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        else
+            c=(content["TimingPoints"][i+1][0]-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        tpos=tpos+c;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>time)break;
+    }
+    for(let i=p1;i<TPnums;i++){
+        MpB=BPMs[content["TimingPoints"][i][8]][1];
+        if(content["TimingPoints"][i][1]>0)percent=1;else percent=-content["TimingPoints"][i][1]/100;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>tt)
+            c=(tt-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        else
+            c=(content["TimingPoints"][i+1][0]-content["TimingPoints"][i][0])*800/(scrollDuration*MpB*percent/baseMpB);
+        pos=pos+c;
+        if(i===TPnums-1||content["TimingPoints"][i+1][0]>tt)break;
+    }
+
+    return Number(pos-tpos);
+}
+function bt_start_onclick() {
+    document.getElementById("startdiv").setAttribute("style","display: none;");
+    document.getElementById("canvasdiv").setAttribute("style","width: 600px; margin:0 auto;");
+    scrollDuration=Number(document.getElementById("scrollDurationInput").value);
+    offset=Number(document.getElementById("inputOffset").value);
+    if(document.getElementById("baseBPM").value!=="")baseMpB=60000/Number(document.getElementById("baseBPM").value);else{
+        baseMpB=Number(content["TimingPoints"][0][1]);
+        for(let i=1;i<TPnums;i++)if(Number(content["TimingPoints"][i][1])>0)baseMpB=(baseMpB<Number(content["TimingPoints"][i][1])?baseMpB:Number(content["TimingPoints"][i][1]));
+    }
+    initKeyListener();
+    startTime();
+}
+function MissEvent(early) {
+    Combo=0;
+    FSType=early;
+    JudgeType=6;
+    Result[6]++;
+    JudgeNew=time+JudgeTime;
+    if(early)FastCount++;else SlowCount++;
+}
+function HitEvent(Key, number, early) {
+    if(number<5)Combo++;else Combo=0;
+    if(Combo>MaxCombo)MaxCombo=Combo;
+    Score+=5-number;
+    FSType=early;
+    JudgeType=number;
+    if(number!==0)
+        if(early)FastCount++;else SlowCount++;
+    Result[number]++;
+    JudgeNew=time+JudgeTime;
+}
+function processKeydown(e) {
+    let keys = e.keyCode,Key=0,Finded=false;
+    if(null != audio1&&(!audio1.ended)&&time>0) {
+        if(keys===27){
+            audio1.paused?audio1.play():audio1.pause();
+            if(!(audio1.ended||audio1.paused))startTime();
+        }
+    }
+    for(let i=0;i<4;i++) {
+        if (bindKey[i] === keys && !keyAsync[i]) {
+            keyAsync[i] = true;
+            keyLaserTime[i] = -1;
+            Finded=true;
+            Key=i;
+            break;
+        }
+    }
+    if(time<0)return;
+    if(!Finded)return;
+    if(null != audio1&&!audio1.ended&&!audio1.paused) {
+        LineHold[Key]=-1;
+        let i=LineQueueHead[Key];
+        while(i<LineQueueTail[Key]&&!Objs[LineQueue[Key][i]]["Available"])i++;
+        if (i >= LineQueueTail[Key]) return;
+        let st = Objs[LineQueue[Key][i]]["StartTime"],
+            et = Objs[LineQueue[Key][i]]["EndTime"];
+        if (time + timing[5] < st) return;
+
+        if (et === 0) {
+            if (st < time - timing[5]) {
+                MissEvent(time<st);
+                LineQueueHead[Key]=i+1;
+                return;
+            }
+            if (time - timing[0] <= st && st <= time + timing[0]) {
+                HitEvent(Key, 0);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[1] <= st && st <= time + timing[1]) {
+                HitEvent(Key, 1, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[2] <= st && st <= time + timing[2]) {
+                HitEvent(Key, 2, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[3] <= st && st <= time + timing[3]) {
+                HitEvent(Key, 3, time<st);
+                LineQueueHead[Key]=i+1;
+            } else if (time - timing[4] <= st && st <= time + timing[4]) {
+                HitEvent(Key, 4, time<st);
+                LineQueueHead[Key]=i+1;
+            } else {
+                HitEvent(Key, 5, time<st);
+                LineQueueHead[Key]=i+1;
+            }
+        } else if(Objs[LineQueue[Key][i]]["Available"]){
+            if (st < time - timing[5]) {
+                MissEvent(time<st);
+                LineHold[Key]=-1;
+                Objs[LineQueue[Key][i]]["Available"] = false;
+                return;
+            }
+            LineHold[Key]=LineQueue[Key][i];
+            if (time - timing[0] <= st && st <= time + timing[0]) {
+                HitEvent(Key, 0, time<st);
+            } else if (time - timing[1] <= st && st <= time + timing[1]) {
+                HitEvent(Key, 1, time<st);
+            } else if (time - timing[2] <= st && st <= time + timing[2]) {
+                HitEvent(Key, 2, time<st);
+            } else if (time - timing[3] <= st && st <= time + timing[3]) {
+                HitEvent(Key, 3, time<st);
+            } else if (time - timing[4] <= st && st <= time + timing[4]) {
+                HitEvent(Key, 4, time<st);
+            } else {
+                HitEvent(Key, 5, time<st);
+            }
+        }
+    }
+}
+function processKeyup(e){
+    let keys = e.keyCode,Key=0,Finded=false;
+    for(let i=0;i<4;i++) {
+        if (bindKey[i] === keys && keyAsync[i]) {
+            keyAsync[i] = false;
+            keyLaserTime[i] = LaserTime+time;
+            Finded=true;
+            Key=i;
+            break;
+        }
+    }
+    if(time<0)return;
+    if(!Finded)return;
+    if(null != audio1&&!audio1.ended&&!audio1.paused) {
+        let i=LineQueueHead[Key];
+        while(i<LineQueueTail[Key]&&!Objs[LineQueue[Key][i]]["Available"])i++;
+        if (i >= LineQueueTail[Key]) return;
+        if (LineHold[Key] === -1) return;
+        if (LineQueue[Key][i] !== LineHold[Key]) {
+            LineHold[Key] = -1;
+            return;
+        }
+        let et = Objs[LineQueue[Key][i]]["EndTime"];
+        LineHold[Key] = -1;
+        Objs[LineQueue[Key][i]]["Available"] = false;
+        if (time + timing[5] < et) {
+            MissEvent(time<et);
+
+            return;
+        }else if (time >= et) {
+            HitEvent(Key, 0, time<et);
+            return;
+        }
+        if (time - timing[0] <= et && et <= time + timing[0]) {
+            HitEvent(Key, 0, time<et);
+        } else if (time - timing[1] <= et && et <= time + timing[1]) {
+            HitEvent(Key, 1, time<et);
+        } else if (time - timing[2] <= et && et <= time + timing[2]) {
+            HitEvent(Key, 2, time<et);
+        } else if (time - timing[3] <= et && et <= time + timing[3]) {
+            HitEvent(Key, 3, time<et);
+        } else if (time - timing[4] <= et && et <= time + timing[4]) {
+            HitEvent(Key, 4, time<et);
+        } else {
+            HitEvent(Key, 5, time<et);
+        }
+
+    }
+}
+function draw_Bar_Line() {
+    ctx.save();
+    for(let i=content["TimingPoints"][p][8];i<BPMnums;i++){
+        BpB=BPMs[i][2];
+        MpB=BPMs[i][1];
+        measure=BpB*MpB;
+        let a=false;
+        for(let tt=BPMs[i][0]; i===BPMnums-1||(i<BPMnums-1&&tt<BPMs[i+1][0]); tt=tt+measure){
+            a=true;
+            if(tt<time)continue;
+            let pos=calcPOS(tt);
+            if(pos>800+noteThick)break;
+            ctx.fillStyle="#FF0000";
+            ctx.fillRect(0,800-pos+noteThick,600,2);
+            a=false;
+        }
+        if(a)break;
+    }
+    ctx.restore();
+}
+function EndingScene() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    ctx.save();
+    ctx.font = "bold 50px Arial";
+    ctx.textAlign = "start";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=2;
+    ctx.fillStyle = "#00FFFF";
+    ctx.strokeStyle = "#007F7F";
+    ctx.fillText("300 : "+String(Result[0]), 50, 150-50);
+    ctx.strokeText("300 : "+String(Result[0]), 50, 150-50);
+    ctx.fillStyle = "#FFFF00";
+    ctx.strokeStyle = "#7F7F00";
+    ctx.fillText("300 : "+String(Result[1]), 50, 215-50);
+    ctx.strokeText("300 : "+String(Result[1]), 50, 215-50);
+    ctx.fillStyle = "#00FF00";
+    ctx.strokeStyle = "#007F00";
+    ctx.fillText("200 : "+String(Result[2]), 50, 280-50);
+    ctx.strokeText("200 : "+String(Result[2]), 50, 280-50);
+    ctx.fillStyle = "#0000FF";
+    ctx.strokeStyle = "#00007F";
+    ctx.fillText("100 : "+String(Result[3]), 50, 345-50);
+    ctx.strokeText("100 : "+String(Result[3]), 50, 345-50);
+    ctx.fillStyle = "#7F7F7F";
+    ctx.strokeStyle = "#3F3F3F";
+    ctx.fillText("50 : "+String(Result[4]), 50, 410-50);
+    ctx.strokeText("50 : "+String(Result[4]), 50, 410-50);
+    ctx.fillStyle = "#FF0000";
+    ctx.strokeStyle = "#7F0000";
+    ctx.fillText("MISS : "+String(Result[5]+Result[6]), 50, 475-50);
+    ctx.strokeText("MISS : "+String(Result[5]+Result[6]), 50, 475-50);
+    ctx.fillStyle = "#0000FF";
+    ctx.strokeStyle = "#00007F";
+    ctx.fillText("FAST : "+String(FastCount), 50, 540-50);
+    ctx.strokeText("FAST : "+String(FastCount), 50, 540-50);
+    ctx.fillStyle = "#FF0000";
+    ctx.strokeStyle = "#7F0000";
+    ctx.fillText("SLOW : "+String(SlowCount), 50, 605-50);
+    ctx.strokeText("SLOW : "+String(SlowCount), 50, 605-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("Score : "+String(Score)+"/"+String(EndScore), 50, 670-50);
+    ctx.strokeText("Score : "+String(Score)+"/"+String(EndScore), 50, 670-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("Combo : "+String(MaxCombo)+"/"+String(HOnums+LN), 50, 735-50);
+    ctx.strokeText("Combo : "+String(MaxCombo)+"/"+String(HOnums+LN), 50, 735-50);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.fillText("ACC : "+String(Math.round(Score/EndScore*10000)/100)+"%", 50, 800-50);
+    ctx.strokeText("ACC : "+String(Math.round(Score/EndScore*10000)/100)+"%", 50, 800-50);
+    ctx.restore();
+}
+function draw_Notes() {
+    ctx.save();
+    for(let Col=0;Col<4;Col++){
+        for(let i=LineQueueHead[Col];i<LineQueueTail[Col];i++){
+
+            if(Objs[LineQueue[Col][i]]["EndTime"]>0&&time-Objs[LineQueue[Col][i]]["EndTime"]>0){
+                if(Objs[LineQueue[Col][i]]["Available"]&&LineHold[Col]===LineQueue[Col][i]){
+                    HitEvent(Col, 0);
+                    LineHold[Col]=-1;
+                    LineQueueHead[Col]=i+1;
+                    continue;
+                }
+            }
+            if(LineHold[Col]!==LineQueue[Col][i]) {
+                if(Objs[LineQueue[Col][i]]["Available"])
+                    if (time - Objs[LineQueue[Col][i]]["StartTime"] > timing[5]) {
+                        MissEvent(time<Objs[LineQueue[Col][i]]["StartTime"]);
+                        if (Objs[LineQueue[Col][i]]["EndTime"] === 0) {
+                            LineQueueHead[Col] = i + 1;
+                            continue;
+                        } else {
+                            Objs[LineQueue[Col][i]]["Available"] = false;
+                        }
+
+                    }
+            }
+            let L=0;
+            let color="#FFFFFF";
+            ctx.strokeStyle="#FF0000";
+            switch(Col){
+                case 1:
+                    L=150;
+                    color="#0BFFFF";
+                    break;
+                case 2:
+                    L=300;
+                    color="#0BFFFF";
+                    break;
+                case 3:
+                    L=450;
+                    break;
+            }
+            if(!Objs[LineQueue[Col][i]]["Available"]){
+                color="#7F7F7F";
+                ctx.strokeStyle="#7F0000";
+                switch(Col){
+                    case 1:
+                        color="#0b7f7f";
+                        break;
+                    case 2:
+                        color="#0B7F7F";
+                        break;
+                    case 3:
+                        break;
+                }
+            }
+            ctx.fillStyle=color;
+
+            ctx.lineWidth=4;
+            let pos=calcPOS(Objs[LineQueue[Col][i]]["StartTime"]);
+            if(pos>800+noteThick)break;
+            if(Objs[LineQueue[Col][i]]["EndTime"]!==0){
+                let pos2=calcPOS(Objs[LineQueue[Col][i]]["EndTime"]);
+                if(pos2<0){
+                    continue;
+                }
+                ctx.fillRect(L,800-pos2,150,pos2-pos+noteThick);
+                ctx.strokeRect(L+2,800-pos2+2,150-4,pos2-pos+noteThick-4);
+
+            }else{
+                if(pos<0){
+                    continue;
+                }
+                ctx.fillRect(L,800-pos,150,noteThick);
+            }
+        }
+    }
+    ctx.restore();
+}
+function draw_Lasers() {
+    ctx.save();
+    for(let Col=0;Col<4;Col++){
+        if(keyLaserTime[Col]===0)continue;
+        let Width=0;
+        if(keyLaserTime[Col]===-1)Width=150;else
+            Width=(keyLaserTime[Col]-time)*150/LaserTime;
+        if(Width<0){
+            keyLaserTime[Col]=0;
+            continue;
+        }
+        let L=Col*150;
+        ctx.fillStyle=linear;
+        ctx.globalAlpha=Width/150;
+        ctx.fillRect(L+(150-Width)/2,500,Width,300);
+        //ctx.globalAlpha=1;
+    }
+    ctx.restore();
+}
+function draw_Combo() {
+    if(Combo===0)return;
+    ctx.save();
+    ctx.font = "bold 80px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    ctx.strokeText(Combo, 300, 180);
+    ctx.fillText(Combo, 300, 180);
+    ctx.restore();
+}
+function draw_Score() {
+    ctx.save();
+    ctx.font = "bold 40px Arial";
+    ctx.textAlign = "end";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    ctx.strokeText(Score, 580, 50);
+    ctx.fillText(Score, 580, 50);
+    ctx.restore();
+}
+function draw_ACC() {
+    ctx.save();
+    ctx.font = "bold 25px Arial";
+    ctx.textAlign = "end";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#FFFFFF";
+    ctx.strokeStyle = "#7F7F7F";
+    ctx.lineWidth=4;
+    let Accuracy=Math.round(Score/EndScore*10000)/100;
+    ctx.strokeText(Accuracy+"%", 580, 80);
+    ctx.fillText(Accuracy+"%", 580, 80);
+    ctx.restore();
+}
+function draw_Judge() {
+    if(JudgeNew==0)return;
+    if(JudgeNew-time<0){
+        JudgeNew=0;
+        return;
+    }
+    ctx.save();
+    ctx.font = "bold 90px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=4;
+    switch(JudgeType){
+        case 0:
+            ctx.fillStyle = "#00FFFF";
+            ctx.strokeStyle = "#007F7F";
+            ctx.fillText("PERFECT", 300, 280);
+            ctx.strokeText("PERFECT", 300, 280);
+            break;
+        case 1:
+            ctx.fillStyle = "#FFFF00";
+            ctx.strokeStyle = "#7F7F00";
+            ctx.fillText("PERFECT", 300, 280);
+            ctx.strokeText("PERFECT", 300, 280);
+            break;
+        case 2:
+            ctx.fillStyle = "#00FF00";
+            ctx.strokeStyle = "#007F00";
+            ctx.fillText("GREAT", 300, 280);
+            ctx.strokeText("GREAT", 300, 280);
+            break;
+        case 3:
+            ctx.fillStyle = "#0000FF";
+            ctx.strokeStyle = "#00007F";
+            ctx.fillText("GOOD", 300, 280);
+            ctx.strokeText("GOOD", 300, 280);
+            break;
+        case 4:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("BAD", 300, 280);
+            ctx.strokeText("BAD", 300, 280);
+            break;
+        case 5:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("MISS", 300, 280);
+            ctx.strokeText("MISS", 300, 280);
+            break;
+        case 6:
+            ctx.fillStyle = "#FF0000";
+            ctx.strokeStyle = "#7F0000";
+            ctx.fillText("MISS", 300, 280);
+            ctx.strokeText("MISS", 300, 280);
+            break;
+        default:
+    }
+    ctx.restore();
+}
+function draw_FS() {
+    if(JudgeNew==0)return;
+    if(JudgeNew-time<0){
+        JudgeNew=0;
+        return;
+    }
+    if(JudgeType==0)return;
+    ctx.save();
+    ctx.font = "bold 20px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+    ctx.lineWidth=2;
+    if(FSType) {
+        ctx.fillStyle = "#0000FF";
+        ctx.strokeStyle = "#00007F";
+        ctx.strokeText("FAST", 300, 192);
+        ctx.fillText("FAST", 300, 192);
+    }else{
+        ctx.fillStyle = "#FF0000";
+        ctx.strokeStyle = "#7F0000";
+        ctx.strokeText("LATE", 300, 192);
+        ctx.fillText("LATE", 300, 192);
+    }
+
+    ctx.restore();
+}
+function draw() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    draw_Bar_Line();
+    draw_Notes();
+    draw_Lasers();
+    draw_Combo();
+    draw_Score();
+    draw_ACC();
+    draw_Judge();
+    draw_FS();
+}
+
+let request=null;
+if(window.XMLHttpRequest){request=new XMLHttpRequest();}else if(window.ActiveXObject){request=new ActiveXObject("Microsoft.XMLHTTP");}
+if(request){
+    request.open("GET",document.getElementById("filename").innerHTML,true);
+    request.onreadystatechange=function(){
+        if(request.readyState===4){
+            if (request.status == 200 || request.status == 0){
+                content = request.responseText;
+                content = parseOsuString(content);
+                for(let i=0;i<TPnums;i++)if(content["TimingPoints"][i][1]<0)content["TimingPoints"][i][8]=BPMnums-1;else{
+                    content["TimingPoints"][i][8]=BPMnums;
+                    BPMs[BPMnums]={};
+                    BPMs[BPMnums][0]=content["TimingPoints"][i][0];
+                    BPMs[BPMnums][1]=content["TimingPoints"][i][1];
+                    BPMs[BPMnums][2]=content["TimingPoints"][i][2];
+                    BPMnums++;
+                }
+                for(let i=0;i<HOnums;i++){
+                    Objs[i]={};
+                    Objs[i]["Key"]=Math.floor(content["HitObjects"][i][0]/(512/4));
+					if(Objs[i]["Key"]>=4)Objs[i]["Key"]=3;
+                    Objs[i]["StartTime"]=content["HitObjects"][i][2];
+                    Objs[i]["EndTime"]=content["HitObjects"][i][5];
+                    if(Objs[i]["EndTime"]>0)LN++;
+                    Objs[i]["Available"]=true;
+                    LineQueue[Objs[i]["Key"]][LineQueueTail[Objs[i]["Key"]]++]=i;
+                }
+                EndScore=(LN+HOnums)*5;
+            }
+        }
+    }
+    request.send(null);
+}else{
+    alert("error");
+}
+audio1.play();
+audio1.pause();
+document.getElementById("osudiv").setAttribute("style","display:none;");
+document.getElementById("audiodiv").setAttribute("style","display: none;");
+document.getElementById("startdiv").setAttribute("style","text-align: center; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0; height: 0px;");
