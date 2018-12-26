@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2018-12-24T13:45:47.886Z</updated>
+  <updated>2018-12-26T10:57:34.549Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -15,11 +15,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[在Windows上利用FTP共享文件]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/2018/12/26/FileZillaServer/"/>
+    <id>https://www.xtxtmtxtx.xyz/2018/12/26/FileZillaServer/</id>
+    <published>2018-12-26T06:06:48.000Z</published>
+    <updated>2018-12-26T10:57:34.549Z</updated>
+    <content type="html"><![CDATA[<p>　　近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>　　安装完之后打开FileZilla Server Interface，一通默认设置不要改内容就行了，然而可能出现如下错误<br>　　<img src="/2018/12/26/FileZillaServer/1.jpg" alt="错误"><br>　　这时候先检查下菜单栏File-&gt;Connect to server…，如果安装的时候没做别的设置的话应该是这样子的<br>　　<img src="/2018/12/26/FileZillaServer/2.jpg" alt="设置"><br>　　还连不上的话要去电脑的管理工具-&gt;服务里把FileZilla Server FTP server服务开启。顺带一提的是如果在安装时选的手动开启服务，每次重启之后都要来这里（或者任务管理器）把这个服务打开。<br>　　<img src="/2018/12/26/FileZillaServer/3.jpg" alt="图标"><br>　　这样之后就可以点这张图框里中间那个图标加用户了。<br>　　<img src="/2018/12/26/FileZillaServer/4.jpg" alt="设置"><br>　　先点图中右侧的Add，输个好记的用户名之后点OK。接下来把中间的Enable account勾上，Password视情况填选。<br>　　接下来左边点Shared folders。<br>　　<img src="/2018/12/26/FileZillaServer/5.jpg" alt="设置"><br>　　点中间的Add，选择要放到ftp上的文件夹并确定，然后选中该文件夹，根据需要在右边的Files和Directories里打勾。最后点OK之后在资源管理器地址栏中输入ftp://localhost，如果能连上就成功了。<br>　　到这一步还不够，如果电脑开了防火墙的话即使在局域网里别的设备也连不上这个ftp地址。<br>　　先打开计算机的防火墙设置，进入高级设置，点击入站规则，新建规则进入向导。规则类型选程序，程序路径选与FileZilla Server Interface.exe同路径的FileZilla Server.exe，操作允许连接，配置文件全勾上，名称随便输即可。接下来确认刚才设置的规则启用了即可。<br>　　现在，你就可以在局域网下通过ftp传文件啦，只需要在网络设置中找到本机的ip，在别的设备上加入ftp://的前缀就可以了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>　　近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。]]>
+    </summary>
+    
+      <category term="FTP" scheme="https://www.xtxtmtxtx.xyz/tags/FTP/"/>
+    
+      <category term="Firewall" scheme="https://www.xtxtmtxtx.xyz/tags/Firewall/"/>
+    
+      <category term="Server" scheme="https://www.xtxtmtxtx.xyz/tags/Server/"/>
+    
+      <category term="Windows" scheme="https://www.xtxtmtxtx.xyz/tags/Windows/"/>
+    
+      <category term="Web" scheme="https://www.xtxtmtxtx.xyz/categories/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[救砖记]]></title>
     <link href="https://www.xtxtmtxtx.xyz/2018/12/24/bios/"/>
     <id>https://www.xtxtmtxtx.xyz/2018/12/24/bios/</id>
     <published>2018-12-24T07:02:36.000Z</published>
-    <updated>2018-12-24T13:45:47.886Z</updated>
+    <updated>2018-12-26T09:52:12.146Z</updated>
     <content type="html"><![CDATA[<p>　　也许是因为过于疲劳，周五晚上的我决定实施早就想实施的Bios解锁+更换启动图像。下载好官网上原版的Bios文件，修改文件时虽然还比较顺利，然后在听信网络上的教程之后，尽管在网上没有找到跟我机型一样的刷Bios的帖子（顺带一提我的机子是GE62-2QF，三年前的微星笔记本），我还是决定用AFUDOS刷入Bios。<br>　　在DOS下的界面也一切顺利，打完AFUDOS NI.113 /GAN之后条非常快的就读完了，于是我非常淡定地按下电源键，然后非常淡定地开机，非常淡定地发现只有键盘灯亮了起来，然后就没有任何响应了。<br>　　完了，黑了<br>　　当时还比较从容，先百度一番，了解了笔记本这种情况一般只能靠编程器，顺便还做了返厂要600左右的心理准备。没辙，在tb上逛了一圈，一开始买了个127带烧录夹和一拖二的编程器，后来搜着搜着感觉有点贵，就退款再买了个XTW100和烧录夹。在别的刷vbios的帖子里看到有人用了1.8v转换器，琢磨着保险点就在另一家店又买了个，顺带还买了个ch341a，加起来六七十。<br>　　然后就是漫长的等快递的日子了。于是又在网上搜有没有别的解决方案。看到各种盲刷、双Bios复原法。盲刷试了下，电脑依旧没有反应，U盘灯也亮不了，看来是彻底刷没了，只能等编程器到货了。期间还把笔记本打开找Bios芯片，结果找到一堆8脚还带涂点的芯片，然而网上又找不到这个机子的主板详情。没办法，连蒙带猜决定就是那个又有粉点又有个小洞标记的芯片作为Bios芯片了。<br>　　因为是两个快递，虽然都在周日就到了，结果我先拿了一个快递回到寝室第二个快递短信就来了。不过早点到也好，在借了同学电脑之后，先装编程器驱动。<br>　　当然装不进去，得关闭强制数字签名的驱动的启动选项才能装。装好了之后就把我的笔记本拆了，烧录夹一夹，编程器一插，打开软件准备就绪。<br>　　当时大概是这样：<br>　　<img src="/2018/12/24/bios/2.jpg" alt="这是照片"><br>　　然而并没有就绪，试尽了各种组合、各种夹子方向，读出来不是全零就是全FF，偶尔还蹦出来几个诡异的数字，强行刷入刷得蛮久，结果当然是没有用。<del>后来才发现一直在刷空气。</del><br>　　终于，历经几个小时的排错，终于找到了原因——夹子没夹准。其实夹子大概要加到芯片底下才行，大概这种效果：<br>　　<img src="/2018/12/24/bios/0.png" alt="这是图"><br>　　另外我的烧录夹是红线对应1号引脚，芯片上从小孔开始逆时针12345678，接下来的接口都1号位对应一号位插就完事儿了。然后就是烧录夹的线插cha341a需要插在靠近USB接口的那几个孔，那是给25用的，而靠近末端的是给24用的。用之前用XTW100没读出来，所以不是很清楚，可能差不多，反正实践出真知，多试几遍就对了。<br>　　终于，在我生怕压坏主板又怕夹不住的一顿操作之后，夹子夹稳了，芯片型号终于读出来了（虽然和芯片上标的不太一样），数据也终于读出来了，第二行终于出现了5A A5…不过先没急着把原版刷进去，而是先把bios里的数据导出来看看。拿出原先准备烧的bios文件一FC，蹦出来一万个差异。果然，文件根本就没有烧录完整，怪不得黑了。<br>　　不过还是保险点好，先擦除芯片，结果一下就擦完了。当时以为夹子又没插好，不过点查空过了一分钟提示一空，而且刷新芯片还是能识别芯片规格，于是拿出原版bios文件，点完编程，点校验，校验成功<img src="/2018/12/24/bios/1.jpg" alt="这还是图">，再保存出来，和准备刷入的文件一FC，“找不到差异”。成了<br>　　十分忐忑的打开电脑，在过了比往常开机久一点的几秒之后，终于，MSI的图标出现了！当时我就狂按del键，出现了久违的bios界面，于是我就关机了。<br>　　后来一想，既然是dos下刷bios刷不完整的问题，那我索性把改过的bios刷上去就完事儿了。第二次的操作比第一次熟练多了，结果发现解锁没成功，改启动图像倒是成功了<br>　　<img src="/2018/12/24/bios/3.jpg" alt="这是启动图"><br>　　顺便因为我还用的是HDD+Win7，刷完bios之后还得先改设置。总共也就是把快速启动关了，UEFI改成Legacy，RAID改成AHCI，于是就没有出现不断重启进入bios界面的情况了。<br>　　最后来一张买的工具的合照，虽然最终只用到了ch341a和那个烧录夹，但可以留着备用嘛。<br>　　<img src="/2018/12/24/bios/4.jpg" alt="合影">  </p>
 ]]></content>
     <summary type="html">
@@ -32,7 +56,7 @@
     
       <category term="编程器" scheme="https://www.xtxtmtxtx.xyz/tags/%E7%BC%96%E7%A8%8B%E5%99%A8/"/>
     
-      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
+      <category term="Tech" scheme="https://www.xtxtmtxtx.xyz/categories/Tech/"/>
     
   </entry>
   
@@ -73,7 +97,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2018/11/21/TrafficStatistics/"/>
     <id>https://www.xtxtmtxtx.xyz/2018/11/21/TrafficStatistics/</id>
     <published>2018-11-21T14:43:45.000Z</published>
-    <updated>2018-11-30T03:40:35.931Z</updated>
+    <updated>2018-12-26T09:50:55.658Z</updated>
     <content type="html"><![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi.ibruce.info</a><br>网上搜HEXO+访问统计也能搜到讲这个东西的，不过我直接照着别人博客往自己的博客加会出现奇怪问题，后来发现官网上写：<br><code>因七牛强制过期『dn-lbstatics.qbox.me』域名，与客服沟通无果，只能更换域名到『busuanzi.ibruce.info』！</code><br>嗯，破案了。<br>首先地址要这么弄<br><code>脚本：&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code><br><code>网站流量统计：&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br><code>文章流量统计：&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br>需要注意的是其中pv、uv可以互换，区别就是pv是刷新一次算一次，uv是一个用户最多算一次。</p>
 <p>然后就是怎么实装了！</p>
 <p>首先找到HEXO文件夹里的\themes\你用的主题\layout\<br>在这个文件夹及子文件夹\_partial找文件<br>我用的是clean blog，所以是在\_partial\footer.ejs里放脚本以及网站流量统计，在\_partial\article-full.ejs里放的文章流量统计。<br>那么怎么放呢？<br>打开footer.ejs（编辑器自理），在&lt;footer&gt;后换一行加入脚本那一串代码即可，之后也不需要再引用了。然后拉到文件末尾区域，找到你博客类似“copyright”什么什么的文字，自行理解那几行分别是干什么的，然后在你觉得合适的地方插入网站流量统计的那串代码。<br>然后网站流量统计已经可以用了，不过如果你preview的话会发现那个流量统计的文字出奇的格格不入x<br>怎么解决呢？在每个&lt;span和紧接其后的id中间插入上下文中相同的class或者style或者之类的<br>然后再根据原本的文字十分居中在整个统计的那行代码左右分别插入&lt;enter&gt;和&lt;/center&gt;<br>比如我本来上下文有<code>&lt;p class=&quot;copyright text-muted&quot;&gt;Adapted for &lt;a target=&quot;_blank&quot; href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; by &lt;a href=&quot;http://www.codeblocq.com/&quot; target=&quot;_blank&quot;&gt;Jonathan Klughertz&lt;/a&gt;&lt;/p&gt;</code><br>那我就把原本的统计代码弄成<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code><br>这样就可以配对啦。</p>
@@ -92,7 +116,7 @@
     
       <category term="访问统计" scheme="https://www.xtxtmtxtx.xyz/tags/%E8%AE%BF%E9%97%AE%E7%BB%9F%E8%AE%A1/"/>
     
-      <category term="Blog" scheme="https://www.xtxtmtxtx.xyz/categories/Blog/"/>
+      <category term="Web" scheme="https://www.xtxtmtxtx.xyz/categories/Web/"/>
     
   </entry>
   
@@ -101,7 +125,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2018/11/20/CydiaImpactor/"/>
     <id>https://www.xtxtmtxtx.xyz/2018/11/20/CydiaImpactor/</id>
     <published>2018-11-20T13:43:39.000Z</published>
-    <updated>2018-11-20T16:25:54.571Z</updated>
+    <updated>2018-12-26T09:51:54.111Z</updated>
     <content type="html"><![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>不过这里讲得和编程没什么关系（大概）<br>总之来说就是分享一个软件</p>
 <p>环境：iPad 2018<del>（学生版）</del>，iOS 12.1，Windows 7 64x<br><del>铛铛，</del>就是这个小钻头，<img src="/2018/11/20/CydiaImpactor/logo.png" alt="Cydia Impactor">，官网在这里：<a href="http://www.cydiaimpactor.com/" target="_blank" rel="external">Cydia Impactor</a> 点进去下载对应平台的程序即可。<br>虽然本意是被设计来安装越狱软件的，不过事实上甚至可以支持直接在iOS12.1上安装别的不太大的（大概100mb以内）的ipa文件，那么哪里能得到ipa文件呢，<del>点击打开百度，</del><a href="https://www.iphonecake.com/" target="_blank" rel="external">iphonecake.com</a>上可以下载，但是需要梯子才能打开下载链接。另外貌似同一个appleID在同一个设备上最多签名3个ipa文件，需要注意一下。</p>
 <p>然后就是步骤了：<br>首先确保装了iTunes或者相关驱动，将iPad或iPhone或什么什么什么通过数据线连接上电脑（当然需要信任该电脑），打开Impactor.exe，一般来说在第一个下拉框会显示你的设备名。然后不要点击Start，先将菜单Impactor - Insecure SSL勾上，貌似不勾会出现SSL证书错误（当然你也可以不打开“不安全的SSL”试一遍，能成功的话更好啦）。<br>然后将ipa拖到impactor程序的窗口上，注意官网上说的<br><code>Note: Do not &quot;Run as Administrator&quot; Impactor; doing this makes drag/drop of files not work on Windows 10.</code><br>以管理员模式运行Impactor可能导致无法拖拽文件。<br>然后会弹框，依次输入AppleID与密码，如果不放心的话可以另外注册一个号，不影响的。<br>如果出现了如图错误：<img src="/2018/11/20/CydiaImpactor/Error.jpg" alt="Error">，原因是开启了两步验证。请登录<a href="https://appleid.apple.com/" target="_blank" rel="external">appleid.apple.com</a>并点击Security - APP-SPECIFIC PASSWORDS - Generate Password…生成一个应用专属密码，复制下来，建议保存一下，因为该密码不会再出现了。再用这个密码代替AppleID密码即可刷入ipa。<br>最后，打开你的<del>林檎</del>苹果设备，进入设置 - 通用 - 设备管理 - 开发者应用 - 你的AppleID - 点击信任，即可使用刷入的应用了！</p>
@@ -119,7 +143,7 @@
     
       <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
     
-      <category term="ipa" scheme="https://www.xtxtmtxtx.xyz/categories/ipa/"/>
+      <category term="Tech" scheme="https://www.xtxtmtxtx.xyz/categories/Tech/"/>
     
   </entry>
   
@@ -156,7 +180,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2018/10/23/Hackergame2018/"/>
     <id>https://www.xtxtmtxtx.xyz/2018/10/23/Hackergame2018/</id>
     <published>2018-10-23T11:57:13.000Z</published>
-    <updated>2018-10-25T12:48:00.176Z</updated>
+    <updated>2018-12-26T10:04:57.020Z</updated>
     <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br><del>一度17名最后20名发现奖项居然是中科大校内的 我哭了 你呢.jpg</del></p>
 <hr>
 <h5 id="u7B7E_u5230_u9898"><a href="#u7B7E_u5230_u9898" class="headerlink" title="签到题"></a>签到题</h5><p>f12把字数限制去了</p>
@@ -205,7 +229,7 @@
     
       <category term="Reverse" scheme="https://www.xtxtmtxtx.xyz/tags/Reverse/"/>
     
-      <category term="CTF" scheme="https://www.xtxtmtxtx.xyz/categories/CTF/"/>
+      <category term="Tech" scheme="https://www.xtxtmtxtx.xyz/categories/Tech/"/>
     
   </entry>
   
@@ -233,7 +257,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2016/08/08/Kreuz/"/>
     <id>https://www.xtxtmtxtx.xyz/2016/08/08/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
-    <updated>2018-10-25T13:16:01.961Z</updated>
+    <updated>2018-12-26T09:50:35.976Z</updated>
     <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>原BGA缩略图:<br><img src="https://ooo.0o0.ooo/2016/08/07/57a75311c80ac.jpg" alt="1">  </p>
 <hr>
 <blockquote>
@@ -256,7 +280,7 @@
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="OtoMAD" scheme="https://www.xtxtmtxtx.xyz/categories/OtoMAD/"/>
+      <category term="Vedio" scheme="https://www.xtxtmtxtx.xyz/categories/Vedio/"/>
     
   </entry>
   
@@ -265,7 +289,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2016/07/09/%E5%A4%A9%E5%9D%91%E9%A2%84%E5%91%8Ax/"/>
     <id>https://www.xtxtmtxtx.xyz/2016/07/09/天坑预告x/</id>
     <published>2016-07-08T16:00:00.000Z</published>
-    <updated>2018-10-23T12:22:03.221Z</updated>
+    <updated>2018-12-26T09:50:44.420Z</updated>
     <content type="html"><![CDATA[<p>没错，这个坑就是Calamity Fortune(<br><a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>终于是填完了啊,最后的部分做得有点不像= =<br>但不管怎么说断断续续做了半年(orz)的坑终于做完了还是非常高兴的ww</p>
 <p>虽然说确实是<del>心血来潮</del>想要还原原PV的(<a href="http://www.bilibili.com/video/av1369660/" target="_blank" rel="external">av1369660</a>)<br>不过遇到了各种各样的问题所以进度缓慢<del>(就是因为懒)</del><br>所以特地在这里记录一下进度x  </p>
 <hr>
@@ -298,7 +322,7 @@
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="OtoMAD" scheme="https://www.xtxtmtxtx.xyz/categories/OtoMAD/"/>
+      <category term="Vedio" scheme="https://www.xtxtmtxtx.xyz/categories/Vedio/"/>
     
   </entry>
   
@@ -307,7 +331,7 @@
     <link href="https://www.xtxtmtxtx.xyz/2016/05/14/FX%20Particle%20Builder/"/>
     <id>https://www.xtxtmtxtx.xyz/2016/05/14/FX Particle Builder/</id>
     <published>2016-05-14T05:34:00.000Z</published>
-    <updated>2018-10-23T12:20:56.497Z</updated>
+    <updated>2018-12-26T09:50:03.814Z</updated>
     <content type="html"><![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。<br><a id="more"></a><br><img src="https://ooo.0o0.ooo/2016/05/14/5736c847a509f.jpg" alt="Inline FXPB.jpg"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c847eda9e.gif" alt="01.gif"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c82ba4f3f.gif" alt="02.gif"></p>
@@ -330,7 +354,7 @@
     
       <category term="AE" scheme="https://www.xtxtmtxtx.xyz/tags/AE/"/>
     
-      <category term="AE" scheme="https://www.xtxtmtxtx.xyz/categories/AE/"/>
+      <category term="Video" scheme="https://www.xtxtmtxtx.xyz/categories/Video/"/>
     
   </entry>
   
