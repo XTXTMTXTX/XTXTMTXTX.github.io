@@ -1,3 +1,11 @@
+article .container .row {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  background-color: rgba(250,250,250,0.6);
+}
 article .container .row img {
   max-width: 100% !important;
   height: auto;
