@@ -88,8 +88,10 @@
     
     <link rel="icon" href="/img/favicon.ico"/>
     
-
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 </head>
+
 
 
 <body>
@@ -222,22 +224,48 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>不过这里讲得和编程没什么关系（大概）<br>总之来说就是分享一个软件</p>
-<p>环境：iPad 2018<del>（学生版）</del>，iOS 12.1，Windows 7 64x<br><del>铛铛，</del>就是这个小钻头，<img src="/articles/CydiaImpactor/logo.png" alt="Cydia Impactor">，官网在这里：<a href="http://www.cydiaimpactor.com/" target="_blank" rel="external">Cydia Impactor</a> 点进去下载对应平台的程序即可。<br>虽然本意是被设计来安装越狱软件的，不过事实上甚至可以支持直接在iOS12.1上安装别的不太大的（大概100mb以内）的ipa文件，那么哪里能得到ipa文件呢，<del>点击打开百度，</del><a href="https://www.iphonecake.com/" target="_blank" rel="external">iphonecake.com</a>上可以下载，但是需要梯子才能打开下载链接。另外貌似同一个appleID在同一个设备上最多签名3个ipa文件，需要注意一下。</p>
-<p>然后就是步骤了：<br>首先确保装了iTunes或者相关驱动，将iPad或iPhone或什么什么什么通过数据线连接上电脑（当然需要信任该电脑），打开Impactor.exe，一般来说在第一个下拉框会显示你的设备名。然后不要点击Start，先将菜单Impactor - Insecure SSL勾上，貌似不勾会出现SSL证书错误（当然你也可以不打开“不安全的SSL”试一遍，能成功的话更好啦）。<br>然后将ipa拖到impactor程序的窗口上，注意官网上说的<br><code>Note: Do not &quot;Run as Administrator&quot; Impactor; doing this makes drag/drop of files not work on Windows 10.</code><br>以管理员模式运行Impactor可能导致无法拖拽文件。<br>然后会弹框，依次输入AppleID与密码，如果不放心的话可以另外注册一个号，不影响的。<br>如果出现了如图错误：<img src="/articles/CydiaImpactor/Error.jpg" alt="Error">，原因是开启了两步验证。请登录<a href="https://appleid.apple.com/" target="_blank" rel="external">appleid.apple.com</a>并点击Security - APP-SPECIFIC PASSWORDS - Generate Password…生成一个应用专属密码，复制下来，建议保存一下，因为该密码不会再出现了。再用这个密码代替AppleID密码即可刷入ipa。<br>最后，打开你的<del>林檎</del>苹果设备，进入设置 - 通用 - 设备管理 - 开发者应用 - 你的AppleID - 点击信任，即可使用刷入的应用了！</p>
+                <p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>
+不过这里讲得和编程没什么关系（大概）<br>
+总之来说就是分享一个软件</p>
+<p>环境：iPad 2018<del>（学生版）</del>，iOS 12.1，Windows 7 64x<br>
+<del>铛铛，</del>就是这个小钻头，<img src="/articles/CydiaImpactor/logo.png" alt="Cydia Impactor">，官网在这里：<a href="http://www.cydiaimpactor.com/" target="_blank" rel="external">Cydia Impactor</a> 点进去下载对应平台的程序即可。<br>
+虽然本意是被设计来安装越狱软件的，不过事实上甚至可以支持直接在iOS12.1上安装别的不太大的（大概100mb以内）的ipa文件，那么哪里能得到ipa文件呢，<del>点击打开百度，</del><a href="https://www.iphonecake.com/" target="_blank" rel="external">iphonecake.com</a>上可以下载，但是需要梯子才能打开下载链接。另外貌似同一个appleID在同一个设备上最多签名3个ipa文件，需要注意一下。</p>
+<p>然后就是步骤了：<br>
+首先确保装了iTunes或者相关驱动，将iPad或iPhone或什么什么什么通过数据线连接上电脑（当然需要信任该电脑），打开Impactor.exe，一般来说在第一个下拉框会显示你的设备名。然后不要点击Start，先将菜单Impactor - Insecure SSL勾上，貌似不勾会出现SSL证书错误（当然你也可以不打开“不安全的SSL”试一遍，能成功的话更好啦）。<br>
+然后将ipa拖到impactor程序的窗口上，注意官网上说的<br>
+<code>Note: Do not &quot;Run as Administrator&quot; Impactor; doing this makes drag/drop of files not work on Windows 10.</code><br>
+以管理员模式运行Impactor可能导致无法拖拽文件。<br>
+然后会弹框，依次输入AppleID与密码，如果不放心的话可以另外注册一个号，不影响的。<br>
+如果出现了如图错误：<img src="/articles/CydiaImpactor/Error.jpg" alt="Error">，原因是开启了两步验证。请登录<a href="https://appleid.apple.com/" target="_blank" rel="external">appleid.apple.com</a>并点击Security - APP-SPECIFIC PASSWORDS - Generate Password…生成一个应用专属密码，复制下来，建议保存一下，因为该密码不会再出现了。再用这个密码代替AppleID密码即可刷入ipa。<br>
+最后，打开你的<del>林檎</del>苹果设备，进入设置 - 通用 - 设备管理 - 开发者应用 - 你的AppleID - 点击信任，即可使用刷入的应用了！</p>
 <p>注意：刷入的ipa会在七天后失效，请在七天后不要重启设备，或者重启完了重刷一遍即可覆盖。</p>
 <p>最后吐槽一下刷进去使用的Duet Display，用着感觉还行，问题是每次双击不管间隔多远都会判定成在一个点双击<del>（直接导致我没法戳屏打osu）</del>。输入延迟还可以，显示延迟稍微有点单不影响日常使用，甚至可以内购Pro来把iPad当数位屏（对不起我没钱买笔）。问题是桌面端程序对独显 极 其 不友好，哪怕不插设备也为有影响（<del>例如R6无法正常启动，LR2变成只有50FPS，</del>听说Adobe系列基本上都出了各种奇奇怪怪的问题），我试了两天就卸载了。</p>
 <p>最最后，请不要刷入未知来源的ipa文件，万一出个什么事呢不是吗。</p>
 
 
                 
+				<br>
+				<div style="text-align:center;color: #ccc;font-size:20px;">---EOF---</div>
             </div>
-
             <!-- Comments -->
+				
             
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
 
+
+	<hr />
+	<div id="vcomments"></div>
+	<script>
+		new Valine({
+			av: AV, 
+			el: '#vcomments', // 
+			app_id: '279s7xDoxndUbB2GTXrO8fd6-gzGzoHsz',
+			app_key: 'jXm5pw4ANUmrqQnVrlP3k3tm',
+			placeholder: '输入你想说的话。',
+			verify: true
+		});
+	</script>
 
                 </div>
             
@@ -247,13 +275,12 @@
 </article>
 
     <!-- Footer -->
-    <hr />
-
-<!-- Footer -->
+    <!-- Footer -->
+<hr />
 <footer>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <div class="container">
-        <div class="footer_row">
+        <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
                     
@@ -290,6 +317,7 @@
                 <p class="copyright text-muted">&copy; 2019 XTXTMTXTX<br></p>
                 <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
                 <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+				<p class="copyright text-muted">Modified by <a href="https://www.xtxtmtxtx.com/" target="_blank">XTXTMTXTX</a></p>
             </div>
         </div>
     </div>
@@ -308,6 +336,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- Disqus Comments -->
+
 
 
     <script type="text/javascript" src="/js/love.js"></script>

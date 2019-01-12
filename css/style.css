@@ -74,7 +74,10 @@ hr.small {
 .post-heading {
   background-color: rgba(0,0,0,0.6);
 }
-.footer_row div {
+footer .container .row div {
+  background-color: rgba(250,250,250,0.6);
+}
+#vcomments {
   background-color: rgba(250,250,250,0.6);
 }
 .fa-stack-1x,

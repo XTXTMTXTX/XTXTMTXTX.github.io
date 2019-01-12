@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2019-01-11T05:52:51.533Z</updated>
+  <updated>2019-01-12T09:52:27.037Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -15,20 +15,120 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[美化Blog &amp;&amp; 加入评论功能]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/articles/embellish/"/>
+    <id>https://www.xtxtmtxtx.xyz/articles/embellish/</id>
+    <published>2019-01-12T04:47:45.000Z</published>
+    <updated>2019-01-12T09:52:27.037Z</updated>
+    <content type="html"><![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的VPS发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把CF<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，十分不幸，我居然被div2 C题给杀了，完了之后跟同学一讲，原来是读错题了🤔🤔🤔。然后这几天还折腾了几下优化博客的体验，期末考怕是要凉了。<br>
+　　好了，言归正传，讲一下怎么给博客加上一些效果，让博客看起来更好看，和加上评论功能。<br>
+<br></p>
+<h1>添加js效果</h1>
+<hr>
+<p>首先是给博客加上一些小动画，像这里的点击爱心效果和背景的效果，其实引入一个js就可以做到。问题就是怎么引入了。<br>
+　　我先按网上的教程做，找<strong>HEXO\themes\[theme name]\layout\</strong>下的文件，教程里说是&quot;_layout.swig&quot;文件。我一看，全是.ejs文件。好吧不影响，这个其实是因为主题不一样的原因。我用的是clean-blog，而好像大部分人用的都是Next。接下来notepad++打开layout.ejs先，仔细观察格式，其实还是比较好理解的：</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> </span></span>&lt;%<span class="ruby"> <span class="keyword">if</span>(config.language) &#123; </span>%&gt;<span class="xml"><span class="tag"><span class="attribute">lang</span>=<span class="value">"</span></span></span>&lt;%=<span class="ruby"> config.language </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span></span></span>&lt;%<span class="ruby"> &#125; <span class="keyword">else</span> &#123; </span>%&gt;<span class="xml"><span class="tag"><span class="attribute">lang</span>=<span class="value">"en"</span></span></span>&lt;%<span class="ruby"> &#125;</span>%&gt;<span class="xml"><span class="tag">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></span><br><span class="line"></span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/head'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Menu --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/menu'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Main Content --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> body </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Footer --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/footer'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- After footer scripts --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/after-footer'</span>) </span>%&gt;<span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">color</span>=<span class="value">"255,0,0"</span> <span class="attribute">opacity</span>=<span class="value">'0.5'</span> <span class="attribute">src</span>=<span class="value">"/js/canvas-nest.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>  注意到，在<code>&lt;/body&gt;</code>前加入了两行script，这两个就是这些小动画的js啦。如果你要引用的话，直接打开这个<a href="/js/love.js"><strong>love.js</strong></a>和这个<a href="/js/canvas-nest.min.js"><strong>canvas-nest.min.js</strong></a>，保存到本地，再复制到<strong>HEXO\themes\[theme name]\source\js\</strong>下，最后在上文目录中类似<strong>*layout*</strong>的文件下找个合适的地方粘贴：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">color</span>=<span class="value">"255,0,0"</span> <span class="attribute">opacity</span>=<span class="value">'0.5'</span> <span class="attribute">src</span>=<span class="value">"/js/canvas-nest.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  其中第二行的color和opacity可以自己设置，分别是背景线条的颜色RGB和不透明度。<br>
+　　实在找不到怎么办？<br>
+　　CMD: <code>hexo s</code>。对就是生成预览网站，然后直接修改theme文件并保存，刷新一下localhost:4000就可以直接预览效果，善用F12可以定位你做的修改在网页里的哪个位置（虽然可能需要一些网页调试基本知识了<strong><del>，推荐使用更为方便的Typecho</del></strong>）。<br>
+　　接下来就是给文本框框加上一个半透明的背景和阴影了。<br>
+<br></p>
+<h1>修改博客CSS</h1>
+<hr>
+<p>Clean-Blog原本的背景是白色，所以文本是没有背景色的。现在一加上背景效果，就比较干扰阅读，所以这里就需要修改CSS文件。<br>
+　　打开<strong>HEXO\themes\[theme name]\source\css\</strong>，发现有许多.styl文件，其一般的结构是一个<strong>style.styl</strong>中又引用了许多别的styl文件，主要在<strong>base.styl</strong>里，那么首先就修改base.styl。<br>
+　　观察文件结构，发现还是比较规则的，与css文件很类似。需要注意的是作为缩进字符必须统一，例如原本是两个空格就用两个空格缩进，原本是Tab就用Tab，不然生成网页会报错（这点和python蛮像的）。主要是Notepad++可能在换行的时候会自动把几个空格变成一个Tab，最好还是手动删了再输比较好。<br>
+　　首先<code>hexo s</code>打开本地服务器方便实时查看修改状态，先来给主页的post预览加上一个白色底框。在浏览器中打开网页按下F12定位到文章预览框<code>class=&quot;post-preview&quot;</code>，接下来只要定位<strong>post-preview</strong>就行了。<br>
+　　在base.styl中找到</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<p>  找不到就直接手打，注意缩进<br>
+　　在.post-preview后加一行代码，变成</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<p>  其中四个数字分别是颜色RGB和不透明度，按自己喜好调整，保存styl文件刷新预览服务器页面即可看到效果。（还想再方便点？直接F12修改css。）<br>
+　　如果需要加上阴影，那么就：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<p>  rgba参数意义同上，5px表示阴影厚度。<br>
+　　另外，如果需要调整框的大小，则需要：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  margin-top: <span class="number">65</span>px;</span><br><span class="line">  margin-bottom: <span class="number">65</span>px;</span><br><span class="line">  padding: <span class="number">25</span>px;</span><br><span class="line">  -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<p>  具体意义参考css教程。<br>
+　　好了，现在文章预览有底框了，可是文章还没有底框，怎么办呢。<br>
+　　先进F12看看在哪个css里加框框，感觉在container div里的row div里加比较好看，于是在base.styl里找，不太找得到，找<strong>article.styl</strong>，有了，开头前几行就是，于是编辑为：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">article</span><br><span class="line">  .container</span><br><span class="line">    .row</span><br><span class="line">      margin-top: <span class="number">65</span>px;</span><br><span class="line">      margin-bottom: <span class="number">65</span>px;</span><br><span class="line">      padding: <span class="number">25</span>px;</span><br><span class="line">      -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">      -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">      background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">      ...</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
+<p>  这样，效果就有了。<br>
+　　接下来觉得标题和底栏也需要一个半透明背景。先找标题，通过F12定位，发现有两种class，一个叫site-heading，一个叫post-heading，其实好办，打开<strong>base.styl</strong>，加入：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.site-heading</span><br><span class="line">  background-color:rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br><span class="line">.post-heading</span><br><span class="line">  background-color:rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br></pre></td></tr></table></figure>
+<p>  这样就有了个黑色的底板，能看得清字了。<br>
+　　同理，找footer，发现是在一个container的div里套着的一个row的div再套一个div，直接在里加入：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.row</span><br><span class="line">  div</span><br><span class="line">    background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<p>  刷新，结果不尽人意。平白多了一堆灰框，不太好看。原因是所有class为row的全都加上了这个属性。那么怎么办呢？<br>
+html中的相应代码是</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer&gt;</span><br><span class="line">    &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"container"</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"row"</span>&gt;</span><br><span class="line">            &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"</span>&gt;</span><br><span class="line">            ...</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
+<p>  所以需要修改为：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">footer</span><br><span class="line">  .container</span><br><span class="line">    .row</span><br><span class="line">      div</span><br><span class="line">        background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+<p>  保存，即可。<br>
+　　到这里博客就好看多了，最后来讲讲怎么加上评论功能。<br>
+<br></p>
+<h1>加入评论功能</h1>
+<hr>
+<p>之前用Pacman主题时用的评论功能在我转到Clean-Blog主题的时候就给去掉了，现在这个主题能用的只有disqus和facebook的评论系统，然而都需要科学上网才能使用。尽管现在我的博客是挂在外国（毕竟便宜，8块多一个月），但我还是懒得实现类似反代之类的操作。毕竟都选择静态博客了，再嵌入个php就有点懒得麻烦。<br>
+　　这里就用到了<a href="https://valine.js.org/" target="_blank" rel="external"><strong>Valine</strong></a>，具体怎么配置可以点进去看一下，这里讲一下我的配置过程。<br>
+　　首先需要一个<a href="https://leancloud.cn/" target="_blank" rel="external"><strong>Leancloud</strong></a>账号，作为处理评论的后台。注册完之后验证好邮箱就可以用了。首先创建一个应用，名字随意，接着到应用<strong>设置</strong>，<strong>应用Key</strong>里把<strong>App ID</strong>和<strong>App Key</strong>复制下来，再到<strong>安全中心</strong>修改<strong>Web 安全域名</strong>，改成这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://your.site</span><br><span class="line">https://your.site <span class="comment">#如果有SSL的话</span></span><br><span class="line">http://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">4000</span> <span class="comment">#方便本地测试</span></span><br><span class="line">http://localhost:<span class="number">4000</span> <span class="comment">#同上</span></span><br></pre></td></tr></table></figure>
+<p>  当然了，不要把注释也打进去。<br>
+　　接着就是在HEXO里配置了。关键代码比较少，如果不弄什么方便控制的功能的话在特定的地方粘贴一下就可以了，许多主题现在已经可以直接安装Valine了，然而Clean-Blog没有。这里讲一下怎么把评论直接放到网页里。<br>
+　　先打开<strong>HEXO\themes\[theme name]\layout\</strong>，找到头部的配置文件，我的是<strong>_partial\head.ejs</strong>。<br>
+　　在<code>&lt;/head&gt;</code>之前加入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  接下来找文章放评论模块的地方，一般都是有独立的文件的，实在找不到就在文章布局文件的结尾放。<br>
+　　打开<strong>_partial\comments.ejs</strong>，在结尾加入：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">hr</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"vcomments"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line">	<span class="keyword">new</span> Valine(&#123;</span><br><span class="line">		av: AV, </span><br><span class="line">		el: <span class="string">'#vcomments'</span>, <span class="comment">// </span></span><br><span class="line">		app_id: <span class="string">'&lt;APP_ID&gt;'</span>,</span><br><span class="line">		app_key: <span class="string">'&lt;APP_KEY&gt;'</span>,</span><br><span class="line">		placeholder: <span class="string">'输入你想说的话。'</span>,</span><br><span class="line">		verify: <span class="literal">true</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>  其中<code>&lt;APP_ID&gt;</code>与<code>&lt;APP_KEY&gt;</code>填之前保存下来的，<code>placeholder</code>填在留言框中出现的占位符，<code>verify</code>是验证码，其实就是一个简单的四则运算求答案，可以改成false关掉。<br>
+　　到这里就差不多了，但如果你还想改下评论框的css样式的话，打开<strong>HEXO\themes\[theme name]\source\css\</strong>里的<strong>base.styl</strong>，添加并编辑：</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">#vcomments</span></span><br><span class="line">  <span class="attribute">...</span></span><br><span class="line">  <span class="attribute">...</span></span><br></pre></td></tr></table></figure>
+<p>  即可。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><strong>CF</strong>： <a href="https://codeforces.com/" target="_blank" rel="external"><strong>Codeforces</strong></a>，才不是某TX游戏。 <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的VPS发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把CF<sup class="footnote-ref"><a href="#fn1" id="fnref1">[]]>
+    </summary>
+    
+      <category term="HEXO" scheme="https://www.xtxtmtxtx.xyz/tags/HEXO/"/>
+    
+      <category term="Javascript" scheme="https://www.xtxtmtxtx.xyz/tags/Javascript/"/>
+    
+      <category term="Valine" scheme="https://www.xtxtmtxtx.xyz/tags/Valine/"/>
+    
+      <category term="博客" scheme="https://www.xtxtmtxtx.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="评论" scheme="https://www.xtxtmtxtx.xyz/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+      <category term="Web" scheme="https://www.xtxtmtxtx.xyz/categories/Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[未命名]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/%E6%9C%AA%E5%91%BD%E5%90%8D/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/未命名/</id>
     <published>2019-01-11T05:26:48.000Z</published>
-    <updated>2019-01-11T05:52:51.533Z</updated>
-    <content type="html"><![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><p></p>
-<p></p><h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
+    <updated>2019-01-12T03:51:47.510Z</updated>
+    <content type="html"><![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><br>
+<h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
 <p style="text-align:center">假如生活欺骗了你，　　　　　　　　</p><p style="text-align:center">不要悲伤，不要心急！　　　　　　　</p><p style="text-align:center">忧郁的日子里须要镇静：　　　　　　</p><p style="text-align:center">相信吧，快乐的日子将会来临！　　　</p><p style="text-align:center">心儿永远向往着未来；　　　　　　　</p><p style="text-align:center">现在却常是忧郁。　　　　　　　　　</p><p style="text-align:center">一切都是瞬息，一切都将会过去；　　</p><p style="text-align:center">而那过去了的，就会成为亲切的怀恋。</p>
-
+<p style="text-align:center">-EOF-</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><p></p>
-<p></p><h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
-<p]]>
+    <![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><br>
+<h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
+<p style="te]]>
     </summary>
     
       <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
@@ -43,10 +143,16 @@
     <id>https://www.xtxtmtxtx.xyz/articles/2019/</id>
     <published>2018-12-31T18:48:42.000Z</published>
     <updated>2018-12-31T19:12:25.691Z</updated>
-    <content type="html"><![CDATA[<p>　　时光飞逝，又到了一年元旦。虽然没有什么东西想写的，每年本质上的东西都没有什么大的变化，但还是随便扯扯淡吧。<br>　　相比前年，好歹写的东西多了点，但大多还是流水账一般的文笔。毕竟阅读量在那儿，也只有高考前才集中地看过一段时间的小说，因此也难以写出什么优雅的词语。思维又比较破碎，一会儿想的这个一会儿又会想别的去，偶尔有个什么点子又难以拓展。总之写地很艰难。<br>　　学校里加了几个组织，结果活特别多。虽然说白了还是自己拖延导致的需要赶死线，不过相比高中做完作业就不管不顾的心理状态还是要差很多。其实也没什么好抱怨的，一方面会被说“能力越大责任越大”，尽管自己是觉得自己不过是个有点三脚猫功夫的人；另一方面做些事儿确实能体现点个人价值，也能逼自己学些东西，不至于变成小透明。<br>　　本来想着跨年在家里打会儿游戏，打累了就睡了。结果却是被拉去做事，家也没回成，跨年是在办公室里度过的。不过意外地内心没有什么抵触的情绪，大概是被生活磨平了棱角，也有可能是因为别的事？（笑）<br>　　尽管对未来比较迷茫，当初狂言想要努力双学位。结果现在发现很难，也没什么热情。还有种别人好像活得都比我努力的感觉。不过日子总是得过的，也许车到山前必有路吧。<br>　　不管怎样，新年快乐啦。  </p>
+    <content type="html"><![CDATA[<p>时光飞逝，又到了一年元旦。虽然没有什么东西想写的，每年本质上的东西都没有什么大的变化，但还是随便扯扯淡吧。<br>
+　　相比前年，好歹写的东西多了点，但大多还是流水账一般的文笔。毕竟阅读量在那儿，也只有高考前才集中地看过一段时间的小说，因此也难以写出什么优雅的词语。思维又比较破碎，一会儿想的这个一会儿又会想别的去，偶尔有个什么点子又难以拓展。总之写地很艰难。<br>
+　　学校里加了几个组织，结果活特别多。虽然说白了还是自己拖延导致的需要赶死线，不过相比高中做完作业就不管不顾的心理状态还是要差很多。其实也没什么好抱怨的，一方面会被说“能力越大责任越大”，尽管自己是觉得自己不过是个有点三脚猫功夫的人；另一方面做些事儿确实能体现点个人价值，也能逼自己学些东西，不至于变成小透明。<br>
+　　本来想着跨年在家里打会儿游戏，打累了就睡了。结果却是被拉去做事，家也没回成，跨年是在办公室里度过的。不过意外地内心没有什么抵触的情绪，大概是被生活磨平了棱角，也有可能是因为别的事？（笑）<br>
+　　尽管对未来比较迷茫，当初狂言想要努力双学位。结果现在发现很难，也没什么热情。还有种别人好像活得都比我努力的感觉。不过日子总是得过的，也许车到山前必有路吧。<br>
+　　不管怎样，新年快乐啦。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>　　时光飞逝，又到了一年元旦。虽然没有什么东西想写的，每年本质上的东西都没有什么大的变化，但还是随便扯扯淡吧。<br>　　相比前年，好歹写的东西多了点，但大多还是流水账一般的文笔。毕竟阅读量在那儿，也只有高考前才集中地看过一段时间的小说，因此也难以写出什么优雅的词语。思维又]]>
+    <![CDATA[<p>时光飞逝，又到了一年元旦。虽然没有什么东西想写的，每年本质上的东西都没有什么大的变化，但还是随便扯扯淡吧。<br>
+　　相比前年，好歹写的东西多了点，但大多还是流水账一般的文笔。毕竟阅读量在那儿，也只有高考前才集中地看过一段时间的小说，因此也难以写出什么优雅的词语。思维又比]]>
     </summary>
     
       <category term="2019" scheme="https://www.xtxtmtxtx.xyz/tags/2019/"/>
@@ -63,10 +169,27 @@
     <id>https://www.xtxtmtxtx.xyz/articles/FileZillaServer/</id>
     <published>2018-12-26T06:06:48.000Z</published>
     <updated>2018-12-26T10:57:34.549Z</updated>
-    <content type="html"><![CDATA[<p>　　近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>　　安装完之后打开FileZilla Server Interface，一通默认设置不要改内容就行了，然而可能出现如下错误<br>　　<img src="/articles/FileZillaServer/1.jpg" alt="错误"><br>　　这时候先检查下菜单栏File-&gt;Connect to server…，如果安装的时候没做别的设置的话应该是这样子的<br>　　<img src="/articles/FileZillaServer/2.jpg" alt="设置"><br>　　还连不上的话要去电脑的管理工具-&gt;服务里把FileZilla Server FTP server服务开启。顺带一提的是如果在安装时选的手动开启服务，每次重启之后都要来这里（或者任务管理器）把这个服务打开。<br>　　<img src="/articles/FileZillaServer/3.jpg" alt="图标"><br>　　这样之后就可以点这张图框里中间那个图标加用户了。<br>　　<img src="/articles/FileZillaServer/4.jpg" alt="设置"><br>　　先点图中右侧的Add，输个好记的用户名之后点OK。接下来把中间的Enable account勾上，Password视情况填选。<br>　　接下来左边点Shared folders。<br>　　<img src="/articles/FileZillaServer/5.jpg" alt="设置"><br>　　点中间的Add，选择要放到ftp上的文件夹并确定，然后选中该文件夹，根据需要在右边的Files和Directories里打勾。最后点OK之后在资源管理器地址栏中输入ftp://localhost，如果能连上就成功了。<br>　　到这一步还不够，如果电脑开了防火墙的话即使在局域网里别的设备也连不上这个ftp地址。<br>　　先打开计算机的防火墙设置，进入高级设置，点击入站规则，新建规则进入向导。规则类型选程序，程序路径选与FileZilla Server Interface.exe同路径的FileZilla Server.exe，操作允许连接，配置文件全勾上，名称随便输即可。接下来确认刚才设置的规则启用了即可。<br>　　现在，你就可以在局域网下通过ftp传文件啦，只需要在网络设置中找到本机的ip，在别的设备上加入ftp://的前缀就可以了。</p>
+    <content type="html"><![CDATA[<p>近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>
+　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>
+　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>
+　　安装完之后打开FileZilla Server Interface，一通默认设置不要改内容就行了，然而可能出现如下错误<br>
+　　<img src="/articles/FileZillaServer/1.jpg" alt="错误"><br>
+　　这时候先检查下菜单栏File-&gt;Connect to server…，如果安装的时候没做别的设置的话应该是这样子的<br>
+　　<img src="/articles/FileZillaServer/2.jpg" alt="设置"><br>
+　　还连不上的话要去电脑的管理工具-&gt;服务里把FileZilla Server FTP server服务开启。顺带一提的是如果在安装时选的手动开启服务，每次重启之后都要来这里（或者任务管理器）把这个服务打开。<br>
+　　<img src="/articles/FileZillaServer/3.jpg" alt="图标"><br>
+　　这样之后就可以点这张图框里中间那个图标加用户了。<br>
+　　<img src="/articles/FileZillaServer/4.jpg" alt="设置"><br>
+　　先点图中右侧的Add，输个好记的用户名之后点OK。接下来把中间的Enable account勾上，Password视情况填选。<br>
+　　接下来左边点Shared folders。<br>
+　　<img src="/articles/FileZillaServer/5.jpg" alt="设置"><br>
+　　点中间的Add，选择要放到ftp上的文件夹并确定，然后选中该文件夹，根据需要在右边的Files和Directories里打勾。最后点OK之后在资源管理器地址栏中输入ftp://localhost，如果能连上就成功了。<br>
+　　到这一步还不够，如果电脑开了防火墙的话即使在局域网里别的设备也连不上这个ftp地址。<br>
+　　先打开计算机的防火墙设置，进入高级设置，点击入站规则，新建规则进入向导。规则类型选程序，程序路径选与FileZilla Server Interface.exe同路径的FileZilla Server.exe，操作允许连接，配置文件全勾上，名称随便输即可。接下来确认刚才设置的规则启用了即可。<br>
+　　现在，你就可以在局域网下通过ftp传文件啦，只需要在网络设置中找到本机的ip，在别的设备上加入ftp://的前缀就可以了。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>　　近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。]]>
+    <![CDATA[<p>近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<b]]>
     </summary>
     
       <category term="FTP" scheme="https://www.xtxtmtxtx.xyz/tags/FTP/"/>
@@ -87,10 +210,30 @@
     <id>https://www.xtxtmtxtx.xyz/articles/bios/</id>
     <published>2018-12-24T07:02:36.000Z</published>
     <updated>2018-12-26T09:52:12.146Z</updated>
-    <content type="html"><![CDATA[<p>　　也许是因为过于疲劳，周五晚上的我决定实施早就想实施的Bios解锁+更换启动图像。下载好官网上原版的Bios文件，修改文件时虽然还比较顺利，然后在听信网络上的教程之后，尽管在网上没有找到跟我机型一样的刷Bios的帖子（顺带一提我的机子是GE62-2QF，三年前的微星笔记本），我还是决定用AFUDOS刷入Bios。<br>　　在DOS下的界面也一切顺利，打完AFUDOS NI.113 /GAN之后条非常快的就读完了，于是我非常淡定地按下电源键，然后非常淡定地开机，非常淡定地发现只有键盘灯亮了起来，然后就没有任何响应了。<br>　　完了，黑了<br>　　当时还比较从容，先百度一番，了解了笔记本这种情况一般只能靠编程器，顺便还做了返厂要600左右的心理准备。没辙，在tb上逛了一圈，一开始买了个127带烧录夹和一拖二的编程器，后来搜着搜着感觉有点贵，就退款再买了个XTW100和烧录夹。在别的刷vbios的帖子里看到有人用了1.8v转换器，琢磨着保险点就在另一家店又买了个，顺带还买了个ch341a，加起来六七十。<br>　　然后就是漫长的等快递的日子了。于是又在网上搜有没有别的解决方案。看到各种盲刷、双Bios复原法。盲刷试了下，电脑依旧没有反应，U盘灯也亮不了，看来是彻底刷没了，只能等编程器到货了。期间还把笔记本打开找Bios芯片，结果找到一堆8脚还带涂点的芯片，然而网上又找不到这个机子的主板详情。没办法，连蒙带猜决定就是那个又有粉点又有个小洞标记的芯片作为Bios芯片了。<br>　　因为是两个快递，虽然都在周日就到了，结果我先拿了一个快递回到寝室第二个快递短信就来了。不过早点到也好，在借了同学电脑之后，先装编程器驱动。<br>　　当然装不进去，得关闭强制数字签名的驱动的启动选项才能装。装好了之后就把我的笔记本拆了，烧录夹一夹，编程器一插，打开软件准备就绪。<br>　　当时大概是这样：<br>　　<img src="/articles/bios/2.jpg" alt="这是照片"><br>　　然而并没有就绪，试尽了各种组合、各种夹子方向，读出来不是全零就是全FF，偶尔还蹦出来几个诡异的数字，强行刷入刷得蛮久，结果当然是没有用。<del>后来才发现一直在刷空气。</del><br>　　终于，历经几个小时的排错，终于找到了原因——夹子没夹准。其实夹子大概要加到芯片底下才行，大概这种效果：<br>　　<img src="/articles/bios/0.png" alt="这是图"><br>　　另外我的烧录夹是红线对应1号引脚，芯片上从小孔开始逆时针12345678，接下来的接口都1号位对应一号位插就完事儿了。然后就是烧录夹的线插cha341a需要插在靠近USB接口的那几个孔，那是给25用的，而靠近末端的是给24用的。用之前用XTW100没读出来，所以不是很清楚，可能差不多，反正实践出真知，多试几遍就对了。<br>　　终于，在我生怕压坏主板又怕夹不住的一顿操作之后，夹子夹稳了，芯片型号终于读出来了（虽然和芯片上标的不太一样），数据也终于读出来了，第二行终于出现了5A A5…不过先没急着把原版刷进去，而是先把bios里的数据导出来看看。拿出原先准备烧的bios文件一FC，蹦出来一万个差异。果然，文件根本就没有烧录完整，怪不得黑了。<br>　　不过还是保险点好，先擦除芯片，结果一下就擦完了。当时以为夹子又没插好，不过点查空过了一分钟提示一空，而且刷新芯片还是能识别芯片规格，于是拿出原版bios文件，点完编程，点校验，校验成功<img src="/articles/bios/1.jpg" alt="这还是图">，再保存出来，和准备刷入的文件一FC，“找不到差异”。成了<br>　　十分忐忑的打开电脑，在过了比往常开机久一点的几秒之后，终于，MSI的图标出现了！当时我就狂按del键，出现了久违的bios界面，于是我就关机了。<br>　　后来一想，既然是dos下刷bios刷不完整的问题，那我索性把改过的bios刷上去就完事儿了。第二次的操作比第一次熟练多了，结果发现解锁没成功，改启动图像倒是成功了<br>　　<img src="/articles/bios/3.jpg" alt="这是启动图"><br>　　顺便因为我还用的是HDD+Win7，刷完bios之后还得先改设置。总共也就是把快速启动关了，UEFI改成Legacy，RAID改成AHCI，于是就没有出现不断重启进入bios界面的情况了。<br>　　最后来一张买的工具的合照，虽然最终只用到了ch341a和那个烧录夹，但可以留着备用嘛。<br>　　<img src="/articles/bios/4.jpg" alt="合影">  </p>
+    <content type="html"><![CDATA[<p>也许是因为过于疲劳，周五晚上的我决定实施早就想实施的Bios解锁+更换启动图像。下载好官网上原版的Bios文件，修改文件时虽然还比较顺利，然后在听信网络上的教程之后，尽管在网上没有找到跟我机型一样的刷Bios的帖子（顺带一提我的机子是GE62-2QF，三年前的微星笔记本），我还是决定用AFUDOS刷入Bios。<br>
+　　在DOS下的界面也一切顺利，打完AFUDOS NI.113 /GAN之后条非常快的就读完了，于是我非常淡定地按下电源键，然后非常淡定地开机，非常淡定地发现只有键盘灯亮了起来，然后就没有任何响应了。<br>
+　　完了，黑了<br>
+　　当时还比较从容，先百度一番，了解了笔记本这种情况一般只能靠编程器，顺便还做了返厂要600左右的心理准备。没辙，在tb上逛了一圈，一开始买了个127带烧录夹和一拖二的编程器，后来搜着搜着感觉有点贵，就退款再买了个XTW100和烧录夹。在别的刷vbios的帖子里看到有人用了1.8v转换器，琢磨着保险点就在另一家店又买了个，顺带还买了个ch341a，加起来六七十。<br>
+　　然后就是漫长的等快递的日子了。于是又在网上搜有没有别的解决方案。看到各种盲刷、双Bios复原法。盲刷试了下，电脑依旧没有反应，U盘灯也亮不了，看来是彻底刷没了，只能等编程器到货了。期间还把笔记本打开找Bios芯片，结果找到一堆8脚还带涂点的芯片，然而网上又找不到这个机子的主板详情。没办法，连蒙带猜决定就是那个又有粉点又有个小洞标记的芯片作为Bios芯片了。<br>
+　　因为是两个快递，虽然都在周日就到了，结果我先拿了一个快递回到寝室第二个快递短信就来了。不过早点到也好，在借了同学电脑之后，先装编程器驱动。<br>
+　　当然装不进去，得关闭强制数字签名的驱动的启动选项才能装。装好了之后就把我的笔记本拆了，烧录夹一夹，编程器一插，打开软件准备就绪。<br>
+　　当时大概是这样：<br>
+　　<img src="/articles/bios/2.jpg" alt="这是照片"><br>
+　　然而并没有就绪，试尽了各种组合、各种夹子方向，读出来不是全零就是全FF，偶尔还蹦出来几个诡异的数字，强行刷入刷得蛮久，结果当然是没有用。<del>后来才发现一直在刷空气。</del><br>
+　　终于，历经几个小时的排错，终于找到了原因——夹子没夹准。其实夹子大概要加到芯片底下才行，大概这种效果：<br>
+　　<img src="/articles/bios/0.png" alt="这是图"><br>
+　　另外我的烧录夹是红线对应1号引脚，芯片上从小孔开始逆时针12345678，接下来的接口都1号位对应一号位插就完事儿了。然后就是烧录夹的线插cha341a需要插在靠近USB接口的那几个孔，那是给25用的，而靠近末端的是给24用的。用之前用XTW100没读出来，所以不是很清楚，可能差不多，反正实践出真知，多试几遍就对了。<br>
+　　终于，在我生怕压坏主板又怕夹不住的一顿操作之后，夹子夹稳了，芯片型号终于读出来了（虽然和芯片上标的不太一样），数据也终于读出来了，第二行终于出现了5A A5…不过先没急着把原版刷进去，而是先把bios里的数据导出来看看。拿出原先准备烧的bios文件一FC，蹦出来一万个差异。果然，文件根本就没有烧录完整，怪不得黑了。<br>
+　　不过还是保险点好，先擦除芯片，结果一下就擦完了。当时以为夹子又没插好，不过点查空过了一分钟提示一空，而且刷新芯片还是能识别芯片规格，于是拿出原版bios文件，点完编程，点校验，校验成功<img src="/articles/bios/1.jpg" alt="这还是图">，再保存出来，和准备刷入的文件一FC，“找不到差异”。成了<br>
+　　十分忐忑的打开电脑，在过了比往常开机久一点的几秒之后，终于，MSI的图标出现了！当时我就狂按del键，出现了久违的bios界面，于是我就关机了。<br>
+　　后来一想，既然是dos下刷bios刷不完整的问题，那我索性把改过的bios刷上去就完事儿了。第二次的操作比第一次熟练多了，结果发现解锁没成功，改启动图像倒是成功了<br>
+　　<img src="/articles/bios/3.jpg" alt="这是启动图"><br>
+　　顺便因为我还用的是HDD+Win7，刷完bios之后还得先改设置。总共也就是把快速启动关了，UEFI改成Legacy，RAID改成AHCI，于是就没有出现不断重启进入bios界面的情况了。<br>
+　　最后来一张买的工具的合照，虽然最终只用到了ch341a和那个烧录夹，但可以留着备用嘛。<br>
+　　<img src="/articles/bios/4.jpg" alt="合影"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>　　也许是因为过于疲劳，周五晚上的我决定实施早就想实施的Bios解锁+更换启动图像。下载好官网上原版的Bios文件，修改文件时虽然还比较顺利，然后在听信网络上的教程之后，尽管在网上没有找到跟我机型一样的刷Bios的帖子（顺带一提我的机子是GE62-2QF，三年前的微星笔记本]]>
+    <![CDATA[<p>也许是因为过于疲劳，周五晚上的我决定实施早就想实施的Bios解锁+更换启动图像。下载好官网上原版的Bios文件，修改文件时虽然还比较顺利，然后在听信网络上的教程之后，尽管在网上没有找到跟我机型一样的刷Bios的帖子（顺带一提我的机子是GE62-2QF，三年前的微星笔记本），]]>
     </summary>
     
       <category term="Bios" scheme="https://www.xtxtmtxtx.xyz/tags/Bios/"/>
@@ -109,16 +252,40 @@
     <id>https://www.xtxtmtxtx.xyz/articles/html5mug/</id>
     <published>2018-11-29T11:30:01.000Z</published>
     <updated>2018-11-30T03:41:36.750Z</updated>
-    <content type="html"><![CDATA[<p>　　越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。  </p>
-<p>　　一开始听说js是弱类型，觉得很方便，就开始放飞自我，完全没考虑数据类型，字符串乘数字、字符串当数字加导致数字溢出之类的操作满.html起飞，好在debug了一万次之后终于慢慢改过来了，最终虽然也有点小问题不过已经和osu!mania的感觉差不多了。  </p>
-<p>　　好了，我们先来看怎么玩这个东西<del>（推销）</del>，网站在<a href="https://www.XTXTMTXTX.xyz/SIMPLE_MUG">这里</a> 当然 <a href="http://php.XTXTMTXTX.xyz/SIMPLE_MUG" target="_blank" rel="external">这里</a>也可以，不过那个是放在国外的php免费空间上，可能会导致因加载过慢而卡住的坑。 具体就是读取osu!mania谱面，分析谱面<del>，得出结论</del>，然后只支持4K，因为我懒得根据Key数搞一大堆特判，不过以后说不定会加入7k（咕咕咕）。<br>　　Bug还有点，也没任何处理错误的语句，不过比较懒，玩起来效果还不错了就这样吧（之前不小心打开了张主模式的图导致我一直以为js写错了又耗了好久，错误处理真的有点必要）。最后还加了个成绩图，不过就不要想和osu是一样的计分规则了，也没有什么缓动动画，然而能玩，能看变速特效，OK了。</p>
-<p>　　然后我们来看看写这么个东西过程中遇到的坑。  </p>
-<p>　　首先是变量的类型，因为我不注意写着写着变量变字符串类型了我还以为还是数字，一旦a+b就会越来越长，最后出现奇奇怪怪的问题，debug到死才发现不对劲。<br>　　然后&lt;script&gt;&lt;/script&gt;的地方也有讲究，放在文档前面就会先于HTML加载出来之前执行，嗯，比较基础，但我就是被坑了会儿<br>　　canvas绘制过程中需要反复调用draw()，然而如果你在draw()最后requestAnimationFrame (draw())，那就可能递归下去，最终导致浏览器越来越卡（还可能卡爆系统）。<br>　　在程序块里用var声明的变量在块外都还在，和我以前接触到的实在不一样，比如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1</span>;i++)&#123;</span><br><span class="line">       <span class="keyword">var</span> a=<span class="string">"a"</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(a);</span><br></pre></td></tr></table></figure></p>
-<p>就会弹出”a”。好在没被坑到，想要像c一样的话用let而不是var。<br>　　removeEventListener的参数要和addEventListener的参数完全一致才可以移除，而且不可以用匿名函数。<br>　　canvas.height改的是canvas的画布的高度，而canvas.setAttribute(“style”,”height: xxxpx;”);改的是最终显示大小，和canvas.height不一致将会导致canvas画布被缩放。<br>　　html5的audio.play()有肉眼可见延迟，导致不方便倒计时时间的预判，另外iOS不允许音频自动播放，但我懒得再处理了（本来还想拿ipad试试）。<br>　　监听触控事件最好在回调函数里开头加上e.preventDefault();不然肯导致移动设备的屏幕缩放之类的事发生。<br>　　监听触控事件返回的X，Y是相对页面而不是你所监听的对象的坐标，因此处理之前要先吧得到的坐标减掉那个对象的坐标，比方说我关注相对canvas的水平距离，那就e.changedTouches[0].clientX-c.offsetLeft。<br>　　利用ajax访问本域上的.osu谱面文件时发现404了，可是我明明传上去了，然而直接用浏览器也404。实在没办法就把后缀名改txt，结果成了。不过目前还没什么头绪为什么会这样，可能是php空间的文件处理机制导致的。<br>　　<br>　　另外别的想不出来什么了，那就放一下我之前推的根据间隔时间求屏幕像素距离的公式<br>　　<code>间隔时间*屏幕Y像素/(下落整屏所需时间*当前小节拍子时长*绿线百分比/基准拍子时长)</code><br>　　这样的话要求当前时间某个物体相对判定线的距离，只要先找到在当前时间之前的最近的一个TimingPoint作为基准TimingPoint，先将基准TimingPoint时间到物件时间之间的所有TimingPoint分割出来的完整的时间区域用上述公式计算距离并累加，再计算最后一小段的时间的距离。同理求当前时间相对基准TimingPoint的距离，减一下就是要求的物件的距离了。<br>　　<br>　　完整代码在<a href="https://github.com/XTXTMTXTX/SIMPLE-HTML5-Music-Game/" target="_blank" rel="external">github</a>，目前支持移动设备的触控操作，不过iOS因为各种各样的原因玩不了。然后玩在线谱面可能会因为缓冲块不够而卡住或重放，目前还不知道怎么让它先把整个音频文件加载完。<br>　　<br>　　目测会有一段时间不碰js了，打算抽时间恶补写软件时的一些规范，之前搞习惯了oi习惯了那一套格式，现在写大的程序都debug无力<del>（，而且辅导员看了我的github都说我的程序怎么看怎么像C）</del>。<br>　　<br>　　最后放一张osu!mania的判定时间图吧，说不定你们也想写呢（笑）。<br><img src="/articles/html5mug/o!m_OD_Table.png" alt="这是图"></p>
+    <content type="html"><![CDATA[<p>越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>
+　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。</p>
+<p>一开始听说js是弱类型，觉得很方便，就开始放飞自我，完全没考虑数据类型，字符串乘数字、字符串当数字加导致数字溢出之类的操作满.html起飞，好在debug了一万次之后终于慢慢改过来了，最终虽然也有点小问题不过已经和osu!mania的感觉差不多了。</p>
+<p>好了，我们先来看怎么玩这个东西<del>（推销）</del>，网站在<a href="https://www.XTXTMTXTX.xyz/SIMPLE_MUG">这里</a> 当然 <a href="http://php.XTXTMTXTX.xyz/SIMPLE_MUG" target="_blank" rel="external">这里</a>也可以，不过那个是放在国外的php免费空间上，可能会导致因加载过慢而卡住的坑。 具体就是读取osu!mania谱面，分析谱面<del>，得出结论</del>，然后只支持4K，因为我懒得根据Key数搞一大堆特判，不过以后说不定会加入7k（咕咕咕）。<br>
+　　Bug还有点，也没任何处理错误的语句，不过比较懒，玩起来效果还不错了就这样吧（之前不小心打开了张主模式的图导致我一直以为js写错了又耗了好久，错误处理真的有点必要）。最后还加了个成绩图，不过就不要想和osu是一样的计分规则了，也没有什么缓动动画，然而能玩，能看变速特效，OK了。</p>
+<p>然后我们来看看写这么个东西过程中遇到的坑。</p>
+<p>首先是变量的类型，因为我不注意写着写着变量变字符串类型了我还以为还是数字，一旦a+b就会越来越长，最后出现奇奇怪怪的问题，debug到死才发现不对劲。<br>
+　　然后&lt;script&gt;&lt;/script&gt;的地方也有讲究，放在文档前面就会先于HTML加载出来之前执行，嗯，比较基础，但我就是被坑了会儿<br>
+　　canvas绘制过程中需要反复调用draw()，然而如果你在draw()最后requestAnimationFrame (draw())，那就可能递归下去，最终导致浏览器越来越卡（还可能卡爆系统）。<br>
+　　在程序块里用var声明的变量在块外都还在，和我以前接触到的实在不一样，比如</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">1</span>;i++)&#123;</span><br><span class="line">       <span class="keyword">var</span> a=<span class="string">"a"</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(a);</span><br></pre></td></tr></table></figure>
+<p>就会弹出&quot;a&quot;。好在没被坑到，想要像c一样的话用let而不是var。<br>
+　　removeEventListener的参数要和addEventListener的参数完全一致才可以移除，而且不可以用匿名函数。<br>
+　　canvas.height改的是canvas的画布的高度，而canvas.setAttribute(“style”,“height: xxxpx;”);改的是最终显示大小，和canvas.height不一致将会导致canvas画布被缩放。<br>
+　　html5的audio.play()有肉眼可见延迟，导致不方便倒计时时间的预判，另外iOS不允许音频自动播放，但我懒得再处理了（本来还想拿ipad试试）。<br>
+　　监听触控事件最好在回调函数里开头加上e.preventDefault();不然肯导致移动设备的屏幕缩放之类的事发生。<br>
+　　监听触控事件返回的X，Y是相对页面而不是你所监听的对象的坐标，因此处理之前要先吧得到的坐标减掉那个对象的坐标，比方说我关注相对canvas的水平距离，那就e.changedTouches[0].clientX-c.offsetLeft。<br>
+　　利用ajax访问本域上的.osu谱面文件时发现404了，可是我明明传上去了，然而直接用浏览器也404。实在没办法就把后缀名改txt，结果成了。不过目前还没什么头绪为什么会这样，可能是php空间的文件处理机制导致的。<br>
+　　<br>
+　　另外别的想不出来什么了，那就放一下我之前推的根据间隔时间求屏幕像素距离的公式<br>
+　　<code>间隔时间*屏幕Y像素/(下落整屏所需时间*当前小节拍子时长*绿线百分比/基准拍子时长)</code><br>
+　　这样的话要求当前时间某个物体相对判定线的距离，只要先找到在当前时间之前的最近的一个TimingPoint作为基准TimingPoint，先将基准TimingPoint时间到物件时间之间的所有TimingPoint分割出来的完整的时间区域用上述公式计算距离并累加，再计算最后一小段的时间的距离。同理求当前时间相对基准TimingPoint的距离，减一下就是要求的物件的距离了。<br>
+　　<br>
+　　完整代码在<a href="https://github.com/XTXTMTXTX/SIMPLE-HTML5-Music-Game/" target="_blank" rel="external">github</a>，目前支持移动设备的触控操作，不过iOS因为各种各样的原因玩不了。然后玩在线谱面可能会因为缓冲块不够而卡住或重放，目前还不知道怎么让它先把整个音频文件加载完。<br>
+　　<br>
+　　目测会有一段时间不碰js了，打算抽时间恶补写软件时的一些规范，之前搞习惯了oi习惯了那一套格式，现在写大的程序都debug无力<del>（，而且辅导员看了我的github都说我的程序怎么看怎么像C）</del>。<br>
+　　<br>
+　　最后放一张osu!mania的判定时间图吧，说不定你们也想写呢（笑）。<br>
+<img src="/articles/html5mug/o!m_OD_Table.png" alt="这是图"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>　　越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。  </p>
-<p>　　一开始听说js是弱类型，觉得]]>
+    <![CDATA[<p>越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>
+　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。</p>
+<p>一开始听说js是弱类型，觉得很方便，就]]>
     </summary>
     
       <category term="Canvas" scheme="https://www.xtxtmtxtx.xyz/tags/Canvas/"/>
@@ -141,14 +308,34 @@
     <id>https://www.xtxtmtxtx.xyz/articles/TrafficStatistics/</id>
     <published>2018-11-21T14:43:45.000Z</published>
     <updated>2018-12-26T09:50:55.658Z</updated>
-    <content type="html"><![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi.ibruce.info</a><br>网上搜HEXO+访问统计也能搜到讲这个东西的，不过我直接照着别人博客往自己的博客加会出现奇怪问题，后来发现官网上写：<br><code>因七牛强制过期『dn-lbstatics.qbox.me』域名，与客服沟通无果，只能更换域名到『busuanzi.ibruce.info』！</code><br>嗯，破案了。<br>首先地址要这么弄<br><code>脚本：&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code><br><code>网站流量统计：&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br><code>文章流量统计：&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br>需要注意的是其中pv、uv可以互换，区别就是pv是刷新一次算一次，uv是一个用户最多算一次。</p>
+    <content type="html"><![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>
+首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi.ibruce.info</a><br>
+网上搜HEXO+访问统计也能搜到讲这个东西的，不过我直接照着别人博客往自己的博客加会出现奇怪问题，后来发现官网上写：<br>
+<code>因七牛强制过期『dn-lbstatics.qbox.me』域名，与客服沟通无果，只能更换域名到『busuanzi.ibruce.info』！</code><br>
+嗯，破案了。<br>
+首先地址要这么弄<br>
+<code>脚本：&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code><br>
+<code>网站流量统计：&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br>
+<code>文章流量统计：&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</code><br>
+需要注意的是其中pv、uv可以互换，区别就是pv是刷新一次算一次，uv是一个用户最多算一次。</p>
 <p>然后就是怎么实装了！</p>
-<p>首先找到HEXO文件夹里的\themes\你用的主题\layout\<br>在这个文件夹及子文件夹\_partial找文件<br>我用的是clean blog，所以是在\_partial\footer.ejs里放脚本以及网站流量统计，在\_partial\article-full.ejs里放的文章流量统计。<br>那么怎么放呢？<br>打开footer.ejs（编辑器自理），在&lt;footer&gt;后换一行加入脚本那一串代码即可，之后也不需要再引用了。然后拉到文件末尾区域，找到你博客类似“copyright”什么什么的文字，自行理解那几行分别是干什么的，然后在你觉得合适的地方插入网站流量统计的那串代码。<br>然后网站流量统计已经可以用了，不过如果你preview的话会发现那个流量统计的文字出奇的格格不入x<br>怎么解决呢？在每个&lt;span和紧接其后的id中间插入上下文中相同的class或者style或者之类的<br>然后再根据原本的文字十分居中在整个统计的那行代码左右分别插入&lt;enter&gt;和&lt;/center&gt;<br>比如我本来上下文有<code>&lt;p class=&quot;copyright text-muted&quot;&gt;Adapted for &lt;a target=&quot;_blank&quot; href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; by &lt;a href=&quot;http://www.codeblocq.com/&quot; target=&quot;_blank&quot;&gt;Jonathan Klughertz&lt;/a&gt;&lt;/p&gt;</code><br>那我就把原本的统计代码弄成<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code><br>这样就可以配对啦。</p>
-<p>然后还有页面的访问量，我的是打开\_partial\article-full.ejs，然后找到类似’&lt;!-- Comments --&gt;’或者之类能看出来表示某一个板块的代码段后加上了文章流量统计代码，为了显得更加和谐，我加入的代码是<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_page_pv&quot;&gt;本文总阅读量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code>还是看大家想怎么弄自行修改啦。</p>
+<p>首先找到HEXO文件夹里的\themes\你用的主题\layout\<br>
+在这个文件夹及子文件夹\_partial找文件<br>
+我用的是clean blog，所以是在\_partial\footer.ejs里放脚本以及网站流量统计，在\_partial\article-full.ejs里放的文章流量统计。<br>
+那么怎么放呢？<br>
+打开footer.ejs（编辑器自理），在&lt;footer&gt;后换一行加入脚本那一串代码即可，之后也不需要再引用了。然后拉到文件末尾区域，找到你博客类似“copyright”什么什么的文字，自行理解那几行分别是干什么的，然后在你觉得合适的地方插入网站流量统计的那串代码。<br>
+然后网站流量统计已经可以用了，不过如果你preview的话会发现那个流量统计的文字出奇的格格不入x<br>
+怎么解决呢？在每个&lt;span和紧接其后的id中间插入上下文中相同的class或者style或者之类的<br>
+然后再根据原本的文字十分居中在整个统计的那行代码左右分别插入&lt;enter&gt;和&lt;/center&gt;<br>
+比如我本来上下文有<code>&lt;p class=&quot;copyright text-muted&quot;&gt;Adapted for &lt;a target=&quot;_blank&quot; href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; by &lt;a href=&quot;http://www.codeblocq.com/&quot; target=&quot;_blank&quot;&gt;Jonathan Klughertz&lt;/a&gt;&lt;/p&gt;</code><br>
+那我就把原本的统计代码弄成<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_site_uv&quot;&gt;本站总访问量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code><br>
+这样就可以配对啦。</p>
+<p>然后还有页面的访问量，我的是打开\_partial\article-full.ejs，然后找到类似’&lt;!-- Comments --&gt;'或者之类能看出来表示某一个板块的代码段后加上了文章流量统计代码，为了显得更加和谐，我加入的代码是<code>&lt;center&gt;&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_container_page_pv&quot;&gt;本文总阅读量&lt;span class=&quot;copyright text-muted&quot; id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span class=&quot;copyright text-muted&quot;&gt;次&lt;/span&gt;&lt;/center&gt;</code>还是看大家想怎么弄自行修改啦。</p>
 <p>然后就这么多，看不懂的话，，善用搜索引擎吧（雾）。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanzi]]>
+    <![CDATA[<p>首先我这个博客是拿HEXO弄的，所以理论上别的博客也适用（大概）。<br>
+首先就是这个东东啦，叫不蒜子，网站在这里：<a href="https://busuanzi.ibruce.info/" target="_blank" rel="external">busuanz]]>
     </summary>
     
       <category term="HEXO" scheme="https://www.xtxtmtxtx.xyz/tags/HEXO/"/>
@@ -169,9 +356,20 @@
     <id>https://www.xtxtmtxtx.xyz/articles/CydiaImpactor/</id>
     <published>2018-11-20T13:43:39.000Z</published>
     <updated>2018-12-26T09:51:54.111Z</updated>
-    <content type="html"><![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>不过这里讲得和编程没什么关系（大概）<br>总之来说就是分享一个软件</p>
-<p>环境：iPad 2018<del>（学生版）</del>，iOS 12.1，Windows 7 64x<br><del>铛铛，</del>就是这个小钻头，<img src="/articles/CydiaImpactor/logo.png" alt="Cydia Impactor">，官网在这里：<a href="http://www.cydiaimpactor.com/" target="_blank" rel="external">Cydia Impactor</a> 点进去下载对应平台的程序即可。<br>虽然本意是被设计来安装越狱软件的，不过事实上甚至可以支持直接在iOS12.1上安装别的不太大的（大概100mb以内）的ipa文件，那么哪里能得到ipa文件呢，<del>点击打开百度，</del><a href="https://www.iphonecake.com/" target="_blank" rel="external">iphonecake.com</a>上可以下载，但是需要梯子才能打开下载链接。另外貌似同一个appleID在同一个设备上最多签名3个ipa文件，需要注意一下。</p>
-<p>然后就是步骤了：<br>首先确保装了iTunes或者相关驱动，将iPad或iPhone或什么什么什么通过数据线连接上电脑（当然需要信任该电脑），打开Impactor.exe，一般来说在第一个下拉框会显示你的设备名。然后不要点击Start，先将菜单Impactor - Insecure SSL勾上，貌似不勾会出现SSL证书错误（当然你也可以不打开“不安全的SSL”试一遍，能成功的话更好啦）。<br>然后将ipa拖到impactor程序的窗口上，注意官网上说的<br><code>Note: Do not &quot;Run as Administrator&quot; Impactor; doing this makes drag/drop of files not work on Windows 10.</code><br>以管理员模式运行Impactor可能导致无法拖拽文件。<br>然后会弹框，依次输入AppleID与密码，如果不放心的话可以另外注册一个号，不影响的。<br>如果出现了如图错误：<img src="/articles/CydiaImpactor/Error.jpg" alt="Error">，原因是开启了两步验证。请登录<a href="https://appleid.apple.com/" target="_blank" rel="external">appleid.apple.com</a>并点击Security - APP-SPECIFIC PASSWORDS - Generate Password…生成一个应用专属密码，复制下来，建议保存一下，因为该密码不会再出现了。再用这个密码代替AppleID密码即可刷入ipa。<br>最后，打开你的<del>林檎</del>苹果设备，进入设置 - 通用 - 设备管理 - 开发者应用 - 你的AppleID - 点击信任，即可使用刷入的应用了！</p>
+    <content type="html"><![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>
+不过这里讲得和编程没什么关系（大概）<br>
+总之来说就是分享一个软件</p>
+<p>环境：iPad 2018<del>（学生版）</del>，iOS 12.1，Windows 7 64x<br>
+<del>铛铛，</del>就是这个小钻头，<img src="/articles/CydiaImpactor/logo.png" alt="Cydia Impactor">，官网在这里：<a href="http://www.cydiaimpactor.com/" target="_blank" rel="external">Cydia Impactor</a> 点进去下载对应平台的程序即可。<br>
+虽然本意是被设计来安装越狱软件的，不过事实上甚至可以支持直接在iOS12.1上安装别的不太大的（大概100mb以内）的ipa文件，那么哪里能得到ipa文件呢，<del>点击打开百度，</del><a href="https://www.iphonecake.com/" target="_blank" rel="external">iphonecake.com</a>上可以下载，但是需要梯子才能打开下载链接。另外貌似同一个appleID在同一个设备上最多签名3个ipa文件，需要注意一下。</p>
+<p>然后就是步骤了：<br>
+首先确保装了iTunes或者相关驱动，将iPad或iPhone或什么什么什么通过数据线连接上电脑（当然需要信任该电脑），打开Impactor.exe，一般来说在第一个下拉框会显示你的设备名。然后不要点击Start，先将菜单Impactor - Insecure SSL勾上，貌似不勾会出现SSL证书错误（当然你也可以不打开“不安全的SSL”试一遍，能成功的话更好啦）。<br>
+然后将ipa拖到impactor程序的窗口上，注意官网上说的<br>
+<code>Note: Do not &quot;Run as Administrator&quot; Impactor; doing this makes drag/drop of files not work on Windows 10.</code><br>
+以管理员模式运行Impactor可能导致无法拖拽文件。<br>
+然后会弹框，依次输入AppleID与密码，如果不放心的话可以另外注册一个号，不影响的。<br>
+如果出现了如图错误：<img src="/articles/CydiaImpactor/Error.jpg" alt="Error">，原因是开启了两步验证。请登录<a href="https://appleid.apple.com/" target="_blank" rel="external">appleid.apple.com</a>并点击Security - APP-SPECIFIC PASSWORDS - Generate Password…生成一个应用专属密码，复制下来，建议保存一下，因为该密码不会再出现了。再用这个密码代替AppleID密码即可刷入ipa。<br>
+最后，打开你的<del>林檎</del>苹果设备，进入设置 - 通用 - 设备管理 - 开发者应用 - 你的AppleID - 点击信任，即可使用刷入的应用了！</p>
 <p>注意：刷入的ipa会在七天后失效，请在七天后不要重启设备，或者重启完了重刷一遍即可覆盖。</p>
 <p>最后吐槽一下刷进去使用的Duet Display，用着感觉还行，问题是每次双击不管间隔多远都会判定成在一个点双击<del>（直接导致我没法戳屏打osu）</del>。输入延迟还可以，显示延迟稍微有点单不影响日常使用，甚至可以内购Pro来把iPad当数位屏（对不起我没钱买笔）。问题是桌面端程序对独显 极 其 不友好，哪怕不插设备也为有影响（<del>例如R6无法正常启动，LR2变成只有50FPS，</del>听说Adobe系列基本上都出了各种奇奇怪怪的问题），我试了两天就卸载了。</p>
 <p>最最后，请不要刷入未知来源的ipa文件，万一出个什么事呢不是吗。</p>
@@ -196,16 +394,19 @@
     <id>https://www.xtxtmtxtx.xyz/articles/GearHost/</id>
     <published>2018-10-25T13:15:00.000Z</published>
     <updated>2018-11-20T15:09:08.039Z</updated>
-    <content type="html"><![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
+    <content type="html"><![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>
+申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
 <p>首先服务器是基于IIS的 因此支持php和aspx</p>
 <p>然后限制什么的都比较严格 每天60分钟的CPU Time 每月1Gb流量 100Mb存储空间 256Mb运行内存 另外还有10Mb免费数据库（Mysql是5Mb) 按教程的话来讲就最多跑个Wordpress</p>
 <p>连接速度应该还行 ping过去250ms左右（ping到我搭在GitHub Page上的blog是100ms）做个博客应该还行</p>
 <p>不过有个问题 免费空间不支持SSL 另外我尝试在空间上放<a href="https://github.com/HFIProgramming/mikutap/" target="_blank" rel="external">MikuTap</a>结果加载不出来 然后尝试.htaccess和httpb.ini实现301重定向都失败了 可能我的操作有问题</p>
-<p>最后是地址 <a href="http://php.xtxtmtxtx.xyz" target="_blank" rel="external">http://php.xtxtmtxtx.xyz</a> 什么都没有 都是拉的别人源码 目前还没有拿它来做什么的想法<br><del>最最最后请不要扫文件（</del></p>
+<p>最后是地址 <a href="http://php.xtxtmtxtx.xyz" target="_blank" rel="external">http://php.xtxtmtxtx.xyz</a> 什么都没有 都是拉的别人源码 目前还没有拿它来做什么的想法<br>
+<del>最最最后请不要扫文件（</del></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
-<p>首先服务器是基于IIS的 因此支持php和]]>
+    <![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>
+申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
+<p>首先服务器是基于IIS的 因此支持php]]>
     </summary>
     
       <category term="GearHost" scheme="https://www.xtxtmtxtx.xyz/tags/GearHost/"/>
@@ -224,44 +425,130 @@
     <id>https://www.xtxtmtxtx.xyz/articles/Hackergame2018/</id>
     <published>2018-10-23T11:57:13.000Z</published>
     <updated>2018-12-26T10:04:57.020Z</updated>
-    <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br><del>一度17名最后20名发现奖项居然是中科大校内的 我哭了 你呢.jpg</del></p>
+    <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>
+官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>
+我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br>
+<del>一度17名最后20名发现奖项居然是中科大校内的 我哭了 你呢.jpg</del></p>
 <hr>
-<h5 id="u7B7E_u5230_u9898"><a href="#u7B7E_u5230_u9898" class="headerlink" title="签到题"></a>签到题</h5><p>f12把字数限制去了</p>
+<h5 id="签到题"><a class="header-anchor" href="#签到题">¶</a>签到题</h5>
+<p>f12把字数限制去了</p>
 <hr>
-<h5 id="u732B_u54AA_u95EE_u7B54"><a href="#u732B_u54AA_u95EE_u7B54" class="headerlink" title="猫咪问答"></a>猫咪问答</h5><p>善用百度</p>
+<h5 id="猫咪问答"><a class="header-anchor" href="#猫咪问答">¶</a>猫咪问答</h5>
+<p>善用百度</p>
 <hr>
-<h5 id="u6E38_u56ED_u4F1A_u7684_u96C6_u7AE0_u5361_u7247"><a href="#u6E38_u56ED_u4F1A_u7684_u96C6_u7AE0_u5361_u7247" class="headerlink" title="游园会的集章卡片"></a>游园会的集章卡片</h5><p>拼拼图<br>我用的AE</p>
+<h5 id="游园会的集章卡片"><a class="header-anchor" href="#游园会的集章卡片">¶</a>游园会的集章卡片</h5>
+<p>拼拼图<br>
+我用的AE</p>
 <hr>
-<h5 id="u732B_u54AA_u548C_u952E_u76D8"><a href="#u732B_u54AA_u548C_u952E_u76D8" class="headerlink" title="猫咪和键盘"></a>猫咪和键盘</h5><p>字符拼接 见cat.cpp<br>然后发现怎么都编译不通过<br>猜测程序意图<br>先定义输出格式再输出<br>ok直接复制粘贴出flag<br>注意其中一个}和_输出的是十进制ascii值</p>
+<h5 id="猫咪和键盘"><a class="header-anchor" href="#猫咪和键盘">¶</a>猫咪和键盘</h5>
+<p>字符拼接 见cat.cpp<br>
+然后发现怎么都编译不通过<br>
+猜测程序意图<br>
+先定义输出格式再输出<br>
+ok直接复制粘贴出flag<br>
+注意其中一个}和_输出的是十进制ascii值</p>
 <hr>
-<h5 id="WORD_u6587_u6863"><a href="#WORD_u6587_u6863" class="headerlink" title="WORD文档"></a>WORD文档</h5><p>改后缀为zip解压</p>
+<h5 id="word文档"><a class="header-anchor" href="#word文档">¶</a>WORD文档</h5>
+<p>改后缀为zip解压</p>
 <hr>
-<h5 id="u732B_u54AA_u94F6_u884C"><a href="#u732B_u54AA_u94F6_u884C" class="headerlink" title="猫咪银行"></a>猫咪银行</h5><p>先兑换一次TDSU<br>然后购买理财 时长555555555555555555 份额1000 然后取回<br>恭喜你获得5442144815179344334TDSU 兑换回CTB买flag</p>
-<p>#不要买碎片 貌似没用？</p>
+<h5 id="猫咪银行"><a class="header-anchor" href="#猫咪银行">¶</a>猫咪银行</h5>
+<p>先兑换一次TDSU<br>
+然后购买理财 时长555555555555555555 份额1000 然后取回<br>
+恭喜你获得5442144815179344334TDSU 兑换回CTB买flag<br>
+#不要买碎片 貌似没用？</p>
 <hr>
-<h5 id="u9ED1_u66DC_u77F3_u6D4F_u89C8_u5668"><a href="#u9ED1_u66DC_u77F3_u6D4F_u89C8_u5668" class="headerlink" title="黑曜石浏览器"></a>黑曜石浏览器</h5><p>HEICORE 联想到红芯(redcore)<br>马上搜索相关新闻 红芯 user agent 找到红芯用的是Chrome/49.1.2623.213<br>接下来把浏览器的user agent改为HEICORE/49.1.2623.213再访问页面即可</p>
+<h5 id="黑曜石浏览器"><a class="header-anchor" href="#黑曜石浏览器">¶</a>黑曜石浏览器</h5>
+<p>HEICORE 联想到红芯(redcore)<br>
+马上搜索相关新闻 红芯 user agent 找到红芯用的是Chrome/49.1.2623.213<br>
+接下来把浏览器的user agent改为HEICORE/49.1.2623.213再访问页面即可</p>
 <hr>
-<h5 id="u56DE_u5230_u8FC7_u53BB"><a href="#u56DE_u5230_u8FC7_u53BB" class="headerlink" title="回到过去"></a>回到过去</h5><p>百度ed编辑器<br>注意接受下来的按键记录文件藏了个ESC字符 所以后面那个c是假的<br>事实上我去OpenBSD里试了下 显示ESCc<br>就很怪 卡了好久</p>
+<h5 id="回到过去"><a class="header-anchor" href="#回到过去">¶</a>回到过去</h5>
+<p>百度ed编辑器<br>
+注意接受下来的按键记录文件藏了个ESC字符 所以后面那个c是假的<br>
+事实上我去OpenBSD里试了下 显示ESCc<br>
+就很怪 卡了好久</p>
 <hr>
-<h5 id="u6211_u662F_u8C01"><a href="#u6211_u662F_u8C01" class="headerlink" title="我是谁"></a>我是谁</h5><h6 id="u54F2_u5B66_u601D_u8003"><a href="#u54F2_u5B66_u601D_u8003" class="headerlink" title="哲学思考"></a>哲学思考</h6><p>搜索HTTP 418协议<br>得到下一题链接</p>
-<h6 id="Can_I_help_me_3F"><a href="#Can_I_help_me_3F" class="headerlink" title="Can I help me?"></a>Can I help me?</h6><p>思考 方式 把请求头get改成post一下 得到线索 CRF 7168 <a href="https://www.rfc-editor.org/rfc/rfc7168.txt" target="_blank" rel="external">https://www.rfc-editor.org/rfc/rfc7168.txt</a><br>好的 自定义请求头BREW 注意附上Content-Type: message/teapot\r\n\<br>因为不会使用telnet 专门打了个程序 teapot.cpp</p>
+<h5 id="我是谁"><a class="header-anchor" href="#我是谁">¶</a>我是谁</h5>
+<h6 id="哲学思考"><a class="header-anchor" href="#哲学思考">¶</a>哲学思考</h6>
+<p>搜索HTTP 418协议<br>
+得到下一题链接</p>
+<h6 id="can-i-help-me"><a class="header-anchor" href="#can-i-help-me">¶</a>Can I help me?</h6>
+<p>思考 方式 把请求头get改成post一下 得到线索 CRF 7168 <a href="https://www.rfc-editor.org/rfc/rfc7168.txt" target="_blank" rel="external">https://www.rfc-editor.org/rfc/rfc7168.txt</a><br>
+好的 自定义请求头BREW 注意附上Content-Type: message/teapot\r\n\<br>
+因为不会使用telnet 专门打了个程序 teapot.cpp</p>
 <hr>
-<h5 id="u732B_u54AA_u9065_u63A7_u5668"><a href="#u732B_u54AA_u9065_u63A7_u5668" class="headerlink" title="猫咪遥控器"></a>猫咪遥控器</h5><p>按着UDRL移动坐标画图<br>个人是画在了二维布尔数组上<br>最后输出方块到txt 改一下字号得flag<br>详见lazercat.cpp</p>
+<h5 id="猫咪遥控器"><a class="header-anchor" href="#猫咪遥控器">¶</a>猫咪遥控器</h5>
+<p>按着UDRL移动坐标画图<br>
+个人是画在了二维布尔数组上<br>
+最后输出方块到txt 改一下字号得flag<br>
+详见lazercat.cpp</p>
 <hr>
-<h5 id="u5979_u7684_u8BD7"><a href="#u5979_u7684_u8BD7" class="headerlink" title="她的诗"></a>她的诗</h5><p>uuencode<br>将helper出来的东西再encode回去发现不一样<br>查询uuencode格式 第一位表示有几个字符<br>全改成最大的_再跑一遍helper<br>把多出来的拼起来就好了</p>
+<h5 id="她的诗"><a class="header-anchor" href="#她的诗">¶</a>她的诗</h5>
+<p>uuencode<br>
+将helper出来的东西再encode回去发现不一样<br>
+查询uuencode格式 第一位表示有几个字符<br>
+全改成最大的_再跑一遍helper<br>
+把多出来的拼起来就好了</p>
 <hr>
-<h5 id="u732B_u54AA_u514B_u661F"><a href="#u732B_u54AA_u514B_u661F" class="headerlink" title="猫咪克星"></a>猫咪克星</h5><p>单纯的nc操作题<br>一开始各种文件生成读取特判输出<br>(甚至硬核模拟键盘)<br>等我做完别人告诉我有eval()???<br>流下了不会python的眼泪<br>我的代码详见\pythoncat</p>
+<h5 id="猫咪克星"><a class="header-anchor" href="#猫咪克星">¶</a>猫咪克星</h5>
+<p>单纯的nc操作题<br>
+一开始各种文件生成读取特判输出<br>
+(甚至硬核模拟键盘)<br>
+等我做完别人告诉我有eval()???<br>
+流下了不会python的眼泪<br>
+我的代码详见\pythoncat</p>
 <hr>
-<h5 id="C_u8BED_u8A00_u4F5C_u4E1A"><a href="#C_u8BED_u8A00_u4F5C_u4E1A" class="headerlink" title="C语言作业"></a>C语言作业</h5><p>源程序用ida f5反编译<br>注意init函数与_err函数<br>以及main中的强制转换<br>可以得出2147483648(2^31)/-1在强转后可以满足跳转_err条件<br>_err中可以让你执行没有传入参数的程序<br>一开始思考cat 显然无法<br>后来想起来可以打开编辑器<br>ed没有vi没有<br>vim蹦出来了<br>:open flag发现flag在-文件中<br>重来一遍<br>:open -得到flag<br>顺便windows下vim界面会十分鬼畜 建议linux下进行操作</p>
+<h5 id="c语言作业"><a class="header-anchor" href="#c语言作业">¶</a>C语言作业</h5>
+<p>源程序用ida f5反编译<br>
+注意init函数与_err函数<br>
+以及main中的强制转换<br>
+可以得出2147483648(2^31)/-1在强转后可以满足跳转_err条件<br>
+_err中可以让你执行没有传入参数的程序<br>
+一开始思考cat 显然无法<br>
+后来想起来可以打开编辑器<br>
+ed没有vi没有<br>
+vim蹦出来了<br>
+:open flag发现flag在-文件中<br>
+重来一遍<br>
+:open -得到flag<br>
+顺便windows下vim界面会十分鬼畜 建议linux下进行操作</p>
 <hr>
-<h5 id="u52A0_u5BC6_u7B97_u6CD5_u548C_u89E3_u5BC6_u7B97_u6CD5"><a href="#u52A0_u5BC6_u7B97_u6CD5_u548C_u89E3_u5BC6_u7B97_u6CD5" class="headerlink" title="加密算法和解密算法"></a>加密算法和解密算法</h5><p>先是bf语言<br>其实还好看懂<br>层层剖析之后发现了算法<br>发现解密就是解一个模64条件下的10元一次方程组<br>克拉默法则<br>求出D=5 乘法逆元13<br>接下来依次求D1~10<br>det计算程序来源<a href="http://www.voidcn.com/article/p-rvomqytj-bb.html" target="_blank" rel="external">http://www.voidcn.com/article/p-rvomqytj-bb.html</a><br>源代码见\bf</p>
+<h5 id="加密算法和解密算法"><a class="header-anchor" href="#加密算法和解密算法">¶</a>加密算法和解密算法</h5>
+<p>先是bf语言<br>
+其实还好看懂<br>
+层层剖析之后发现了算法<br>
+发现解密就是解一个模64条件下的10元一次方程组<br>
+克拉默法则<br>
+求出D=5 乘法逆元13<br>
+接下来依次求D1~10<br>
+det计算程序来源<a href="http://www.voidcn.com/article/p-rvomqytj-bb.html" target="_blank" rel="external">http://www.voidcn.com/article/p-rvomqytj-bb.html</a><br>
+源代码见\bf</p>
 <hr>
-<h5 id="u5979_u7684_u793C_u7269"><a href="#u5979_u7684_u793C_u7269" class="headerlink" title="她的礼物"></a>她的礼物</h5><p>“用你朋友的脚本解密之后的第 10 行”输入./gift “However, someday, someone will find it.”<br>跑了几秒就挂掉了<br>进ida反编译<br>发现循环233333次<br>把sleep alarm signal循环内printf全弄没<br>（怎么弄？ ida隐藏patch二进制功能）<br>然后再跑一次 最好 ./gift “However, someday, someone will find it.” &gt; output.txt<br>等它跑完就完了<br>直接循环1次？输出结果不对<br>最好本机linux跑 我虚拟机跑了一小时才出来结果<br>（流下了不用linux的眼泪）<br><del>(最后发现是没弄掉io)</del><br>patched file见\gift</p>
+<h5 id="她的礼物"><a class="header-anchor" href="#她的礼物">¶</a>她的礼物</h5>
+<p>“用你朋友的脚本解密之后的第 10 行”输入./gift &quot;However, someday, someone will find it.&quot;<br>
+跑了几秒就挂掉了<br>
+进ida反编译<br>
+发现循环233333次<br>
+把sleep alarm signal循环内printf全弄没<br>
+（怎么弄？ ida隐藏patch二进制功能）<br>
+然后再跑一次 最好 ./gift “However, someday, someone will find it.” &gt; output.txt<br>
+等它跑完就完了<br>
+直接循环1次？输出结果不对<br>
+最好本机linux跑 我虚拟机跑了一小时才出来结果<br>
+（流下了不用linux的眼泪）<br>
+<del>(最后发现是没弄掉io)</del><br>
+patched file见\gift</p>
 <hr>
-<h5 id="u4E00_u4E9B_u5B87_u5B99_u771F_u7406"><a href="#u4E00_u4E9B_u5B87_u5B99_u771F_u7406" class="headerlink" title="一些宇宙真理"></a>一些宇宙真理</h5><p>snark.hpp内的<br>verify_proof()<br>调用即可<br>魔改代码使程序读入指定vk proof<br>见lightning_circuit_solve</p>
+<h5 id="一些宇宙真理"><a class="header-anchor" href="#一些宇宙真理">¶</a>一些宇宙真理</h5>
+<p>snark.hpp内的<br>
+verify_proof()<br>
+调用即可<br>
+魔改代码使程序读入指定vk proof<br>
+见lightning_circuit_solve</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>官方 write-up 已发布：]]>
+    <![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>
+官方 write-up 已发布]]>
     </summary>
     
       <category term="C++" scheme="https://www.xtxtmtxtx.xyz/tags/C/"/>
@@ -282,11 +569,23 @@
     <id>https://www.xtxtmtxtx.xyz/articles/无言投下/</id>
     <published>2018-10-06T21:21:12.000Z</published>
     <updated>2018-10-23T12:22:14.058Z</updated>
-    <content type="html"><![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>其实应该是比不上高三那会儿那么任务繁重的 可能是自己变懒了吧<br>想想今后这个博客可能还是得积灰 尽可能多的写些杂事吧<br><del>比如debug失败爆出了什么奇妙错误啊啥啥啥的</del><br>感觉自己就是 所谓三分钟（也许是三天、三个月？）热情<br>从一开始的目标top 到最后失去兴趣只会对着桌面发呆<br><del>（现在靠着deadline过活）</del></p>
-<p>总之顺便看看能不能把以前写那几个工具时的过程感受再回忆一下写出来充实一下这里？<br>不然的话也没什么好写了 没有记日记的习惯 每天都像过流水账</p>
+    <content type="html"><![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>
+其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>
+怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>
+其实应该是比不上高三那会儿那么任务繁重的 可能是自己变懒了吧<br>
+想想今后这个博客可能还是得积灰 尽可能多的写些杂事吧<br>
+<del>比如debug失败爆出了什么奇妙错误啊啥啥啥的</del><br>
+感觉自己就是 所谓三分钟（也许是三天、三个月？）热情<br>
+从一开始的目标top 到最后失去兴趣只会对着桌面发呆<br>
+<del>（现在靠着deadline过活）</del></p>
+<p>总之顺便看看能不能把以前写那几个工具时的过程感受再回忆一下写出来充实一下这里？<br>
+不然的话也没什么好写了 没有记日记的习惯 每天都像过流水账</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>其实应该是比不上高三那会儿那么任务繁重的 可能是自己]]>
+    <![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>
+其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>
+怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>
+其实应该是比不上高三那会儿那么任务繁重的 可能]]>
     </summary>
     
       <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
@@ -301,24 +600,33 @@
     <id>https://www.xtxtmtxtx.xyz/articles/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
     <updated>2018-12-26T09:50:35.976Z</updated>
-    <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>原BGA缩略图:<br><img src="https://ooo.0o0.ooo/2016/08/07/57a75311c80ac.jpg" alt="1">  </p>
+    <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>
+其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>
+说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>
+原BGA缩略图:<br>
+<img src="https://ooo.0o0.ooo/2016/08/07/57a75311c80ac.jpg" alt="1"></p>
 <hr>
 <blockquote>
 <p>总长<code>02:09</code></p>
+</blockquote>
+<blockquote>
 <p>音频</p>
 <blockquote>
 <p>未开始</p>
 </blockquote>
+</blockquote>
+<blockquote>
 <p>视频</p>
 <blockquote>
-<p>未开始  </p>
+<p>未开始</p>
 </blockquote>
 </blockquote>
 <hr>
-<p><del>坑挖的好像有点大了会不会弃全看人品</del>  </p>
+<p><del>坑挖的好像有点大了会不会弃全看人品</del></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>其]]>
+    <![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>
+]]>
     </summary>
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
@@ -333,21 +641,36 @@
     <id>https://www.xtxtmtxtx.xyz/articles/天坑预告x/</id>
     <published>2016-07-08T16:00:00.000Z</published>
     <updated>2018-12-26T09:50:44.420Z</updated>
-    <content type="html"><![CDATA[<p>没错，这个坑就是Calamity Fortune(<br><a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>终于是填完了啊,最后的部分做得有点不像= =<br>但不管怎么说断断续续做了半年(orz)的坑终于做完了还是非常高兴的ww</p>
-<p>虽然说确实是<del>心血来潮</del>想要还原原PV的(<a href="http://www.bilibili.com/video/av1369660/" target="_blank" rel="external">av1369660</a>)<br>不过遇到了各种各样的问题所以进度缓慢<del>(就是因为懒)</del><br>所以特地在这里记录一下进度x  </p>
+    <content type="html"><![CDATA[<p>没错，这个坑就是Calamity Fortune(<br>
+<a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>
+终于是填完了啊,最后的部分做得有点不像= =<br>
+但不管怎么说断断续续做了半年(orz)的坑终于做完了还是非常高兴的ww</p>
+<p>虽然说确实是<del>心血来潮</del>想要还原原PV的(<a href="http://www.bilibili.com/video/av1369660/" target="_blank" rel="external">av1369660</a>)<br>
+不过遇到了各种各样的问题所以进度缓慢<del>(就是因为懒)</del><br>
+所以特地在这里记录一下进度x</p>
 <hr>
 <blockquote>
 <p>总长<code>02:13</code></p>
+</blockquote>
+<blockquote>
 <p>音频</p>
 <blockquote>
 <p>已完成</p>
 </blockquote>
+</blockquote>
+<blockquote>
 <p>PV</p>
 <blockquote>
-<p>00:10<code>16-1-21</code>(是的没错只有10s)<br>00:21<code>16-1-25</code><br>00:26<code>16-2-09</code>(可能会弃坑x)<br>00:33<code>16-2-17</code><br>00:46<code>16-5-08</code><br>01:15<code>16-7-02</code>(总算是填了一半了)<br>完成<code>16-7-09</code>  </p>
+<p>00:10<code>16-1-21</code>(是的没错只有10s)<br>
+00:21<code>16-1-25</code><br>
+00:26<code>16-2-09</code>(可能会弃坑x)<br>
+00:33<code>16-2-17</code><br>
+00:46<code>16-5-08</code><br>
+01:15<code>16-7-02</code>(总算是填了一半了)<br>
+完成<code>16-7-09</code></p>
 </blockquote>
 </blockquote>
-<p><del>什么时候完成嘛,应该明年元旦就能做完了</del>  </p>
+<p><del>什么时候完成嘛,应该明年元旦就能做完了</del></p>
 <hr>
 <blockquote>
 <p>顺带一提勾师傅也在做哦,反正我是达不到他那种高度了的。。</p>
@@ -357,10 +680,13 @@
 <hr>
 <p>有什么建议的话评论哦ww</p>
 <hr>
-<p>缩略图(<del>**的既视感</del>):<br><img src="https://ooo.0o0.ooo/2016/07/08/578050f883711.jpg" alt="Finish.mov.jpg"></p>
+<p>缩略图(<del>**的既视感</del>):<br>
+<img src="https://ooo.0o0.ooo/2016/07/08/578050f883711.jpg" alt="Finish.mov.jpg"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>没错，这个坑就是Calamity Fortune(<br><a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>终于是填完了啊,最]]>
+    <![CDATA[<p>没错，这个坑就是Calamity Fortune(<br>
+<a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>
+终于是填完了啊]]>
     </summary>
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
@@ -375,7 +701,9 @@
     <id>https://www.xtxtmtxtx.xyz/articles/FX Particle Builder/</id>
     <published>2016-05-14T05:34:00.000Z</published>
     <updated>2018-12-26T09:50:03.814Z</updated>
-    <content type="html"><![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。<br><a id="more"></a><br><img src="https://ooo.0o0.ooo/2016/05/14/5736c847a509f.jpg" alt="Inline FXPB.jpg"></p>
+    <content type="html"><![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。</p>
+<a id="more"></a>
+<p><img src="https://ooo.0o0.ooo/2016/05/14/5736c847a509f.jpg" alt="Inline FXPB.jpg"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c847eda9e.gif" alt="01.gif"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c82ba4f3f.gif" alt="02.gif"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c82fd9c21.png" alt="02.png"></p>
@@ -384,14 +712,16 @@
 <p><img src="http://demo.pixflow.net/promo/video/FXPB/04.gif" alt="04.gif"></p>
 <p><img src="https://ooo.0o0.ooo/2016/05/14/5736c82c2b7c2.png" alt="05.png"></p>
 <hr>
-<p>因为之前找的时候发现大部分破解版要下载的话都很麻烦，找了半天才找到这个，所以就拿来分享一下ww<br>这个是需要Particular插件的，而且最好是英文版<br>还有一些简介搜一下”FX Particle Builder”就有了<del>(懒得贴)</del></p>
+<p>因为之前找的时候发现大部分破解版要下载的话都很麻烦，找了半天才找到这个，所以就拿来分享一下ww<br>
+这个是需要Particular插件的，而且最好是英文版<br>
+还有一些简介搜一下&quot;FX Particle Builder&quot;就有了<del>(懒得贴)</del></p>
 <hr>
-<p>下载链接：<a href="http://pan.baidu.com/s/1i5nS3Pz" target="_blank" rel="external">http://pan.baidu.com/s/1i5nS3Pz</a> 密码：0m17  </p>
+<p>下载链接：<a href="http://pan.baidu.com/s/1i5nS3Pz" target="_blank" rel="external">http://pan.baidu.com/s/1i5nS3Pz</a> 密码：0m17</p>
 <hr>
-<p>原帖地址:<a href="http://tieba.baidu.com/p/4421323407" target="_blank" rel="external">http://tieba.baidu.com/p/4421323407</a>  </p>
+<p>原帖地址:<a href="http://tieba.baidu.com/p/4421323407" target="_blank" rel="external">http://tieba.baidu.com/p/4421323407</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。<br></p>]]>
+    <![CDATA[<p>FX Particle Builder是用于动画设计和视觉特效专业人士的基本需求的脚本工具。里面含有一个粒子预设库，您可以用最快和最简单的方式来创建火，尘爆，魔术，烟雾，火花，火焰或玻璃粒子。</p>]]>
     
     </summary>
     
@@ -407,10 +737,14 @@
     <id>https://www.xtxtmtxtx.xyz/articles/==/</id>
     <published>2016-04-09T12:19:00.000Z</published>
     <updated>2018-10-23T12:10:50.946Z</updated>
-    <content type="html"><![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>所以各种坑之类的只有到暑假才能填了<br><del>写这个只是为了表示我还活着x</del>  </p>
+    <content type="html"><![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>
+所以各种坑之类的只有到暑假才能填了<br>
+<del>写这个只是为了表示我还活着x</del></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>所以各种坑之类的只有到暑假才能填了<br><del>写这个只是为了表示我还活着x</del>  </p>
+    <![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>
+所以各种坑之类的只有到暑假才能填了<br>
+<del>写这个只是为了表示我还活着x</del></p>
 ]]>
     </summary>
     
@@ -426,10 +760,16 @@
     <id>https://www.xtxtmtxtx.xyz/articles/第一篇/</id>
     <published>2016-01-20T13:19:38.000Z</published>
     <updated>2018-10-23T12:21:45.626Z</updated>
-    <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br><del>不要吐槽这奇怪的样式</del><br>还是可能什么东西都不写吧</p>
+    <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>
+之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
+<del>不要吐槽这奇怪的样式</del><br>
+还是可能什么东西都不写吧</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><del>十分喜闻乐见的</del><br>之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br><del>不要吐槽这奇怪的样式</del><br>还是可能什么东西都不写吧</p>
+    <![CDATA[<p><del>十分喜闻乐见的</del><br>
+之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
+<del>不要吐槽这奇怪的样式</del><br>
+还是可能什么东西都不写吧</p>
 ]]>
     </summary>
     
