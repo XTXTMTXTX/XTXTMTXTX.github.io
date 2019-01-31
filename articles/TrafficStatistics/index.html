@@ -90,7 +90,32 @@
     
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+	
+	<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+	<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+	<script>
+		document.addEventListener('visibilitychange', function () {
+			if (document.visibilityState == 'hidden') {
+				normal_title = document.title;
+				document.title = 'TlVMTA==';
+			} else document.title = normal_title;
+		});
+	</script>
+	<style>
+		.pace .pace-progress {
+			background: #1E92FB; /*进度条颜色*/
+			height: 3px;
+		}
+		.pace .pace-progress-inner {
+			 box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+		}
+		.pace .pace-activity {
+			border-top-color: #1E92FB;    /*上边框颜色*/
+			border-left-color: #1E92FB;    /*左边框颜色*/
+		}
+	</style>
 </head>
+
 
 
 
@@ -248,7 +273,7 @@
 
                 
 				<br>
-				<div style="text-align:center;color: #ccc;font-size:20px;">---EOF---</div>
+				<div style="text-align:center;color: #ccc;font-size:20px;">当你在凝视深渊的时候　深渊也正在凝视着你</div>
             </div>
             <!-- Comments -->
 				
@@ -320,7 +345,7 @@
                 <p class="copyright text-muted">&copy; 2019 XTXTMTXTX<br></p>
                 <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
                 <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-				<p class="copyright text-muted">Modified by <a href="https://www.xtxtmtxtx.com/" target="_blank">XTXTMTXTX</a></p>
+				<p class="copyright text-muted">Modified by <a href="https://www.xtxtmtxtx.xyz/" target="_blank">XTXTMTXTX</a></p>
             </div>
         </div>
     </div>
