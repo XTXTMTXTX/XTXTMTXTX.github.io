@@ -168,7 +168,7 @@ html中的相应代码是</p>
     <link href="https://www.xtxtmtxtx.xyz/articles/FileZillaServer/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/FileZillaServer/</id>
     <published>2018-12-26T06:06:48.000Z</published>
-    <updated>2018-12-26T10:57:34.549Z</updated>
+    <updated>2018-12-26T10:57:34.550Z</updated>
     <content type="html"><![CDATA[<p>近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>
 　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>
 　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>
@@ -251,7 +251,7 @@ html中的相应代码是</p>
     <link href="https://www.xtxtmtxtx.xyz/articles/html5mug/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/html5mug/</id>
     <published>2018-11-29T11:30:01.000Z</published>
-    <updated>2018-11-30T03:41:36.750Z</updated>
+    <updated>2018-11-30T03:41:36.751Z</updated>
     <content type="html"><![CDATA[<p>越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>
 　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。</p>
 <p>一开始听说js是弱类型，觉得很方便，就开始放飞自我，完全没考虑数据类型，字符串乘数字、字符串当数字加导致数字溢出之类的操作满.html起飞，好在debug了一万次之后终于慢慢改过来了，最终虽然也有点小问题不过已经和osu!mania的感觉差不多了。</p>
@@ -568,7 +568,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/%E6%97%A0%E8%A8%80%E6%8A%95%E4%B8%8B/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/无言投下/</id>
     <published>2018-10-06T21:21:12.000Z</published>
-    <updated>2018-10-23T12:22:14.058Z</updated>
+    <updated>2018-10-23T12:22:14.059Z</updated>
     <content type="html"><![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>
 其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>
 怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>
@@ -599,7 +599,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/Kreuz/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
-    <updated>2018-12-26T09:50:35.976Z</updated>
+    <updated>2018-12-26T09:50:35.977Z</updated>
     <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>
 其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>
 说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>
@@ -736,7 +736,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/==/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/==/</id>
     <published>2016-04-09T12:19:00.000Z</published>
-    <updated>2018-10-23T12:10:50.946Z</updated>
+    <updated>2018-10-23T12:10:50.947Z</updated>
     <content type="html"><![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>
 所以各种坑之类的只有到暑假才能填了<br>
 <del>写这个只是为了表示我还活着x</del></p>
@@ -759,7 +759,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/第一篇/</id>
     <published>2016-01-20T13:19:38.000Z</published>
-    <updated>2018-10-23T12:21:45.626Z</updated>
+    <updated>2018-10-23T12:21:45.627Z</updated>
     <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>
 之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
 <del>不要吐槽这奇怪的样式</del><br>

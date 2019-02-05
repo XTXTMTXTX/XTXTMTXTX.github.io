@@ -114,6 +114,8 @@
 			border-left-color: #1E92FB;    /*左边框颜色*/
 		}
 	</style>
+	
+
 </head>
 
 
@@ -355,8 +357,25 @@
                 <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
                 <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
 				<p class="copyright text-muted">Modified by <a href="https://www.xtxtmtxtx.xyz/" target="_blank">XTXTMTXTX</a></p>
+				
             </div>
         </div>
+		
+		<div class="waifu">
+			<div class="waifu-tips"></div>
+			<canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+				<div class="waifu-tool">
+					<span class="fui-home"></span>
+					<span class="fui-chat"></span>
+					<span class="fui-eye"></span>
+					<span class="fui-user"></span>
+					<span class="fui-photo"></span>
+					<span class="fui-info-circle"></span>
+					<span class="fui-cross"></span>
+				</div>
+		</div>
+				
+		
     </div>
 </footer>
 
@@ -378,6 +397,6 @@
 
     <script type="text/javascript" src="/js/love.js"></script>
     <script type="text/javascript" color="255,0,0" opacity='1' src="/js/canvas-nest.min.js"></script>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"./live2d_models/inazuma/inazuma.model.json"},"display":{"position":"left","superSample":2,"width":150,"height":300,"hOffset":-50,"vOffset":-190},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>
