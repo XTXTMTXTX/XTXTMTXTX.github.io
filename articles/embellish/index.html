@@ -114,7 +114,7 @@
 			border-left-color: #1E92FB;    /*左边框颜色*/
 		}
 	</style>
-	
+
 
 </head>
 
@@ -122,7 +122,11 @@
 
 
 <body>
-
+	<script type="text/javascript" color="255,0,0" opacity='1' src="/js/canvas-nest.min.js"></script>
+	<script type="text/javascript" src="/js/anime.min.js"></script>
+	<canvas class="fireworks" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999999; pointer-events: none;"></canvas>
+	
+	
     <!-- Menu -->
     <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -421,7 +425,7 @@ html中的相应代码是</p>
     </div>
 </footer>
 
-
+	<script type="text/javascript" src="/js/fireworks.js">
     <!-- After footer scripts -->
     
 <!-- jQuery -->
@@ -437,8 +441,9 @@ html中的相应代码是</p>
 
 
 
-    <script type="text/javascript" src="/js/love.js"></script>
-    <script type="text/javascript" color="255,0,0" opacity='1' src="/js/canvas-nest.min.js"></script>
+	
+
+	
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/inazuma/inazuma.model.json"},"display":{"position":"left","superSample":2,"width":150,"height":300,"hOffset":-50,"vOffset":-190},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>
