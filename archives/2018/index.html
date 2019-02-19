@@ -125,7 +125,7 @@
 	<script type="text/javascript" color="255,0,0" opacity='1' src="/js/canvas-nest.min.js"></script>
 	<script type="text/javascript" src="/js/anime.min.js"></script>
 	<canvas class="fireworks" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999999; pointer-events: none;"></canvas>
-	
+	<script type="text/javascript" src="/js/fireworks.js"></script>
 	
     <!-- Menu -->
     <!-- Navigation -->
@@ -192,6 +192,7 @@
     </div>
     <!-- /.container -->
 </nav>
+
 
     <!-- Main Content -->
     
@@ -393,25 +394,49 @@
             </div>
         </div>
 		
-		<div class="waifu">
-			<div class="waifu-tips"></div>
-			<canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-				<div class="waifu-tool">
-					<span class="fui-home"></span>
-					<span class="fui-chat"></span>
-					<span class="fui-eye"></span>
-					<span class="fui-user"></span>
-					<span class="fui-photo"></span>
-					<span class="fui-info-circle"></span>
-					<span class="fui-cross"></span>
-				</div>
-		</div>
-				
+
+		<link rel="stylesheet" href="/css/APlayer.min.css">
+		<div id="aplayer"></div>
+		<script src="/js/APlayer.min.js"></script>
+		<script type="text/javascript">
+			const ap = new APlayer({
+				container: document.getElementById('aplayer'),
+				fixed: true,
+				autoplay: true,
+				loop: 'all',
+				order: 'random',
+				preload: 'auto',
+				volume: 0.7,
+				mutex: true,
+				audio: [
+					{
+						name: 'Gravity',
+						artist: 'M2U',
+						url: '/misc/M2U-Gravity.mp3'
+					},
+					{
+						name: 'Dasein',
+						artist: 'KIVΛ',
+						url: '/misc/KIVΛ-Dasein.mp3'
+					},
+					{
+						name: 'Celestial Sounds (KivΛ Remix)',
+						artist: '3R2',
+						url: '/misc/3R2-Celestial Sounds (KivΛ Remix).mp3'
+					},
+					{
+						name: 'Ember',
+						artist: 'SIHanatsuka',
+						url: '/misc/SIHanatsuka-Ember.mp3'
+					}
+				]
+			});
+		</script>
 		
     </div>
 </footer>
 
-	<script type="text/javascript" src="/js/fireworks.js">
+	
     <!-- After footer scripts -->
     
 <!-- jQuery -->
@@ -430,6 +455,6 @@
 	
 
 	
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/inazuma/inazuma.model.json"},"display":{"position":"left","superSample":2,"width":150,"height":300,"hOffset":-50,"vOffset":-190},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/inazuma/inazuma.model.json"},"display":{"position":"right","superSample":2,"width":150,"height":300,"hOffset":-50,"vOffset":-190},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script></body>
 
 </html>
