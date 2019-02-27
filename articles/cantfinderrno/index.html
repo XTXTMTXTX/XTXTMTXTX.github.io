@@ -25,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="XTXTMTXTX"/>
+        <meta property="og:title" content="Centos7 下 make 找不到 linux/errno.h 等文件的解决办法"/>
     
 
     <!--Open Graph Description-->
@@ -38,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -57,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>XTXTMTXTX</title>
+    <title>Centos7 下 make 找不到 linux/errno.h 等文件的解决办法 - XTXTMTXTX</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -195,11 +195,7 @@
 
 
     <!-- Main Content -->
-    
-
-
-    <section class="main">
-        <!-- Page Header -->
+    <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
@@ -207,13 +203,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Untitled</h1>
+                    <h1>Centos7 下 make 找不到 linux/errno.h 等文件的解决办法</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
+                            Posted by XTXTMTXTX on
                         
-                            2017-01-21
+                        
+                            2019-02-26
                         
                     </span>
                 </div>
@@ -229,7 +227,24 @@
 
             <!-- Tags and categories -->
            
-            <span class="post-tags text-muted">字数：4</span><br/>
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+<a href="/tags/Linux/">#Linux</a> <a href="/tags/make/">#make</a> <a href="/tags/编译错误/">#编译错误</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Centos/">Centos</a>
+
+                    
+                </div>
+            
+            <span class="post-tags text-muted">字数：387</span><br/>
             <span class="post-tags text-muted">阅读时间：1 分钟</span><br/>
             <span class="post-tags text-muted" id="busuanzi_container_page_pv">本文总阅读量 <span class="post-tags text-muted" id="busuanzi_value_page_pv"></span> 次</span>
             <!-- Gallery -->
@@ -237,10 +252,14 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                XTXTMTXTX<br>
-|<br>|<br>|404 ERROR<br>|<br>|
-<br>
-||<a href="https://xtxtmtxtx.github.io/" target="_blank" rel="external">Home</a>
+                <p>先贴解决方案 <code>yum -y install linux-libc-dev</code><br>
+　　这个问题是在搭建某 proto 时发现的，那个仓库的 readme 上并没有相应的解决方案，只有 <code>yum install openssl-devel zlib-devel</code> 和 <code>yum groupinstall &quot;Development Tools&quot;</code><br>
+　　当然我就报错了，于是百度之，找到了一堆创建文件夹链接，链接某个很长很长路径下的库到 /usr/include 的方法<br>
+　　一一试过之后发现各种坑，先把 linux/ 文件夹链接过去发现 asm/errno.h 找不着，把 asm-generic 文件夹链接过去还是找不着，差点就放弃了。<br>
+　　最后终于在 CSDN 论坛里一个没有解决题主实际提出的问题的答案下找到了解决方案（笑），本着试一试的心态先把之前链接的文件夹都删了，再 yum 安装之， make clean 再 make 就成了。<br>
+　　记下来算是给自己以后换机子的话再撞类似的坑方便一点，挺水的。顺便今天出 cet-4 成绩了。转个题外话：<br>
+　　刚刚查了一下，626分。这么多年来的默默付出，终于有了回报，起早贪黑，牵肠挂肚，甚至废寝忘食，换来了如今的成绩。谢谢自己的每一分努力和付出，机会总是给有准备的人的。我始终记得这些刻苦铭心的谆谆教诲，无论我走到哪里，都不会忘记这份恩情，对了我查的是支付宝芝麻信用分，不知道你们是多少。😁</p>
+
 
                 
                     <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -278,12 +297,6 @@
         </div>
     </div>
 </article>
-    </section>
-
-
-
-
-
 
     <!-- Footer -->
     <!-- Footer -->

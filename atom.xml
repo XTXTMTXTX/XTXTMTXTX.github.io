@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2019-01-12T09:52:27.037Z</updated>
+  <updated>2019-02-27T05:09:32.747Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -15,55 +15,84 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[美化Blog &amp;&amp; 加入评论功能]]></title>
+    <title><![CDATA[Centos7 下 make 找不到 linux/errno.h 等文件的解决办法]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/articles/cantfinderrno/"/>
+    <id>https://www.xtxtmtxtx.xyz/articles/cantfinderrno/</id>
+    <published>2019-02-26T15:51:41.000Z</published>
+    <updated>2019-02-27T05:09:32.747Z</updated>
+    <content type="html"><![CDATA[<p>先贴解决方案 <code>yum -y install linux-libc-dev</code><br>
+　　这个问题是在搭建某 proto 时发现的，那个仓库的 readme 上并没有相应的解决方案，只有 <code>yum install openssl-devel zlib-devel</code> 和 <code>yum groupinstall &quot;Development Tools&quot;</code><br>
+　　当然我就报错了，于是百度之，找到了一堆创建文件夹链接，链接某个很长很长路径下的库到 /usr/include 的方法<br>
+　　一一试过之后发现各种坑，先把 linux/ 文件夹链接过去发现 asm/errno.h 找不着，把 asm-generic 文件夹链接过去还是找不着，差点就放弃了。<br>
+　　最后终于在 CSDN 论坛里一个没有解决题主实际提出的问题的答案下找到了解决方案（笑），本着试一试的心态先把之前链接的文件夹都删了，再 yum 安装之， make clean 再 make 就成了。<br>
+　　记下来算是给自己以后换机子的话再撞类似的坑方便一点，挺水的。顺便今天出 cet-4 成绩了。转个题外话：<br>
+　　刚刚查了一下，626分。这么多年来的默默付出，终于有了回报，起早贪黑，牵肠挂肚，甚至废寝忘食，换来了如今的成绩。谢谢自己的每一分努力和付出，机会总是给有准备的人的。我始终记得这些刻苦铭心的谆谆教诲，无论我走到哪里，都不会忘记这份恩情，对了我查的是支付宝芝麻信用分，不知道你们是多少。😁</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>先贴解决方案 <code>yum -y install linux-libc-dev</code><br>
+　　这个问题是在搭建某 proto 时发现的，那个仓库的 readme 上并没有相应的解决方案，只有 <code>yum install openssl-devel ]]>
+    </summary>
+    
+      <category term="Linux" scheme="https://www.xtxtmtxtx.xyz/tags/Linux/"/>
+    
+      <category term="make" scheme="https://www.xtxtmtxtx.xyz/tags/make/"/>
+    
+      <category term="编译错误" scheme="https://www.xtxtmtxtx.xyz/tags/%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF/"/>
+    
+      <category term="Centos" scheme="https://www.xtxtmtxtx.xyz/categories/Centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[美化 Blog && 加入评论功能]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/embellish/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/embellish/</id>
     <published>2019-01-12T04:47:45.000Z</published>
-    <updated>2019-01-12T09:52:27.037Z</updated>
-    <content type="html"><![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的VPS发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把CF<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，十分不幸，我居然被div2 C题给杀了，完了之后跟同学一讲，原来是读错题了🤔🤔🤔。然后这几天还折腾了几下优化博客的体验，期末考怕是要凉了。<br>
+    <updated>2019-02-27T05:17:12.342Z</updated>
+    <content type="html"><![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的 VPS 发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把 CF<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> ，十分不幸，我居然被 div2 C 题给杀了，完了之后跟同学一讲，原来是读错题了🤔🤔🤔。然后这几天还折腾了几下优化博客的体验，期末考怕是要凉了。<br>
 　　好了，言归正传，讲一下怎么给博客加上一些效果，让博客看起来更好看，和加上评论功能。<br>
 <br></p>
-<h1>添加js效果</h1>
+<h1>添加 js 效果</h1>
 <hr>
 <p>首先是给博客加上一些小动画，像这里的点击爱心效果和背景的效果，其实引入一个js就可以做到。问题就是怎么引入了。<br>
-　　我先按网上的教程做，找<strong>HEXO\themes\[theme name]\layout\</strong>下的文件，教程里说是&quot;_layout.swig&quot;文件。我一看，全是.ejs文件。好吧不影响，这个其实是因为主题不一样的原因。我用的是clean-blog，而好像大部分人用的都是Next。接下来notepad++打开layout.ejs先，仔细观察格式，其实还是比较好理解的：</p>
+　　我先按网上的教程做，找 <strong>HEXO\themes\[theme name]\layout\</strong> 下的文件，教程里说是 &quot;_layout.swig&quot; 文件。我一看，全是 .ejs 文件。好吧不影响，这个其实是因为主题不一样的原因。我用的是 clean-blog ，而好像大部分人用的都是 Next 。接下来 notepad++ 打开 layout.ejs 先，仔细观察格式，其实还是比较好理解的：</p>
 <figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> </span></span>&lt;%<span class="ruby"> <span class="keyword">if</span>(config.language) &#123; </span>%&gt;<span class="xml"><span class="tag"><span class="attribute">lang</span>=<span class="value">"</span></span></span>&lt;%=<span class="ruby"> config.language </span>%&gt;<span class="xml"><span class="tag"><span class="value">"</span></span></span>&lt;%<span class="ruby"> &#125; <span class="keyword">else</span> &#123; </span>%&gt;<span class="xml"><span class="tag"><span class="attribute">lang</span>=<span class="value">"en"</span></span></span>&lt;%<span class="ruby"> &#125;</span>%&gt;<span class="xml"><span class="tag">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></span><br><span class="line"></span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/head'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Menu --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/menu'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Main Content --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> body </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Footer --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/footer'</span>) </span>%&gt;<span class="xml"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- After footer scripts --&gt;</span></span><br><span class="line">    </span>&lt;%-<span class="ruby"> partial(<span class="string">'_partial/after-footer'</span>) </span>%&gt;<span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">color</span>=<span class="value">"255,0,0"</span> <span class="attribute">opacity</span>=<span class="value">'0.5'</span> <span class="attribute">src</span>=<span class="value">"/js/canvas-nest.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>  注意到，在<code>&lt;/body&gt;</code>前加入了两行script，这两个就是这些小动画的js啦。如果你要引用的话，直接打开这个<a href="/js/love.js"><strong>love.js</strong></a>和这个<a href="/js/canvas-nest.min.js"><strong>canvas-nest.min.js</strong></a>，保存到本地，再复制到<strong>HEXO\themes\[theme name]\source\js\</strong>下，最后在上文目录中类似<strong>*layout*</strong>的文件下找个合适的地方粘贴：</p>
+<p>  注意到，在 <code>&lt;/body&gt;</code> 前加入了两行 script ，这两个就是这些小动画的 js 啦。如果你要引用的话，直接打开这个 <a href="/js/love.js"><strong>love.js</strong></a> 和这个 <a href="/js/canvas-nest.min.js"><strong>canvas-nest.min.js</strong></a> ，保存到本地，再复制到 <strong>HEXO\themes\[theme name]\source\js\</strong> 下，最后在上文目录中类似 <strong>*layout*</strong> 的文件下找个合适的地方粘贴：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"/js/love.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">color</span>=<span class="value">"255,0,0"</span> <span class="attribute">opacity</span>=<span class="value">'0.5'</span> <span class="attribute">src</span>=<span class="value">"/js/canvas-nest.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>  其中第二行的color和opacity可以自己设置，分别是背景线条的颜色RGB和不透明度。<br>
+<p>  其中第二行的 color 和 opacity 可以自己设置，分别是背景线条的颜色RGB和不透明度。<br>
 　　实在找不到怎么办？<br>
-　　CMD: <code>hexo s</code>。对就是生成预览网站，然后直接修改theme文件并保存，刷新一下localhost:4000就可以直接预览效果，善用F12可以定位你做的修改在网页里的哪个位置（虽然可能需要一些网页调试基本知识了<strong><del>，推荐使用更为方便的Typecho</del></strong>）。<br>
+　　CMD: <code>hexo s</code>。对就是生成预览网站，然后直接修改 theme 文件并保存，刷新一下 localhost:4000 就可以直接预览效果，善用 F12 可以定位你做的修改在网页里的哪个位置（虽然可能需要一些网页调试基本知识了 <strong><del>，推荐使用更为方便的Typecho</del></strong> ）。<br>
 　　接下来就是给文本框框加上一个半透明的背景和阴影了。<br>
 <br></p>
-<h1>修改博客CSS</h1>
+<h1>修改博客 CSS</h1>
 <hr>
-<p>Clean-Blog原本的背景是白色，所以文本是没有背景色的。现在一加上背景效果，就比较干扰阅读，所以这里就需要修改CSS文件。<br>
-　　打开<strong>HEXO\themes\[theme name]\source\css\</strong>，发现有许多.styl文件，其一般的结构是一个<strong>style.styl</strong>中又引用了许多别的styl文件，主要在<strong>base.styl</strong>里，那么首先就修改base.styl。<br>
-　　观察文件结构，发现还是比较规则的，与css文件很类似。需要注意的是作为缩进字符必须统一，例如原本是两个空格就用两个空格缩进，原本是Tab就用Tab，不然生成网页会报错（这点和python蛮像的）。主要是Notepad++可能在换行的时候会自动把几个空格变成一个Tab，最好还是手动删了再输比较好。<br>
-　　首先<code>hexo s</code>打开本地服务器方便实时查看修改状态，先来给主页的post预览加上一个白色底框。在浏览器中打开网页按下F12定位到文章预览框<code>class=&quot;post-preview&quot;</code>，接下来只要定位<strong>post-preview</strong>就行了。<br>
-　　在base.styl中找到</p>
+<p>Clean-Blog 原本的背景是白色，所以文本是没有背景色的。现在一加上背景效果，就比较干扰阅读，所以这里就需要修改CSS文件。<br>
+　　打开 <strong>HEXO\themes\[theme name]\source\css\</strong> ，发现有许多 .styl 文件，其一般的结构是一个 <strong>style.styl</strong> 中又引用了许多别的 styl 文件，主要在 <strong>base.styl</strong> 里，那么首先就修改 base.styl 。<br>
+　　观察文件结构，发现还是比较规则的，与 css 文件很类似。需要注意的是作为缩进字符必须统一，例如原本是两个空格就用两个空格缩进，原本是 Tab 就用 Tab ，不然生成网页会报错（这点和 python 蛮像的）。主要是 Notepad++ 可能在换行的时候会自动把几个空格变成一个 Tab ，最好还是手动删了再输比较好。<br>
+　　首先 <code>hexo s</code> 打开本地服务器方便实时查看修改状态，先来给主页的 post 预览加上一个白色底框。在浏览器中打开网页按下 F12 定位到文章预览框 <code>class=&quot;post-preview&quot;</code> ，接下来只要定位 <strong>post-preview</strong> 就行了。<br>
+　　在 base.styl 中找到</p>
 <figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
 <p>  找不到就直接手打，注意缩进<br>
-　　在.post-preview后加一行代码，变成</p>
+　　在 .post-preview 后加一行代码，变成</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<p>  其中四个数字分别是颜色RGB和不透明度，按自己喜好调整，保存styl文件刷新预览服务器页面即可看到效果。（还想再方便点？直接F12修改css。）<br>
+<p>  其中四个数字分别是颜色 RGB 和不透明度，按自己喜好调整，保存 styl 文件刷新预览服务器页面即可看到效果。（还想再方便点？直接 F12 修改 css 。）<br>
 　　如果需要加上阴影，那么就：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<p>  rgba参数意义同上，5px表示阴影厚度。<br>
+<p>  rgba 参数意义同上， 5px 表示阴影厚度。<br>
 　　另外，如果需要调整框的大小，则需要：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.post-preview</span><br><span class="line">  margin-top: <span class="number">65</span>px;</span><br><span class="line">  margin-bottom: <span class="number">65</span>px;</span><br><span class="line">  padding: <span class="number">25</span>px;</span><br><span class="line">  -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">  background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<p>  具体意义参考css教程。<br>
+<p>  具体意义参考 css 教程。<br>
 　　好了，现在文章预览有底框了，可是文章还没有底框，怎么办呢。<br>
-　　先进F12看看在哪个css里加框框，感觉在container div里的row div里加比较好看，于是在base.styl里找，不太找得到，找<strong>article.styl</strong>，有了，开头前几行就是，于是编辑为：</p>
+　　先进 F12 看看在哪个 css 里加框框，感觉在 container div 里的 row div 里加比较好看，于是在 base.styl 里找，不太找得到，找 <strong>article.styl</strong> ，有了，开头前几行就是，于是编辑为：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">article</span><br><span class="line">  .container</span><br><span class="line">    .row</span><br><span class="line">      margin-top: <span class="number">65</span>px;</span><br><span class="line">      margin-bottom: <span class="number">65</span>px;</span><br><span class="line">      padding: <span class="number">25</span>px;</span><br><span class="line">      -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">      -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="function">px <span class="title">rgba</span><span class="params">(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>)</span></span>;</span><br><span class="line">      background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">      ...</span><br><span class="line">      ...</span><br></pre></td></tr></table></figure>
 <p>  这样，效果就有了。<br>
-　　接下来觉得标题和底栏也需要一个半透明背景。先找标题，通过F12定位，发现有两种class，一个叫site-heading，一个叫post-heading，其实好办，打开<strong>base.styl</strong>，加入：</p>
+　　接下来觉得标题和底栏也需要一个半透明背景。先找标题，通过 F12 定位，发现有两种 class ，一个叫 site-heading ，一个叫 post-heading ，其实好办，打开 <strong>base.styl</strong> ，加入：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.site-heading</span><br><span class="line">  background-color:rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br><span class="line">.post-heading</span><br><span class="line">  background-color:rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.6</span>);</span><br></pre></td></tr></table></figure>
 <p>  这样就有了个黑色的底板，能看得清字了。<br>
-　　同理，找footer，发现是在一个container的div里套着的一个row的div再套一个div，直接在里加入：</p>
+　　同理，找 footer ，发现是在一个 container 的 div 里套着的一个 row 的 div 再套一个 div ，直接在里加入：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.row</span><br><span class="line">  div</span><br><span class="line">    background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
-<p>  刷新，结果不尽人意。平白多了一堆灰框，不太好看。原因是所有class为row的全都加上了这个属性。那么怎么办呢？<br>
-html中的相应代码是</p>
+<p>  刷新，结果不尽人意。平白多了一堆灰框，不太好看。原因是所有 class 为 row 的全都加上了这个属性。那么怎么办呢？<br>
+html 中的相应代码是</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer&gt;</span><br><span class="line">    &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"container"</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"row"</span>&gt;</span><br><span class="line">            &lt;<span class="keyword">div</span> <span class="type">class</span>=<span class="string">"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"</span>&gt;</span><br><span class="line">            ...</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
 <p>  所以需要修改为：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">footer</span><br><span class="line">  .container</span><br><span class="line">    .row</span><br><span class="line">      div</span><br><span class="line">        background-color:rgba(<span class="number">250</span>, <span class="number">250</span>, <span class="number">250</span>, <span class="number">0.6</span>);</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
@@ -72,32 +101,32 @@ html中的相应代码是</p>
 <br></p>
 <h1>加入评论功能</h1>
 <hr>
-<p>之前用Pacman主题时用的评论功能在我转到Clean-Blog主题的时候就给去掉了，现在这个主题能用的只有disqus和facebook的评论系统，然而都需要科学上网才能使用。尽管现在我的博客是挂在外国（毕竟便宜，8块多一个月），但我还是懒得实现类似反代之类的操作。毕竟都选择静态博客了，再嵌入个php就有点懒得麻烦。<br>
-　　这里就用到了<a href="https://valine.js.org/" target="_blank" rel="external"><strong>Valine</strong></a>，具体怎么配置可以点进去看一下，这里讲一下我的配置过程。<br>
-　　首先需要一个<a href="https://leancloud.cn/" target="_blank" rel="external"><strong>Leancloud</strong></a>账号，作为处理评论的后台。注册完之后验证好邮箱就可以用了。首先创建一个应用，名字随意，接着到应用<strong>设置</strong>，<strong>应用Key</strong>里把<strong>App ID</strong>和<strong>App Key</strong>复制下来，再到<strong>安全中心</strong>修改<strong>Web 安全域名</strong>，改成这样：</p>
+<p>之前用 Pacman 主题时用的评论功能在我转到 Clean-Blog 主题的时候就给去掉了，现在这个主题能用的只有 disqus 和 facebook 的评论系统，然而都需要科学上网才能使用。尽管现在我的博客是挂在外国（毕竟便宜，8块多一个月），但我还是懒得实现类似反代之类的操作。毕竟都选择静态博客了，再嵌入个 php 就有点懒得麻烦。<br>
+　　这里就用到了 <a href="https://valine.js.org/" target="_blank" rel="external"><strong>Valine</strong></a> ，具体怎么配置可以点进去看一下，这里讲一下我的配置过程。<br>
+　　首先需要一个 <a href="https://leancloud.cn/" target="_blank" rel="external"><strong>Leancloud</strong></a> 账号，作为处理评论的后台。注册完之后验证好邮箱就可以用了。首先创建一个应用，名字随意，接着到应用 <strong>设置</strong> ，<strong>应用 Key</strong>  里把 <strong>App ID</strong> 和 <strong>App Key</strong> 复制下来，再到 <strong>安全中心</strong> 修改 <strong>Web 安全域名</strong> ，改成这样：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://your.site</span><br><span class="line">https://your.site <span class="comment">#如果有SSL的话</span></span><br><span class="line">http://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">4000</span> <span class="comment">#方便本地测试</span></span><br><span class="line">http://localhost:<span class="number">4000</span> <span class="comment">#同上</span></span><br></pre></td></tr></table></figure>
 <p>  当然了，不要把注释也打进去。<br>
-　　接着就是在HEXO里配置了。关键代码比较少，如果不弄什么方便控制的功能的话在特定的地方粘贴一下就可以了，许多主题现在已经可以直接安装Valine了，然而Clean-Blog没有。这里讲一下怎么把评论直接放到网页里。<br>
-　　先打开<strong>HEXO\themes\[theme name]\layout\</strong>，找到头部的配置文件，我的是<strong>_partial\head.ejs</strong>。<br>
-　　在<code>&lt;/head&gt;</code>之前加入</p>
+　　接着就是在 HEXO 里配置了。关键代码比较少，如果不弄什么方便控制的功能的话在特定的地方粘贴一下就可以了，许多主题现在已经可以直接安装 Valine 了，然而 Clean-Blog 没有。这里讲一下怎么把评论直接放到网页里。<br>
+　　先打开 <strong>HEXO\themes\[theme name]\layout\</strong> ，找到头部的配置文件，我的是 <strong>_partial\head.ejs</strong> 。<br>
+　　在 <code>&lt;/head&gt;</code> 之前加入</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>  接下来找文章放评论模块的地方，一般都是有独立的文件的，实在找不到就在文章布局文件的结尾放。<br>
-　　打开<strong>_partial\comments.ejs</strong>，在结尾加入：</p>
+　　打开 <strong>_partial\comments.ejs</strong> ，在结尾加入：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">hr</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"vcomments"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line">	<span class="keyword">new</span> Valine(&#123;</span><br><span class="line">		av: AV, </span><br><span class="line">		el: <span class="string">'#vcomments'</span>, <span class="comment">// </span></span><br><span class="line">		app_id: <span class="string">'&lt;APP_ID&gt;'</span>,</span><br><span class="line">		app_key: <span class="string">'&lt;APP_KEY&gt;'</span>,</span><br><span class="line">		placeholder: <span class="string">'输入你想说的话。'</span>,</span><br><span class="line">		verify: <span class="literal">true</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>  其中<code>&lt;APP_ID&gt;</code>与<code>&lt;APP_KEY&gt;</code>填之前保存下来的，<code>placeholder</code>填在留言框中出现的占位符，<code>verify</code>是验证码，其实就是一个简单的四则运算求答案，可以改成false关掉。<br>
-　　到这里就差不多了，但如果你还想改下评论框的css样式的话，打开<strong>HEXO\themes\[theme name]\source\css\</strong>里的<strong>base.styl</strong>，添加并编辑：</p>
+<p>  其中 <code>&lt;APP_ID&gt;</code> 与 <code>&lt;APP_KEY&gt;</code> 填之前保存下来的， <code>placeholder</code> 填在留言框中出现的占位符， <code>verify</code> 是验证码，其实就是一个简单的四则运算求答案，可以改成 false 关掉。<br>
+　　到这里就差不多了，但如果你还想改下评论框的 css 样式的话，打开 <strong>HEXO\themes\[theme name]\source\css\</strong> 里的 <strong>base.styl</strong> ，添加并编辑：</p>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">#vcomments</span></span><br><span class="line">  <span class="attribute">...</span></span><br><span class="line">  <span class="attribute">...</span></span><br></pre></td></tr></table></figure>
 <p>  即可。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><strong>CF</strong>： <a href="https://codeforces.com/" target="_blank" rel="external"><strong>Codeforces</strong></a>，才不是某TX游戏。 <a href="#fnref1" class="footnote-backref">↩</a></p>
+<li id="fn1" class="footnote-item"><p><strong>CF</strong>： <a href="https://codeforces.com/" target="_blank" rel="external"><strong>Codeforces</strong></a>，才不是某 TX 游戏。 <a href="#fnref1" class="footnote-backref">↩</a></p>
 </li>
 </ol>
 </section>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的VPS发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把CF<sup class="footnote-ref"><a href="#fn1" id="fnref1">[]]>
+    <![CDATA[<p>快到考试周了，虽然没怎么复习，但依旧忙里偷闲，先是为原先的 VPS 发工单续了个费，再是昨天买了一年10元月付的腾讯云学生主机，初始化又搞了半天。昨天将近凌晨还打了把 CF<sup class="footnote-ref"><a href="#fn1" id="fnref1]]>
     </summary>
     
       <category term="HEXO" scheme="https://www.xtxtmtxtx.xyz/tags/HEXO/"/>
@@ -164,11 +193,11 @@ html中的相应代码是</p>
   </entry>
   
   <entry>
-    <title><![CDATA[在Windows上利用FTP共享文件]]></title>
+    <title><![CDATA[在 Windows 上利用 FTP 共享文件]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/FileZillaServer/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/FileZillaServer/</id>
     <published>2018-12-26T06:06:48.000Z</published>
-    <updated>2018-12-26T10:57:34.550Z</updated>
+    <updated>2019-02-27T05:17:44.797Z</updated>
     <content type="html"><![CDATA[<p>近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>
 　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>
 　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>
@@ -247,11 +276,11 @@ html中的相应代码是</p>
   </entry>
   
   <entry>
-    <title><![CDATA[用HTML5 Canvas写一个下落音游模拟器！]]></title>
+    <title><![CDATA[用 HTML5 Canvas 写一个下落音游模拟器！]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/html5mug/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/html5mug/</id>
     <published>2018-11-29T11:30:01.000Z</published>
-    <updated>2018-11-30T03:41:36.751Z</updated>
+    <updated>2019-02-27T05:17:52.960Z</updated>
     <content type="html"><![CDATA[<p>越忙越给自己找点感兴趣的事儿做有时候也能改善下心情<del>（拖延）</del>。<br>
 　　前几天整了下js，不得不说这东西坑是真的多，对我这种之前写C++<del>（其实写出来像C）</del>的人来说有点不友好。</p>
 <p>一开始听说js是弱类型，觉得很方便，就开始放飞自我，完全没考虑数据类型，字符串乘数字、字符串当数字加导致数字溢出之类的操作满.html起飞，好在debug了一万次之后终于慢慢改过来了，最终虽然也有点小问题不过已经和osu!mania的感觉差不多了。</p>
@@ -351,11 +380,11 @@ html中的相应代码是</p>
   </entry>
   
   <entry>
-    <title><![CDATA[不越狱为iPad刷ipa文件]]></title>
+    <title><![CDATA[不越狱为 iPad 刷 ipa 文件]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/CydiaImpactor/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/CydiaImpactor/</id>
     <published>2018-11-20T13:43:39.000Z</published>
-    <updated>2018-12-26T09:51:54.111Z</updated>
+    <updated>2019-02-27T05:18:03.707Z</updated>
     <content type="html"><![CDATA[<p>最近感觉自己又变得更懒了<del>，连澡都不想天天洗了</del>，无论之前订计划时多么雄心壮志，最终难免计划赶不上变化<del>（拖延）</del>，不过<del>迫于压力</del>每天都有在刷leetcode，算是避免生疏吧，你看我现在做个MG动画都一点头绪都莫得，afk太久果然还是不行。<del>然而还是光有脑洞又懒得开坑</del>。<br>
 不过这里讲得和编程没什么关系（大概）<br>
 总之来说就是分享一个软件</p>
@@ -389,11 +418,11 @@ html中的相应代码是</p>
   </entry>
   
   <entry>
-    <title><![CDATA[GearHost上的免费PHP空间]]></title>
+    <title><![CDATA[GearHost 上的免费 PHP 空间]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/GearHost/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/GearHost/</id>
     <published>2018-10-25T13:15:00.000Z</published>
-    <updated>2018-11-20T15:09:08.039Z</updated>
+    <updated>2019-02-27T05:18:10.956Z</updated>
     <content type="html"><![CDATA[<p>最近闲的没事干（其实腰缠万锅 做点别的舒解一下压力） 正好1元买了个xyz域名 就想着不妨搞个php空间 <del>还可以做些别的事</del><br>
 申请很简单 百度一下GearHost就有几篇教程 这里写一下感受</p>
 <p>首先服务器是基于IIS的 因此支持php和aspx</p>
@@ -420,11 +449,11 @@ html中的相应代码是</p>
   </entry>
   
   <entry>
-    <title><![CDATA[Hackergame2018]]></title>
+    <title><![CDATA[Hackergame 2018]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/Hackergame2018/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/Hackergame2018/</id>
     <published>2018-10-23T11:57:13.000Z</published>
-    <updated>2018-12-26T10:04:57.020Z</updated>
+    <updated>2019-02-27T05:18:23.959Z</updated>
     <content type="html"><![CDATA[<p>题目存档：<a href="https://hack2018.lug.ustc.edu.cn/" target="_blank" rel="external">https://hack2018.lug.ustc.edu.cn/</a><br>
 官方 write-up 已发布：<a href="https://github.com/ustclug/hackergame2018-writeups" target="_blank" rel="external">https://github.com/ustclug/hackergame2018-writeups</a><br>
 我的一些解题过程的源文件<a href="https://github.com/XTXTMTXTX/Hackergame2018" target="_blank" rel="external">https://github.com/XTXTMTXTX/Hackergame2018</a><br>
@@ -599,7 +628,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/Kreuz/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/Kreuz/</id>
     <published>2016-08-07T16:00:00.000Z</published>
-    <updated>2018-12-26T09:50:35.977Z</updated>
+    <updated>2019-02-26T15:57:30.779Z</updated>
     <content type="html"><![CDATA[<p>Kreuz是十字架的德语说法，原BGA是FRENZ2014的参赛作品<a href="http://www.bilibili.com/video/av1756222/" target="_blank" rel="external">链接:av1756222</a><br>
 其实这个坑大概是要等到明年才会去填的，因为怕到时候忘了所以在这里留个记录。<br>
 说起来好像做BGA的人都比较喜欢用德语啊，然后大部分都是跟时间、齿轮、魔法阵有关的，不知道是什么含义呢？<br>
@@ -631,7 +660,7 @@ verify_proof()<br>
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="Vedio" scheme="https://www.xtxtmtxtx.xyz/categories/Vedio/"/>
+      <category term="Video" scheme="https://www.xtxtmtxtx.xyz/categories/Video/"/>
     
   </entry>
   
@@ -640,7 +669,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/%E5%A4%A9%E5%9D%91%E9%A2%84%E5%91%8Ax/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/天坑预告x/</id>
     <published>2016-07-08T16:00:00.000Z</published>
-    <updated>2018-12-26T09:50:44.420Z</updated>
+    <updated>2019-02-26T15:57:40.722Z</updated>
     <content type="html"><![CDATA[<p>没错，这个坑就是Calamity Fortune(<br>
 <a href="http://www.bilibili.com/video/av5258712/" target="_blank" rel="external">av5258712</a><br>
 终于是填完了啊,最后的部分做得有点不像= =<br>
@@ -691,7 +720,7 @@ verify_proof()<br>
     
       <category term="音MAD" scheme="https://www.xtxtmtxtx.xyz/tags/%E9%9F%B3MAD/"/>
     
-      <category term="Vedio" scheme="https://www.xtxtmtxtx.xyz/categories/Vedio/"/>
+      <category term="Video" scheme="https://www.xtxtmtxtx.xyz/categories/Video/"/>
     
   </entry>
   
