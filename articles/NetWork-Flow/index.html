@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+    
+        <meta name="keywords" content="博客,个人,Coding">
+        
+    
+        <meta name="description" content="不为所动 做更专业的自己"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="XTXTMTXTX"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="网络流"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="不为所动 做更专业的自己"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="XTXTMTXTX"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://www.xtxtmtxtx.xyz/img/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://www.xtxtmtxtx.xyz/img/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>网络流 - XTXTMTXTX</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/img/favicon.ico"/>
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+	
+	<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+	<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+	<script>
+		document.addEventListener('visibilitychange', function () {
+			if (document.visibilityState == 'hidden') {
+				normal_title = document.title;
+				document.title = 'TlVMTA==';
+			} else document.title = normal_title;
+		});
+	</script>
+	<style>
+		.pace .pace-progress {
+			background: #1E92FB; /*进度条颜色*/
+			height: 3px;
+		}
+		.pace .pace-progress-inner {
+			 box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+		}
+		.pace .pace-activity {
+			border-top-color: #1E92FB;    /*上边框颜色*/
+			border-left-color: #1E92FB;    /*左边框颜色*/
+		}
+	</style>
+
+
+</head>
+
+
+
+
+<body>
+	<script type="text/javascript" color="255,0,0" opacity='1' src="/js/canvas-nest.min.js"></script>
+	<script type="text/javascript" src="/js/anime.min.js"></script>
+	<canvas class="fireworks" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999999; pointer-events: none;"></canvas>
+	<script type="text/javascript" src="/js/fireworks.js"></script>
+	
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">XTXTMTXTX</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/XTXTMTXTX/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>网络流</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                            Posted by XTXTMTXTX on
+                        
+                        
+                            2019-03-06
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+<a href="/tags/Algorithm/">#Algorithm</a> <a href="/tags/C/">#C++</a> <a href="/tags/OI/">#OI</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/OI/">OI</a>
+
+                    
+                </div>
+            
+            <span class="post-tags text-muted">字数：1.6k</span><br/>
+            <span class="post-tags text-muted">阅读时间：7 分钟</span><br/>
+            <span class="post-tags text-muted" id="busuanzi_container_page_pv">本文总阅读量 <span class="post-tags text-muted" id="busuanzi_value_page_pv"></span> 次</span>
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>  一直以来都觉得网络流特别的高深莫测，所以就没有怎么用心看过。结果在学校校队选拔赛碰上了道网络流套路题，当场就跳过了。事后想想不行，不管怎么样的算法总得先去学才能会，于是看了几篇博客，姑且是按着博客里的介绍自己一行行打出来了。当然了，这里并不做什么再次讲解，纯粹丢个有注释的代码就跑了（方便以后忘了回来看眼）。对于网络流具体应该怎么理解，可以看这篇博客：<a href="https://blog.csdn.net/lzoi_hmh/article/details/74940366" target="_blank" rel="external">https://blog.csdn.net/lzoi_hmh/article/details/74940366</a><br>
+　　首先，这是我按照网络流想法直接实现的一个非常朴素、低效的代码，见下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAXN <span class="number">205</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAXM <span class="number">205</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> min(x,y) ((x)&lt;(y)?(x):(y))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;<span class="comment">//读写优化 </span></span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">	<span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)f=-<span class="number">1</span>;ch=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>;ch=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> lines=<span class="number">0</span>,First[MAXN],Next[MAXM*<span class="number">2</span>],w[MAXM*<span class="number">2</span>],v[MAXM*<span class="number">2</span>];</span><br><span class="line"><span class="keyword">bool</span> visited[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addline</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z)</span></span>&#123;<span class="comment">//链式前向星加边 </span></span><br><span class="line">	Next[lines]=First[x];</span><br><span class="line">	First[x]=lines;</span><br><span class="line">	v[lines]=y;</span><br><span class="line">	w[lines]=z;</span><br><span class="line">	lines++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n,m,stuck[MAXN],stop=<span class="number">0</span>,ans=<span class="number">0</span>;<span class="comment">//stuck存放增广路上经过的边 </span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x==n)&#123;</span><br><span class="line">		<span class="keyword">int</span> d=w[stuck[<span class="number">0</span>]];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;stop;i++)d=min(d,w[stuck[i]]);<span class="comment">//遍历增广路上的边找出最大能通过的流量 </span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;stop;i++)&#123;</span><br><span class="line">			w[stuck[i]]-=d;<span class="comment">//遍历增广路上的边并减去相应流量 </span></span><br><span class="line">			w[stuck[i]^<span class="number">1</span>]+=d;<span class="comment">//遍历增广路上的边并为其反向边加上相应流量</span></span><br><span class="line">		&#125;</span><br><span class="line">		ans+=d;</span><br><span class="line">		stop=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span>(visited,<span class="number">0</span>,<span class="keyword">sizeof</span>(visited));<span class="comment">//清理数组，准备下一次增广 </span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=First[x];i!=-<span class="number">1</span>;i=Next[i])&#123;<span class="comment">//遍历该点引出的边 </span></span><br><span class="line">		<span class="keyword">if</span>(!w[i]||visited[v[i]])<span class="keyword">continue</span>;<span class="comment">//当前边无剩余流量，跳过 </span></span><br><span class="line">		stuck[stop++]=i;<span class="comment">//将该边压栈 </span></span><br><span class="line">		visited[v[i]]=<span class="number">1</span>;<span class="comment">//防止走回路 </span></span><br><span class="line">		<span class="keyword">if</span>(dfs(v[i]))<span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//如果下一层dfs找到增广路，直接返回true </span></span><br><span class="line">		visited[v[i]]=<span class="number">0</span>;<span class="comment">//回溯 </span></span><br><span class="line">		stop--;<span class="comment">//出栈 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//未找到增广路，返回false </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	m=read(),n=read();</span><br><span class="line">	<span class="built_in">memset</span>(First,-<span class="number">1</span>,<span class="keyword">sizeof</span>(First));<span class="comment">//初始化 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=read(),y=read(),z=read();</span><br><span class="line">		addline(x,y,z);<span class="comment">//添加当前边 </span></span><br><span class="line">		addline(y,x,<span class="number">0</span>);<span class="comment">//添加反向边</span></span><br><span class="line">		<span class="comment">//一条边的反向边编号即为该边编号^1，e.g.，123号边反向边为123^1==122</span></span><br><span class="line">	&#125;</span><br><span class="line">	visited[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(dfs(<span class="number">1</span>));<span class="comment">//不断重复dfs直到无法增广 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);<span class="comment">//输出答案 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  每次 dfs 都只增广一条增广路，找到汇点就直接退出，提交到 <a href="http://codevs.cn/problem/1993/" target="_blank" rel="external">Codevs 1993</a> 上，不出意外地 TLE 了。<br>
+　　对其稍加改进，增加分层、一次增广多条路径，也就是 dinic 算法，于是写成了这样：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAXN <span class="number">205</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAXM <span class="number">205</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> min(x,y) ((x)&lt;(y)?(x):(y))</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;<span class="comment">//读写优化 </span></span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> ch=getchar();</span><br><span class="line">	<span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)f=-<span class="number">1</span>;ch=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)&#123;x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>;ch=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> lines=<span class="number">0</span>,First[MAXN],Next[MAXM*<span class="number">2</span>],w[MAXM*<span class="number">2</span>],v[MAXM*<span class="number">2</span>],dis[MAXN];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addline</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z)</span></span>&#123;<span class="comment">//链式前向星加边 </span></span><br><span class="line">	Next[lines]=First[x];</span><br><span class="line">	First[x]=lines;</span><br><span class="line">	v[lines]=y;</span><br><span class="line">	w[lines]=z;</span><br><span class="line">	lines++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n,m,ans=<span class="number">0</span>,st,ed;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;<span class="comment">//DINIC分层，即BFS搜索每个点到源点最短距离</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> h,t,que[MAXN];</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">bool</span> b[MAXN];<span class="comment">//判断是否遍历到过 </span></span><br><span class="line">	<span class="built_in">memset</span>(b,<span class="number">0</span>,<span class="keyword">sizeof</span>(b));</span><br><span class="line">	h=<span class="number">0</span>,t=<span class="number">1</span>;</span><br><span class="line">	que[h]=st;</span><br><span class="line">	b[st]=<span class="number">1</span>;</span><br><span class="line">	dis[st]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(h!=t)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=que[h++];h%=MAXN;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=First[x];i!=-<span class="number">1</span>;i=Next[i])&#123;</span><br><span class="line">			<span class="keyword">if</span>(b[v[i]]||!w[i])<span class="keyword">continue</span>;<span class="comment">//跳过已访问过的点及不流通的点 </span></span><br><span class="line">			dis[v[i]]=dis[x]+<span class="number">1</span>;</span><br><span class="line">			que[t++]=v[i];t%=MAXN;</span><br><span class="line">			b[v[i]]=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> b[ed];<span class="comment">//返回汇点能否遍历到 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> flow)</span></span>&#123;<span class="comment">//x表示当前点，flow表示到该点的流量，源点正无穷设为-1，并返回该点流到汇点的流量 </span></span><br><span class="line">	<span class="keyword">if</span>(x==ed)<span class="keyword">return</span> flow;<span class="comment">//找到汇点，返回流量 </span></span><br><span class="line">	<span class="keyword">int</span> c,d=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=First[x];i!=-<span class="number">1</span>;i=Next[i])&#123;</span><br><span class="line">		<span class="keyword">if</span>(!w[i]||dis[v[i]]!=dis[x]+<span class="number">1</span>)<span class="keyword">continue</span>;<span class="comment">//跳过非下一层的点及不流通的点 </span></span><br><span class="line">		c=dfs(v[i],((flow==-<span class="number">1</span>||w[i]&lt;(flow-d))?w[i]:(flow-d)));<span class="comment">//传入下一层DFS，可用流量为该边剩余流量或该点剩余流量 </span></span><br><span class="line">		d+=c;<span class="comment">//该点流出流量 </span></span><br><span class="line">		w[i]-=c;<span class="comment">//该边减去相应剩余流量 </span></span><br><span class="line">		w[i^<span class="number">1</span>]+=c;<span class="comment">//该边反向边加上相应剩余流量</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> d;<span class="comment">//返回该点最终流出流量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=read();m=read();</span><br><span class="line">	st=read();ed=read();</span><br><span class="line">	<span class="built_in">memset</span>(First,-<span class="number">1</span>,<span class="keyword">sizeof</span>(First));<span class="comment">//初始化 </span></span><br><span class="line">	lines=<span class="number">0</span>;ans=<span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=read(),y=read(),z=read();</span><br><span class="line">		addline(x,y,z);<span class="comment">//添加当前边 </span></span><br><span class="line">		addline(y,x,<span class="number">0</span>);<span class="comment">//添加反向边</span></span><br><span class="line">		<span class="comment">//一条边的反向边编号即为该边编号^1，e.g.，123号边反向边为123^1==122</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(bfs())ans+=dfs(st,-<span class="number">1</span>);<span class="comment">//直到源点到汇点无通路，不断增广 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);<span class="comment">//输出答案</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  其实可以发现，大部分讲网络流的文章里都提到了增加反向弧、剩余流量、最大流量的概念。一开始我也是因为这些概念多，下意识认为实现起来特别麻烦就放弃了。其实利用链式前向星的存图方法的话，只要在加单向边的时候增加一条相反的、剩余流量为 0 的边，然后当作普通的边处理就可以了；互相找反向边也很方便，直接异或 1 就可以了。至于最大流量和剩余流量，只要确保正向边和反向边剩余流量都不为负即可，不用管最大流量。另外无向图建图时，给反向边也设置成与正向边相同的剩余流量就可以了。<br>
+　　另外最大流与最小割是可以互相转换的，但如果要知道最小割的边数就会显得有点麻烦。其实有一个办法，在 m * sigma ( ci ) 不会爆精度的情况下，可以在加边时让每条边的流量存为 ci * m + 1，最终 ans % m 就是最小割的边数，ans / m 就是答案。</p>
+
+
+                
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c761e5b00e59dcf"></script> -->
+
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <!-- <div class="addthis_sharing_toolbox"></div> -->
+                
+                <br>
+                <div style="text-align:center;color: #ccc;font-size:20px;">当你在凝视深渊的时候　深渊也正在凝视着你</div>
+            </div>
+
+            <!-- Comments -->
+				
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+	<hr />
+	<div id="vcomments"></div>
+	<script>
+		new Valine({
+			av: AV, 
+			el: '#vcomments', // 
+			app_id: '279s7xDoxndUbB2GTXrO8fd6-gzGzoHsz',
+			app_key: 'jXm5pw4ANUmrqQnVrlP3k3tm',
+			placeholder: '输入你想说的话。',
+			verify: true
+		});
+	</script>
+
+                </div>
+            
+			
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<hr />
+<footer>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/xtxtmtxtx" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/XTXTMTXTX/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <center><p class="copyright text-muted" id="busuanzi_container_site_uv">本站总访问量 <span id="busuanzi_value_site_uv"></span> 次</p></center>
+                <p class="copyright text-muted">全站总字数：12.2k</p>
+                <p class="copyright text-muted">&copy; 2019 XTXTMTXTX<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+                <p class="copyright text-muted">Modified by <a href="https://www.xtxtmtxtx.xyz/" target="_blank">XTXTMTXTX</a></p>
+            </div>
+        </div>
+		
+
+		<link rel="stylesheet" href="/css/APlayer.min.css">
+		<div id="aplayer"></div>
+		<script src="/js/APlayer.min.js"></script>
+		<script type="text/javascript">
+			const ap = new APlayer({
+				container: document.getElementById('aplayer'),
+				fixed: true,
+				autoplay: true,
+				loop: 'all',
+				order: 'random',
+				preload: 'auto',
+				volume: 0.7,
+				mutex: true,
+				audio: [
+					{
+						name: 'Gravity',
+						artist: 'M2U',
+						url: '/misc/M2U-Gravity.mp3'
+					},
+					{
+						name: 'Dasein',
+						artist: 'KIVΛ',
+						url: '/misc/KIVΛ-Dasein.mp3'
+					},
+					{
+						name: 'Celestial Sounds (KivΛ Remix)',
+						artist: '3R2',
+						url: '/misc/3R2-Celestial Sounds (KivΛ Remix).mp3'
+					},
+					{
+						name: 'Ember',
+						artist: 'SIHanatsuka',
+						url: '/misc/SIHanatsuka-Ember.mp3'
+					}
+				]
+			});
+		</script>
+		
+    </div>
+</footer>
+
+	
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+	
+
+    
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c761e5b00e59dcf"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/inazuma/inazuma.model.json"},"display":{"position":"right","superSample":2,"width":150,"height":300,"hOffset":-50,"vOffset":-190},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
+
+</html>
