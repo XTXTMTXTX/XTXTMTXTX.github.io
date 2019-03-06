@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2019-02-27T05:09:32.747Z</updated>
+  <updated>2019-03-06T05:33:05.561Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[时间]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/articles/nostalgia/"/>
+    <id>https://www.xtxtmtxtx.xyz/articles/nostalgia/</id>
+    <published>2019-03-06T04:54:58.000Z</published>
+    <updated>2019-03-06T05:33:05.561Z</updated>
+    <content type="html"><![CDATA[<p id="point" style="text-align:center;color: #555;font-size:50px;word-wrap: break-word;word-break: break-all;overflow: hidden;"></p>
+<center>今天是 <span id="SY3"></span> 年 <span id="SM3"></span> 月 <span id="SD3"></span> 日</center>  
+<center>距离 2018 年 6 月 8 日</center>  
+<center>已过去</center>  
+<p id="result1" style="text-align:center;font-size:80px;"></p>
+
+<script type="text/javascript">
+    let y2=2018;
+    let m2=6;
+    let d2=8;
+    let day2=new Date(y2,m2-1,d2);
+    let day3=new Date();
+    document.getElementById("SY3").innerHTML=day3.getFullYear();
+    document.getElementById("SM3").innerHTML=day3.getMonth()+1;
+    document.getElementById("SD3").innerHTML=day3.getDate();
+    for(let i=0;i<parseInt((day3-day2)/86400000);i++)document.getElementById("point").innerHTML=document.getElementById("point").innerHTML+"·";
+    document.getElementById("result1").innerHTML=parseInt((day3-day2)/86400000)+" 天";
+</script>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p id="point" style="text-align:center;color: #555;font-size:50px;word-wrap: break-word;word-break: break-all;overflow: hidden;"></p>
+<cente]]>
+    </summary>
+    
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
+    
+      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Centos7 下 make 找不到 linux/errno.h 等文件的解决办法]]></title>
@@ -597,7 +634,7 @@ verify_proof()<br>
     <link href="https://www.xtxtmtxtx.xyz/articles/%E6%97%A0%E8%A8%80%E6%8A%95%E4%B8%8B/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/无言投下/</id>
     <published>2018-10-06T21:21:12.000Z</published>
-    <updated>2018-10-23T12:22:14.059Z</updated>
+    <updated>2019-03-06T05:31:04.961Z</updated>
     <content type="html"><![CDATA[<p>一转眼两年多过去了 而我只投了一份视频<del>（还不是因为你懒）</del><br>
 其实本意是想着高考完了可以多挖点坑 实际上又没填旧坑 也没开新坑<br>
 怎么说呢 也没什么好说的 大学开学了比想象中的更累（？）<br>
