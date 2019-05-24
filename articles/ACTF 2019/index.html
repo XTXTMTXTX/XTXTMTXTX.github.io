@@ -348,7 +348,7 @@
 <h5 id="pysandbox-6-10"><a class="header-anchor" href="#pysandbox-6-10">¶</a>pysandbox 6, 10</h5>
 <p>CTF-Wiki 上给的例子大部分是 python 2.7 的，而题目用的是python 3.7，payload 不能混用。<br>
 先是忘了在哪儿找到了个小魔法<br>
-<code>·().__class__.__bases__[-1].__subclasses__()</code><br>
+<code>().__class__.__bases__[-1].__subclasses__()</code><br>
 通过 <code>__dict__</code> 发现有个叫 FileLoader 的东西，进一步探索发现可以输出文件内容<br>
 构造<br>
 <code>[x for x in ().__class__.__bases__[-1].__subclasses__() if x.__name__ == 'FileLoader'][0].get_data('','flag')</code><br>

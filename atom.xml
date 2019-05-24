@@ -4,7 +4,7 @@
   <subtitle><![CDATA[闲置用]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.xtxtmtxtx.xyz/"/>
-  <updated>2019-05-24T14:36:22.990Z</updated>
+  <updated>2019-05-24T14:45:07.334Z</updated>
   <id>https://www.xtxtmtxtx.xyz/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://www.xtxtmtxtx.xyz/articles/ACTF%202019/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/ACTF 2019/</id>
     <published>2019-05-23T16:00:00.000Z</published>
-    <updated>2019-05-24T14:36:22.990Z</updated>
+    <updated>2019-05-24T14:45:07.334Z</updated>
     <content type="html"><![CDATA[<p>代码之后会放在 <a href="https://github.com/XTXTMTXTX/ACTF-2019" target="_blank" rel="external">https://github.com/XTXTMTXTX/ACTF-2019</a><br>
 一度第一名最后第四名，还喜提大一第二 <del>我哭了 你呢.jpg</del></p>
 <hr>
@@ -112,7 +112,7 @@
 <h5 id="pysandbox-6-10"><a class="header-anchor" href="#pysandbox-6-10">¶</a>pysandbox 6, 10</h5>
 <p>CTF-Wiki 上给的例子大部分是 python 2.7 的，而题目用的是python 3.7，payload 不能混用。<br>
 先是忘了在哪儿找到了个小魔法<br>
-<code>·().__class__.__bases__[-1].__subclasses__()</code><br>
+<code>().__class__.__bases__[-1].__subclasses__()</code><br>
 通过 <code>__dict__</code> 发现有个叫 FileLoader 的东西，进一步探索发现可以输出文件内容<br>
 构造<br>
 <code>[x for x in ().__class__.__bases__[-1].__subclasses__() if x.__name__ == 'FileLoader'][0].get_data('','flag')</code><br>
