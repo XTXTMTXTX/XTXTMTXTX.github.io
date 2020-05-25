@@ -343,29 +343,6 @@ onegadget 的条件是 rax = 0 而观察调用 printf 前一句有 mov rax, 0 �
   </entry>
   
   <entry>
-    <title><![CDATA[Why do you have to keep learning?]]></title>
-    <link href="https://www.xtxtmtxtx.xyz/articles/learning/"/>
-    <id>https://www.xtxtmtxtx.xyz/articles/learning/</id>
-    <published>2019-03-10T14:55:02.000Z</published>
-    <updated>2019-03-10T15:00:49.917Z</updated>
-    <content type="html"><![CDATA[<h2 id="life-is-like-riding-a-bicycle-to-keep-your-balance-you-must-keep-moving"><a class="header-anchor" href="#life-is-like-riding-a-bicycle-to-keep-your-balance-you-must-keep-moving">¶</a>  Life is like riding a bicycle. To keep your balance you must keep moving.</h2>
-<h2 id="vision-without-execution-is-just-hallucination"><a class="header-anchor" href="#vision-without-execution-is-just-hallucination">¶</a>  Vision without execution is just hallucination.</h2>
-<h2 id="you-learn-something-every-day-if-you-pay-attention"><a class="header-anchor" href="#you-learn-something-every-day-if-you-pay-attention">¶</a>  You learn something every day if you pay attention.</h2>
-<h2 id="the-past-can-hurt-but-the-way-i-see-it-you-can-either-run-from-it-or-learn-from-it"><a class="header-anchor" href="#the-past-can-hurt-but-the-way-i-see-it-you-can-either-run-from-it-or-learn-from-it">¶</a>  The past can hurt. But the way I see it, you can either run from it, or learn from it.</h2>
-<p><br><br><br><br>
-  十一点半断电。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="life-is-like-riding-a-bicycle-to-keep-your-balance-you-must-keep-moving"><a class="header-anchor" href="#life-is-like-riding-a-bicyc]]>
-    </summary>
-    
-      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
-    
-      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[网络流]]></title>
     <link href="https://www.xtxtmtxtx.xyz/articles/NetWork-Flow/"/>
     <id>https://www.xtxtmtxtx.xyz/articles/NetWork-Flow/</id>
@@ -391,43 +368,6 @@ onegadget 的条件是 rax = 0 而观察调用 printf 前一句有 mov rax, 0 �
       <category term="OI" scheme="https://www.xtxtmtxtx.xyz/tags/OI/"/>
     
       <category term="OI" scheme="https://www.xtxtmtxtx.xyz/categories/OI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[时间]]></title>
-    <link href="https://www.xtxtmtxtx.xyz/articles/nostalgia/"/>
-    <id>https://www.xtxtmtxtx.xyz/articles/nostalgia/</id>
-    <published>2019-03-06T04:54:58.000Z</published>
-    <updated>2019-03-06T05:33:05.561Z</updated>
-    <content type="html"><![CDATA[<p id="point" style="text-align:center;color: #555;font-size:50px;word-wrap: break-word;word-break: break-all;overflow: hidden;"></p>
-<center>今天是 <span id="SY3"></span> 年 <span id="SM3"></span> 月 <span id="SD3"></span> 日</center>  
-<center>距离 2018 年 6 月 8 日</center>  
-<center>已过去</center>  
-<p id="result1" style="text-align:center;font-size:80px;"></p>
-
-<script type="text/javascript">
-    let y2=2018;
-    let m2=6;
-    let d2=8;
-    let day2=new Date(y2,m2-1,d2);
-    let day3=new Date();
-    document.getElementById("SY3").innerHTML=day3.getFullYear();
-    document.getElementById("SM3").innerHTML=day3.getMonth()+1;
-    document.getElementById("SD3").innerHTML=day3.getDate();
-    for(let i=0;i<parseInt((day3-day2)/86400000);i++)document.getElementById("point").innerHTML=document.getElementById("point").innerHTML+"·";
-    document.getElementById("result1").innerHTML=parseInt((day3-day2)/86400000)+" 天";
-</script>
-
-]]></content>
-    <summary type="html">
-    <![CDATA[<p id="point" style="text-align:center;color: #555;font-size:50px;word-wrap: break-word;word-break: break-all;overflow: hidden;"></p>
-<cente]]>
-    </summary>
-    
-      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
-    
-      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
     
   </entry>
   
@@ -557,29 +497,6 @@ html 中的相应代码是</p>
       <category term="评论" scheme="https://www.xtxtmtxtx.xyz/tags/%E8%AF%84%E8%AE%BA/"/>
     
       <category term="Web" scheme="https://www.xtxtmtxtx.xyz/categories/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[未命名]]></title>
-    <link href="https://www.xtxtmtxtx.xyz/articles/%E6%9C%AA%E5%91%BD%E5%90%8D/"/>
-    <id>https://www.xtxtmtxtx.xyz/articles/未命名/</id>
-    <published>2019-01-11T05:26:48.000Z</published>
-    <updated>2019-01-12T03:51:47.510Z</updated>
-    <content type="html"><![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><br>
-<h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
-<p style="text-align:center">假如生活欺骗了你，　　　　　　　　</p><p style="text-align:center">不要悲伤，不要心急！　　　　　　　</p><p style="text-align:center">忧郁的日子里须要镇静：　　　　　　</p><p style="text-align:center">相信吧，快乐的日子将会来临！　　　</p><p style="text-align:center">心儿永远向往着未来；　　　　　　　</p><p style="text-align:center">现在却常是忧郁。　　　　　　　　　</p><p style="text-align:center">一切都是瞬息，一切都将会过去；　　</p><p style="text-align:center">而那过去了的，就会成为亲切的怀恋。</p>
-<p style="text-align:center">-EOF-</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p></p><h3 style="text-align:center">假如生活欺骗了你</h3><br>
-<h5 style="text-align:center">Александр Сергеевич Пушкин</h5><br><p></p>
-<p style="te]]>
-    </summary>
-    
-      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
-    
-      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
     
   </entry>
   
@@ -1191,6 +1108,31 @@ verify_proof()<br>
     <![CDATA[<p>由于学业变重加之现在我住宿了<del>(懒)</del><br>
 所以各种坑之类的只有到暑假才能填了<br>
 <del>写这个只是为了表示我还活着x</del></p>
+]]>
+    </summary>
+    
+      <category term="杂" scheme="https://www.xtxtmtxtx.xyz/tags/%E6%9D%82/"/>
+    
+      <category term="Others" scheme="https://www.xtxtmtxtx.xyz/categories/Others/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[第一篇]]></title>
+    <link href="https://www.xtxtmtxtx.xyz/articles/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>https://www.xtxtmtxtx.xyz/articles/第一篇/</id>
+    <published>2016-01-20T13:19:38.000Z</published>
+    <updated>2018-10-23T12:21:45.627Z</updated>
+    <content type="html"><![CDATA[<p><del>十分喜闻乐见的</del><br>
+之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
+<del>不要吐槽这奇怪的样式</del><br>
+还是可能什么东西都不写吧</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><del>十分喜闻乐见的</del><br>
+之前的主机莫名其妙的就没了<del>这个故事告诉我们尽可能不要用Hostinger</del><br>
+<del>不要吐槽这奇怪的样式</del><br>
+还是可能什么东西都不写吧</p>
 ]]>
     </summary>
     
