@@ -252,7 +252,13 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>　　先贴解决方案 <code>yum -y install linux-libc-dev</code><br>　　这个问题是在搭建某 proto 时发现的，那个仓库的 readme 上并没有相应的解决方案，只有 <code>yum install openssl-devel zlib-devel</code> 和 <code>yum groupinstall &quot;Development Tools&quot;</code><br>　　当然我就报错了，于是百度之，找到了一堆创建文件夹链接，链接某个很长很长路径下的库到 /usr/include 的方法<br>　　一一试过之后发现各种坑，先把 linux/ 文件夹链接过去发现 asm/errno.h 找不着，把 asm-generic 文件夹链接过去还是找不着，差点就放弃了。<br>　　最后终于在 CSDN 论坛里一个没有解决题主实际提出的问题的答案下找到了解决方案（笑），本着试一试的心态先把之前链接的文件夹都删了，再 yum 安装之， make clean 再 make 就成了。<br>　　记下来算是给自己以后换机子的话再撞类似的坑方便一点，挺水的。顺便今天出 cet-4 成绩了。转个题外话：<br>　　刚刚查了一下，626分。这么多年来的默默付出，终于有了回报，起早贪黑，牵肠挂肚，甚至废寝忘食，换来了如今的成绩。谢谢自己的每一分努力和付出，机会总是给有准备的人的。我始终记得这些刻苦铭心的谆谆教诲，无论我走到哪里，都不会忘记这份恩情，对了我查的是支付宝芝麻信用分，不知道你们是多少。😁  </p>
+                <p>先贴解决方案 <code>yum -y install linux-libc-dev</code><br>
+　　这个问题是在搭建某 proto 时发现的，那个仓库的 readme 上并没有相应的解决方案，只有 <code>yum install openssl-devel zlib-devel</code> 和 <code>yum groupinstall &quot;Development Tools&quot;</code><br>
+　　当然我就报错了，于是百度之，找到了一堆创建文件夹链接，链接某个很长很长路径下的库到 /usr/include 的方法<br>
+　　一一试过之后发现各种坑，先把 linux/ 文件夹链接过去发现 asm/errno.h 找不着，把 asm-generic 文件夹链接过去还是找不着，差点就放弃了。<br>
+　　最后终于在 CSDN 论坛里一个没有解决题主实际提出的问题的答案下找到了解决方案（笑），本着试一试的心态先把之前链接的文件夹都删了，再 yum 安装之， make clean 再 make 就成了。<br>
+　　记下来算是给自己以后换机子的话再撞类似的坑方便一点，挺水的。顺便今天出 cet-4 成绩了。转个题外话：<br>
+　　刚刚查了一下，626分。这么多年来的默默付出，终于有了回报，起早贪黑，牵肠挂肚，甚至废寝忘食，换来了如今的成绩。谢谢自己的每一分努力和付出，机会总是给有准备的人的。我始终记得这些刻苦铭心的谆谆教诲，无论我走到哪里，都不会忘记这份恩情，对了我查的是支付宝芝麻信用分，不知道你们是多少。😁</p>
 
 
                 
