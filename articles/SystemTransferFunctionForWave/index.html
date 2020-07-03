@@ -244,7 +244,7 @@
                     
                 </div>
             
-            <span class="post-tags text-muted">字数：653</span><br/>
+            <span class="post-tags text-muted">字数：730</span><br/>
             <span class="post-tags text-muted">阅读时间：2 分钟</span><br/>
             <span class="post-tags text-muted" id="busuanzi_container_page_pv">本文总阅读量 <span class="post-tags text-muted" id="busuanzi_value_page_pv"></span> 次</span>
             <!-- Gallery -->
@@ -252,20 +252,18 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="这是什么"><a class="header-anchor" href="#这是什么">¶</a>这是什么</h2>
-<p>我实在好无聊就写了个这个。虽然还没有复习预估两个月之后的要考的一大堆课，但显然我看不下去。</p>
+                <h2 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h2><p>我实在好无聊就写了个这个。虽然还没有复习预估两个月之后的要考的一大堆课，但显然我看不下去。</p>
 <p>代码见 Github 项目: <a href="https://github.com/XTXTMTXTX/System-Transfer-Function-For-Wave" target="_blank" rel="external">System-Transfer-Function-For-Wave</a></p>
 <p>把文件拖到它上面输入各种各样参数就可以跑起来了。至于是什么参数，请学习信号系统中的线性时不变因果和系统函数。此外，由于本质是 LTI 系统，因此改改代码是可以做到 Real-Time 处理信号的，但是我好懒。</p>
-<h2 id="原理"><a class="header-anchor" href="#原理">¶</a>原理</h2>
-<p>参见 Signals and Systems (Second Edition) (著: Alan V. Oppenheim, Alan S. Willsky, S. Hamid Nawab) 第九章及第十章，对于连续时间系统做拉普拉斯变换，离散时间系统做 z 变换，我们可以得到系统函数 H(s) 或 H(z), 通过 Matlab 的 <code>tf</code> 和 <code>bode</code> 函数可以得到系统函数的波特图，而通过 <code>lsim</code> 函数则可以计算输入信号对应的输出信号，在此不多赘述。</p>
-<p>对于有理离散系统函数 H(z)=(a[n]z<sup>n</sup>+a[n-1]z<sup>n-1</sup>+…+a[0]z<sup>0</sup>)/(b[n]z<sup>n</sup>+b[n-1]z<sup>n-1</sup>+…+b[0]z<sup>0</sup>) 通过直接型方框图表示为：<img src="/articles/SystemTransferFunctionForWave/DS.png" alt="DS"></p>
-<p>对于有理连续系统函数 H(s)=(a[n]s<sup>n</sup>+a[n-1]s<sup>n-1</sup>+…+a[0]s<sup>0</sup>)/(b[n]s<sup>n</sup>+b[n-1]s<sup>n-1</sup>+…+b[0]s<sup>0</sup>) 通过直接型方框图表示为：<img src="/articles/SystemTransferFunctionForWave/CS.png" alt="CS"></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>参见 Signals and Systems (Second Edition) (著: Alan V. Oppenheim, Alan S. Willsky, S. Hamid Nawab) 第九章及第十章，对于连续时间系统做拉普拉斯变换，离散时间系统做 z 变换，我们可以得到系统函数 H(s) 或 H(z), 通过 Matlab 的 <code>tf</code> 和 <code>bode</code> 函数可以得到系统函数的波特图，而通过 <code>lsim</code> 函数则可以计算输入信号对应的输出信号，在此不多赘述。</p>
+<p>对于有理离散系统函数 H(z)=(a[n]z^n^+a[n-1]z^n-1^+…+a[0]z^0^)/(b[n]z^n^+b[n-1]z^n-1^+…+b[0]z^0^) 通过直接型方框图表示为：<img src="/articles/SystemTransferFunctionForWave/DS.png" alt="DS"></p>
+<p>对于有理连续系统函数 H(s)=(a[n]s^n^+a[n-1]s^n-1^+…+a[0]s^0^)/(b[n]s^n^+b[n-1]s^n-1^+…+b[0]s^0^) 通过直接型方框图表示为：<img src="/articles/SystemTransferFunctionForWave/CS.png" alt="CS"></p>
 <p>可以看到长得比较像，稍加推导也很容易推出来。</p>
-<p>图中 z<sup>-1</sup> 为延时器, s<sup>-1</sup> 为积分器。对于离散信号要将连续系统函数离散化，方法很多，代码中直接将离散系统延时器的部分改成了前向差分法面积近似积分。</p>
+<p>图中 z^-1^ 为延时器, s^-1^ 为积分器。对于离散信号要将连续系统函数离散化，方法很多，代码中直接将离散系统延时器的部分改成了前向差分法面积近似积分。</p>
 <p>至于 Wav 文件格式的读写，因为未压缩 Wav 文件用 PCM 格式储存数据，说白了就是某一个采样的值，而这个值在量化位数大于等于 16 则是有符号值，一开始处理的时候还踩了坑。</p>
-<h2 id="我设计了一个很优越的有理连续系统-碍于你写的连续系统函数离散化方式实在不行-不能体现优越性-怎么办？"><a class="header-anchor" href="#我设计了一个很优越的有理连续系统-碍于你写的连续系统函数离散化方式实在不行-不能体现优越性-怎么办？">¶</a>我设计了一个很优越的有理连续系统，碍于你写的连续系统函数离散化方式实在不行，不能体现优越性，怎么办？</h2>
-<p>可以试试先用 matlab 的 <code>tf</code> 和 <code>bode</code> 和 <code>lsim</code> 函数看看这个系统的效果，如果对离散化方式有要求，可以用 matlab 的 <code>c2d</code> 函数将有理系统离散化，然后再将生成的离散有利系统函数系数输入本程序，使用方式请 <code>help c2d</code>。</p>
+<h2 id="我设计了一个很优越的有理连续系统，碍于你写的连续系统函数离散化方式实在不行，不能体现优越性，怎么办？"><a href="#我设计了一个很优越的有理连续系统，碍于你写的连续系统函数离散化方式实在不行，不能体现优越性，怎么办？" class="headerlink" title="我设计了一个很优越的有理连续系统，碍于你写的连续系统函数离散化方式实在不行，不能体现优越性，怎么办？"></a>我设计了一个很优越的有理连续系统，碍于你写的连续系统函数离散化方式实在不行，不能体现优越性，怎么办？</h2><p>可以试试先用 matlab 的 <code>tf</code> 和 <code>bode</code> 和 <code>lsim</code> 函数看看这个系统的效果，如果对离散化方式有要求，可以用 matlab 的 <code>c2d</code> 函数将有理系统离散化，然后再将生成的离散有利系统函数系数输入本程序，使用方式请 <code>help c2d</code>。</p>
 <p>当然也可以手算，见 <a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&amp;dbname=CJFDLAST2015&amp;filename=GYXH201510020&amp;v=MDk4NDk5VE5yNDlIWklSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI3cWZZT1p0RkNqZ1VMekpJalRUWnJHNEg=" target="_blank" rel="external">cnki: 连续系统离散化方法的比较与解析初探</a></p>
+<h2 id="双线性变换法"><a href="#双线性变换法" class="headerlink" title="双线性变换法"></a>双线性变换法</h2><p>用一阶保持积分器积分效果太差了，可以说 bode 图长得完全不是原来那样，因此我又将代码中的积分部分改成了线性插值积分，公式及求解见下：<img src="/articles/SystemTransferFunctionForWave/tustin.png" alt="tustin"></p>
 
 
                 

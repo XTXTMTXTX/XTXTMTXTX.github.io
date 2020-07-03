@@ -252,24 +252,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>
-　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>
-　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>
-　　安装完之后打开FileZilla Server Interface，一通默认设置不要改内容就行了，然而可能出现如下错误<br>
-　　<img src="/articles/FileZillaServer/1.jpg" alt="错误"><br>
-　　这时候先检查下菜单栏File-&gt;Connect to server…，如果安装的时候没做别的设置的话应该是这样子的<br>
-　　<img src="/articles/FileZillaServer/2.jpg" alt="设置"><br>
-　　还连不上的话要去电脑的管理工具-&gt;服务里把FileZilla Server FTP server服务开启。顺带一提的是如果在安装时选的手动开启服务，每次重启之后都要来这里（或者任务管理器）把这个服务打开。<br>
-　　<img src="/articles/FileZillaServer/3.jpg" alt="图标"><br>
-　　这样之后就可以点这张图框里中间那个图标加用户了。<br>
-　　<img src="/articles/FileZillaServer/4.jpg" alt="设置"><br>
-　　先点图中右侧的Add，输个好记的用户名之后点OK。接下来把中间的Enable account勾上，Password视情况填选。<br>
-　　接下来左边点Shared folders。<br>
-　　<img src="/articles/FileZillaServer/5.jpg" alt="设置"><br>
-　　点中间的Add，选择要放到ftp上的文件夹并确定，然后选中该文件夹，根据需要在右边的Files和Directories里打勾。最后点OK之后在资源管理器地址栏中输入ftp://localhost，如果能连上就成功了。<br>
-　　到这一步还不够，如果电脑开了防火墙的话即使在局域网里别的设备也连不上这个ftp地址。<br>
-　　先打开计算机的防火墙设置，进入高级设置，点击入站规则，新建规则进入向导。规则类型选程序，程序路径选与FileZilla Server Interface.exe同路径的FileZilla Server.exe，操作允许连接，配置文件全勾上，名称随便输即可。接下来确认刚才设置的规则启用了即可。<br>
-　　现在，你就可以在局域网下通过ftp传文件啦，只需要在网络设置中找到本机的ip，在别的设备上加入ftp://的前缀就可以了。</p>
+                <p>　　近日，在我的怂恿和育碧再次史低的刺激下，室友买了份R6。然而一个问题是，R6也太大了吧——下下来要七八十G。尽管steam的服务器下载游戏还是很快的，但是用学校的小水管拖下来太慢，用流量就很痛心。最终，在室友下了一半之后，我才突然想起来可以直接把我的游戏文件直接给室友。<br>　　说干就干。这么大个文件不能直接拷，那就开FTP共享。首先先选服务器。Serv-U挺不错的，但是是付费软件。于是最终我选择了FileZilla Server。<br>　　安装过程中会让你选择是否自启服务，以及是否自启控制界面。因为我只是临时用一下，于是都选择了手动(manual)开启。<br>　　安装完之后打开FileZilla Server Interface，一通默认设置不要改内容就行了，然而可能出现如下错误<br>　　<img src="/articles/FileZillaServer/1.jpg" alt="错误"><br>　　这时候先检查下菜单栏File-&gt;Connect to server…，如果安装的时候没做别的设置的话应该是这样子的<br>　　<img src="/articles/FileZillaServer/2.jpg" alt="设置"><br>　　还连不上的话要去电脑的管理工具-&gt;服务里把FileZilla Server FTP server服务开启。顺带一提的是如果在安装时选的手动开启服务，每次重启之后都要来这里（或者任务管理器）把这个服务打开。<br>　　<img src="/articles/FileZillaServer/3.jpg" alt="图标"><br>　　这样之后就可以点这张图框里中间那个图标加用户了。<br>　　<img src="/articles/FileZillaServer/4.jpg" alt="设置"><br>　　先点图中右侧的Add，输个好记的用户名之后点OK。接下来把中间的Enable account勾上，Password视情况填选。<br>　　接下来左边点Shared folders。<br>　　<img src="/articles/FileZillaServer/5.jpg" alt="设置"><br>　　点中间的Add，选择要放到ftp上的文件夹并确定，然后选中该文件夹，根据需要在右边的Files和Directories里打勾。最后点OK之后在资源管理器地址栏中输入ftp://localhost，如果能连上就成功了。<br>　　到这一步还不够，如果电脑开了防火墙的话即使在局域网里别的设备也连不上这个ftp地址。<br>　　先打开计算机的防火墙设置，进入高级设置，点击入站规则，新建规则进入向导。规则类型选程序，程序路径选与FileZilla Server Interface.exe同路径的FileZilla Server.exe，操作允许连接，配置文件全勾上，名称随便输即可。接下来确认刚才设置的规则启用了即可。<br>　　现在，你就可以在局域网下通过ftp传文件啦，只需要在网络设置中找到本机的ip，在别的设备上加入ftp://的前缀就可以了。</p>
 
 
                 
